@@ -6,8 +6,15 @@ from pymongo import MongoClient
 import datetime
 from datetime import date
 import dns
+from fastapi import Request
+
 
 api = FastAPI()
+async def add_process_time_header(request: Request, call_next):
+    response = await call_next(request)
+    response.headers["access-control-allow-origin"] = "*"
+    return response
+
 
 client = MongoClient('mongodb://localhost:27017/')
 
