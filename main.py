@@ -16,7 +16,8 @@ async def add_process_time_header(request: Request, call_next):
     return response
 
 
-client = MongoClient('mongodb://localhost:27017/')
+client = MongoClient('mongodb://oumaima_hl:Oumaimamedias24@cluster0-shard-00-00.scaj4.mongodb.net:27017,cluster0-shard-00-01.scaj4.mongodb.net:27017,cluster0-shard-00-02.scaj4.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-wu1uy5-shard-0&authSource=admin&retryWrites=true&w=majority
+')
 
 db = client['office_des_changes']
 
