@@ -36,7 +36,7 @@ IDE_Maroc_flux_Flux_nets_par_pays_0 = db.IDE_Maroc_Flux_Flux_nets_par_pays_0
 IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0 = db.IDE_Maroc_Flux_Flux_nets_par_secteurs_NMA_0
 IDE_Maroc_Flux_Par_Nature_opération_0 = db.IDE_Maroc_Flux_Par_nature_opération_0
 IDE_Maroc_Recettes_par_pays_0 = db.IDE_Maroc_Recettes_par_pays_0
-IDE_Maroc_recettes_par_secteurs_0 = db.IDE_Maroc_Recettes_par_secteurs_0
+IDE_Maroc_Recettes_par_secteurs_0 = db.IDE_Maroc_Recettes_par_secteurs_0
 IDE_Maroc_Recettes_par_secteurs_NMA_0 = db.IDE_Maroc_Recettes_par_secteurs_NMA_0
 IDE_Maroc_Stock_Par_pays = db.IDE_Maroc_Stock_Par_pays
 IDE_Maroc_Stock_Par_secteurs = db.IDE_Maroc_Stock_Par_secteurs
@@ -115,15 +115,15 @@ def getComptes(start: str = '', end: str = '', type: str = ''):
     if (start and end and type):
         start_date = datetime.datetime.strptime(start, '%Y-%m-%d')
         end_date = datetime.datetime.strptime(end, '%Y-%m-%d')
-        b = Comext_TOTAL_CVS_CJO.aggregate([{"$match": { "$and":[ {"date": {"$gte": start_date, "$lte": end_date}, "Type ": {"$eq": type}}]}}, {"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}}, { "$project": {"_id": 0, "date": "$Date", "Type": "$Type ","Valeur": "$Valeur "}}])
+        b = Comext_TOTAL_CVS_CJO.aggregate([{"$match": { "$and":[ {"date": {"$gte": start_date, "$lte": end_date}, "Type ": {"$eq": type}}]}}, {"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}}, { "$project": {"_id": 0, "date": "$Date", "Type": "$Type ","Valeur": "$valeur "}}])
     elif (start and end):
         start_date = datetime.datetime.strptime(start, '%Y-%m-%d')
         end_date = datetime.datetime.strptime(end, '%Y-%m-%d')
-        b = Comext_TOTAL_CVS_CJO.aggregate([{"$match": {"date": {"$gte": start_date, "$lte": end_date}}}, {"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}}, { "$project": {"_id": 0, "date": "$Date", "Type": "$Type ","Valeur": "$Valeur "}}])
+        b = Comext_TOTAL_CVS_CJO.aggregate([{"$match": {"date": {"$gte": start_date, "$lte": end_date}}}, {"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}}, { "$project": {"_id": 0, "date": "$Date", "Type": "$donnees commerce exterieur","Valeur": "$valeur "}}])
     elif (type):
-          b = Comext_TOTAL_CVS_CJO.aggregate([{"$match": {"Type ": {"$eq": type}}}, {"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}}, { "$project": {"_id": 0, "date": "$Date", "Type": "$Type ","Valeur": "$Valeur "}}])
+          b = Comext_TOTAL_CVS_CJO.aggregate([{"$match": {"Type ": {"$eq": type}}}, {"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}}, { "$project": {"_id": 0, "date": "$Date", "Type": "$donnees commerce exterieur","Valeur": "$valeur "}}])
     else:
-        b = Comext_TOTAL_CVS_CJO.aggregate([{"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}},{"$project": {"_id": 0, "date": "$Date", "Type": "$Type ", "Valeur": "$Valeur "}}])
+        b = Comext_TOTAL_CVS_CJO.aggregate([{"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$Date"}}}},{"$project": {"_id": 0, "date": "$Date", "Type": "$donnees commerce exterieur", "Valeur": "$valeur "}}])
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(b)))
 
 ###################################################################################################################
@@ -254,9 +254,9 @@ def getComptes(start: int = 0, end: int = 0):
 @api.get('/IDE_Maroc_Recettes_par_secteurs_0')
 def getComptes(start: int = 0 , end: int = 0):
     if (start and end):
-        a = list(IDE_Maroc_recettes_par_secteurs_0.find({"Date": {"$gte": start, "$lte": end}},{"_id": 0, "Date": 1, "SECTEURS D'ACTIVITE": 1,"Valeur": 1}));
+        a = list(IDE_Maroc_Recettes_par_secteurs_0.find({"Date": {"$gte": start, "$lte": end}},{"_id": 0, "Date": 1, "SECTEURS D'ACTIVITE": 1,"Valeur": 1}));
     else:
-        a = list(IDE_Maroc_recettes_par_secteurs_0.find({},{"_id": 0, "Date": 1, "SECTEURS D'ACTIVITE": 1,"Valeur": 1}));
+        a = list(IDE_Maroc_Recettes_par_secteurs_0.find({},{"_id": 0, "Date": 1, "SECTEURS D'ACTIVITE": 1,"Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
 ###############################################################################################################
@@ -352,7 +352,7 @@ def getComptes(start: int = 0 , end: int = 0):
     if (start and end):
         a = list(IDM_a_etranger_Stock_Par_pays.find({ "Date": {"$gte": start, "$lte": end} },{ "_id": 0, "Date": 1, "PAYS": 1, "Valeur": 1 }));
     else:
-        a = list(IDM_a_etranger_Stock_Par_pays.find({},{ "_id": 0, "Date": 1, "PAYS":1,"valeur": 1 }));
+        a = list(IDM_a_etranger_Stock_Par_pays.find({},{ "_id": 0, "Date": 1, "PAYS":1,"Valeur": 1 }));
     return JSONResponse(status_code=200 , content=json.loads(json_util.dumps(a)))
 
 
