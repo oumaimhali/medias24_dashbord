@@ -288,6 +288,7 @@ def getComptes(start: int = 0 , end: int = 0):
     else:
         a = list(IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0.find({},{ "_id": 0, "date ": 1, "SECTEURS D'ACTIVITE": 1, "type ": 1,"valeur": 1 }));
     return JSONResponse(status_code=200 , content=json.loads(json_util.dumps(a)))
+
 ####################################################################################################################
 ###################################IDM_a_Etranger_Flux_Depenses_par_pays_0##########################################
 @api.get('/IDM_a_Etranger_Flux_Depenses_par_pays_0')
