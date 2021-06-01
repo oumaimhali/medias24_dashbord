@@ -110,6 +110,7 @@ def getComptes(start: str = '', end: str = '', type: str = ''):
         b = Comext_Export_GU_CVS.aggregate([{"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}},{"$project": {"_id": 0, "date": "$Date", "Type": "$Type ", "Valeur": "$Valeur "}}])
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(b)))
 ##################################################################################################################
+##############"################################Comext_TOTAL_CVS_CJO###############################################
 @api.get('/Comext_TOTAL_CVS_CJO')
 def getComptes(start: str = '', end: str = '', type: str = ''):
     if (start and end and type):
@@ -152,9 +153,9 @@ def getComptes(start: int = '' , end: str = ''):
     else:
         a = list(Dep_Voyages_Nature_0.find({},{ "_id": 0, "Date": 1, "nature d'operation": 1,"valeur ": 1 }));
     return JSONResponse(status_code=200 , content=json.loads(json_util.dumps(a)))
-    ###############################################################################################################
+    ##########################################################################################################################
 
-    ###############################################################################################################
+    ################################################Evol_MRE_3###############################################################
 
 @api.get('/Evol_MRE_3')
 def getComptes(start: int = 0 , end: int = 0):
