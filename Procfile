@@ -1,1 +1,1 @@
-mongodb+srv://oumaima_hl:Oumaimamedias24@cluster0.scaj4.mongodb.net/test
+web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:api
