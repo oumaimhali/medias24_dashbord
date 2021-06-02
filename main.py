@@ -201,9 +201,9 @@ def getComptes(start: int = '', end: str = ''):
   
     if (start and end):
         a = list(Dep_Voyages_Nature_0.find({"Date": {"$gte": start, "$lte": end}},
-                                           {"_id": 0, "Date": 1, "nature d'operation": 1, "valeur ": 1}));
+                                           {"_id": 0, "Date": 1, "nature d'operation ": 1, "valeur ": 1}));
     else:
-        a = list(Dep_Voyages_Nature_0.find({}, {"_id": 0, "Date": 1, "nature d'operation": 1, "valeur ": 1}));
+        a = list(Dep_Voyages_Nature_0.find({}, {"_id": 0, "Date": 1, "nature d'operation ": 1, "valeur ": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
     ###############################################################################################################
 
