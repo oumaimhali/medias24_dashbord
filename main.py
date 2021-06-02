@@ -109,7 +109,6 @@ def getComptes(start: str = '', end: str = '', type: str = ''):
         b = Comext_Export_GU_CVS.aggregate([{"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}},{"$project": {"_id": 0, "date": "$Date", "Type": "$Type ", "Valeur": "$Valeur "}}])
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(b)))
 ##################################################################################################################
-##############"################################Comext_TOTAL_CVS_CJO###############################################
 @api.get('/Comext_TOTAL_CVS_CJO')
 def getComptes(start: str = '', end: str = '', type: str = ''):
     if (start and end and type):
@@ -127,7 +126,7 @@ def getComptes(start: str = '', end: str = '', type: str = ''):
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(b)))
 
 ###################################################################################################################
-#############################
+
 @api.get('/Comext_TOTAL_CVS_CJO') # ==> localhost:8080/Comext_TOTAL_CVS_CJO?start=1996-06-30&end=1999-01-01
 def getComptes(start: str = '' , end: str = ''):
     if (start and end):
@@ -152,9 +151,9 @@ def getComptes(start: int = '' , end: str = ''):
     else:
         a = list(Dep_Voyages_Nature_0.find({},{ "_id": 0, "Date": 1, "nature d'operation": 1,"valeur ": 1 }));
     return JSONResponse(status_code=200 , content=json.loads(json_util.dumps(a)))
-    ##########################################################################################################################
+    ###############################################################################################################
 
-    ################################################Evol_MRE_3###############################################################
+    ###############################################################################################################
 
 @api.get('/Evol_MRE_3')
 def getComptes(start: int = 0 , end: int = 0):
@@ -174,6 +173,7 @@ def getComptes(start: int = 0 , end: int = 0):
     return JSONResponse(status_code=200 , content=json.loads(json_util.dumps(a)))
 #####################################################################################################################
 ######################################Evol_MRe_CVS###################################################################
+
 
 @api.get('/Evol_MRE_CVS') # ==> localhost:8080/vol?start=1996-06-30&end=1999-01-01
 def getComptes(start: str = '' , end: str = ''):
@@ -288,7 +288,6 @@ def getComptes(start: int = 0 , end: int = 0):
     else:
         a = list(IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0.find({},{ "_id": 0, "date ": 1, "SECTEURS D'ACTIVITE": 1, "type ": 1,"valeur": 1 }));
     return JSONResponse(status_code=200 , content=json.loads(json_util.dumps(a)))
-
 ####################################################################################################################
 ###################################IDM_a_Etranger_Flux_Depenses_par_pays_0##########################################
 @api.get('/IDM_a_Etranger_Flux_Depenses_par_pays_0')
@@ -340,9 +339,9 @@ def getComptes(start: int = 0 , end: int = 0):
 @api.get('/IDM_etranger_flux_par_nat_operation')
 def getComptes(start: int = 0 , end: int = 0):
     if (start and end):
-        a = list(IDM_etranger_flux_par_nat_operation.find({ "Date ": {"$gte": start, "$lte": end} },{ "_id": 0, "Date ": 1, "Nature d'operation": 1, "operation":1, "valeur": 1 }));
+        a = list(IDM_etranger_flux_par_nat_operation.find({ "Date": {"$gte": start, "$lte": end} },{ "_id": 0, "Date": 1, "Nature d'operation": 1, "operation": 1, "valeur": 1 }));
     else:
-        a = list(IDM_etranger_flux_par_nat_operation.find({},{ "_id": 0, "Date ": 1, "Nature d'operation": 1, "operation":1,"valeur": 1 }));
+        a = list(IDM_etranger_flux_par_nat_operation.find({},{ "_id": 0, "Date": 1, "Nature d'operation": 1, "operation": 1,"valeur": 1 }));
     return JSONResponse(status_code=200 , content=json.loads(json_util.dumps(a)))
 
 ####################################################################################################################
