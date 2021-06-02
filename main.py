@@ -624,6 +624,189 @@ def getComptes(start: int = 0, end: int = 0):
 
 
 ######################################################################################################################
+########################################BP_T_MBP5_Hierarchy###########################################################
+@api.get("/BP_T_MBP5_H/")
+async def hierarchy():
+    BP_T_MBP5_hierarchy=[
+
+        {"name":"SOLDE",
+        "elements":[
+            {"name":"COMPTE DES TRANSACTIONS COURANTES",
+             "elements": [
+                 {"name": "BIENS", "elements": []},
+                 {"name": "SERVICES", "elements": []},
+                 {"name": "REVENUS", "elements": []},
+                 {"name": "TRANSFERTS COURANTS", "elements": []},
+                 {"name": "INVESTISSEMENTS DIRECTS", "elements": []},
+                 {"name": "INVESTISSEMENTS DE PORTEFEUILLE", "elements": []},
+                 {"name": "AUTRES INVESTISSEMENTS", "elements": []},
+                 {"name": "AVOIRS DE RÉSERVE", "elements": []}
+                ]
+            }
+        ]},
+        {"name": "CREDIT",
+        "elements": [
+            {"name": "COMPTE DES TRANSACTIONS COURANTES",
+            "elements": [
+                {"name": "BIENS",
+                "elements": [
+                    {"name" : "Marchandises générales", "elements": []},
+                    {"name" : "Biens importés sans paiement et réexportés après transformation", "elements": []},
+                    {"name" : "Achats de biens dans les ports", "elements": []},
+                    ]
+                },
+                {"name": "SERVICES",
+                "elements": [
+                    {"name": "Transports",
+                    "elements": [
+                        {"name": "Transports maritimes", "elements": []},
+                        {"name": "Transports aériens", "elements": []},
+                        {"name": "Autres transports", "elements": []},
+                        ]
+                    },
+                    {"name": "Voyages",
+                    "elements": [
+                        {"name": "Voyages à titre professionnel", "elements": []},
+                        {"name": "Voyages à titre personnel", "elements": []}
+                        ]
+                    },
+                    {"name": "Services de communication", "elements": []},
+                    {"name": "Services d'assurance", "elements": []},
+                    {"name": "Redevances et droits de licence", "elements": []},
+                    {"name": "Autres services aux entreprises", "elements": []},
+                    {"name": "Services fournis ou reçus par les administrations publiques N.C.A", "elements": []}
+                ]},
+                {"name": "REVENUS",
+                "elements": [
+                    {"name": "Administrations", "elements": []},
+                    {"name": "Autorités monétaires", "elements": []},
+                    {"name": "Banques", "elements": []},
+                    {"name": "Autres secteurs", "elements": []},
+                    ]
+                },
+                {"name": "TRANSFERTS COURANTS",
+                "elements": [
+                    {"name": "Publics", "elements": []},
+                    {"name": "Privés", "elements": []}
+                    ]
+                }
+            ]}
+        ]},
+        {"name": "DEBIT",
+        "elements": [
+            {"name": "COMPTE DES TRANSACTIONS COURANTES ",
+            "elements": [
+                {"name": "BIENS",
+                "elements": [
+                    {"name": "Marchandises générales", "elements": []},
+                    {"name": "Biens importés sans paiement et réexportés après transformation", "elements": []},
+                    {"name": "Achats de biens dans les ports", "elements": []}
+                    ]
+                },
+                {"name": "SERVICES",
+                "elements": [
+                    {"name": "Transports",
+                    "elements": [
+                        {"name": "Transports maritimes", "elements":[]},
+                        {"name": "Transports aériens", "elements": []},
+                        {"name": "Autres transports", "elements": []},
+                        ]
+                    },
+                    {"name": "Voyages",
+                    "elements": [
+                        {"name": "Voyages à titre professionnel", "elements":[]},
+                        {"name": "Voyages à titre personnel", "elements":[]},
+                    ]},
+                    {"name": "Services de communication", "elements": []},
+                    {"name": "Services d'assurance", "elements": []},
+                    {"name": "Redevances et droits de licence", "elements": []},
+                    {"name": "Autres services aux entreprises", "elements": []},
+                    {"name": "Services fournis ou reçus par les administrations publiques N.C.A", "elements": []}
+                ]},
+                {"name": "REVENUS",
+                "elements": [
+                    {"name": "Administrations", "elements": []},
+                    {"name": "Autorités monétaires", "elements": []},
+                    {"name": "Banques", "elements": []},
+                    {"name": "Autres secteurs", "elements": []},
+                    ]
+                },
+                {"name": "TRANSFERTS COURANTS",
+                "elements": [
+                    {"name": "Publics", "elements": []},
+                    {"name": "Privés", "elements": []}
+                    ]
+                }
+            ]}
+        ]},
+        {"name": "CREDIT",
+        "elements":[
+            {"name":"COMPTE DES OPERATIONS FINANCIERES",
+            "elements":[
+                {"name": "Investissements directs",
+                "elements": [
+                    {"name": "A l'étranger", "elements": []},
+                    {"name": "Dans l' économie nationale", "elements": []}
+                    ]
+                },
+                {"name": "Investissements de portefeuille", "elements": [
+                    {"name": "Avoirs", "elements": []},
+                    {"name": "Engagements", "elements": []}
+                    ]
+                },
+                {"name": "Autres investissements",
+                "elements": [
+                    {"name": "Crédits commerciaux",
+                    "elements": [
+                        {"name": "Autres secteurs", "elements": []}
+                    ]},
+                    {"name": "Prêts",
+                    "elements": [
+                        {"name": "Administrations","elements": []},
+                        {"name": "Banques","elements": []},
+                        {"name": "Autres secteurs","elements": []},
+                    ]},
+                    {"name": "Monnaie fiduciaire et dépôts","elements": []},
+                    {"name": "Autres OF","elements": []},
+                ]},
+                {"name": "Avoirs de réserve ","elements": []}
+            ]}
+        ]},
+        {"name": "DEBIT",
+        "elements": [
+            {"name": "COMPTE DES OPERATIONS FINANCIERES",
+            "elements": [
+                {"name": "Investissements directs",
+                "elements": [
+                    {"name": "A l'étranger", "elements": []},
+                    {"name": "Dans l' économie nationale", "elements": []}
+                ]},
+                {"name": "Investissements de portefeuille",
+                "elements": [
+                    {"name": "Avoirs", "elements": []},
+                    {"name": "Engagements", "elements": []}
+                ]},
+                {"name": "Autres investissements ",
+                "elements": [
+                    {"name": "Crédits commerciaux",
+                    "elements": [
+                        {"name": "Autres secteurs", "elements": []}
+                    ]},
+                    {"name": "Prêts",
+                    "elements":[
+                        {"name": "Administrations", "elements": []},
+                        {"name": "Banques", "elements": []},
+                        {"name": "Autres secteurs", "elements": []}
+                    ]},
+                    {"name": "Monnaie fiduciaire et dépôts", "elements": []},
+                    {"name": "Autres OF", "elements": []}
+                ]},
+                {"name": "Avoirs de réserve ", "elements": []}
+            ]}
+        ]}
+    ]
+    return BP_T_MBP5_hierarchy
+######################################################################################################################
 ###################################################BP_T_MBP5##########################################################
 @api.get('/BP_T_MBP5')
 def getComptes(start: int = 0, end: int = 0):
