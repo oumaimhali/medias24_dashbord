@@ -151,9 +151,9 @@ def getComptes(start: str = '', end: str = '', type: str = ''):
         start_date = datetime.datetime.strptime(start, '%Y-%m-%d')
         end_date = datetime.datetime.strptime(end, '%Y-%m-%d')
         b = Comext_TOTAL_CVS_CJO.aggregate(
-            [{"$match": {"$and": [{"date": {"$gte": start_date, "$lte": end_date}, "Type ": {"$eq": type}}]}},
+            [{"$match": {"$and": [{"date": {"$gte": start_date, "$lte": end_date}, "donnees commerce exterieur": {"$eq": type}}]}},
              {"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}},
-             {"$project": {"_id": 0, "date": "$Date", "Type": "$Type ", "Valeur": "$valeur "}}])
+             {"$project": {"_id": 0, "date": "$Date", "Type": "$donnees commerce exterieur", "Valeur": "$valeur "}}])
     elif (start and end):
         start_date = datetime.datetime.strptime(start, '%Y-%m-%d')
         end_date = datetime.datetime.strptime(end, '%Y-%m-%d')
@@ -163,7 +163,7 @@ def getComptes(start: str = '', end: str = '', type: str = ''):
                                                              "Type": "$donnees commerce exterieur",
                                                              "Valeur": "$valeur "}}])
     elif (type):
-        b = Comext_TOTAL_CVS_CJO.aggregate([{"$match": {"Type ": {"$eq": type}}}, {
+        b = Comext_TOTAL_CVS_CJO.aggregate([{"$match": {"donnees commerce exterieur": {"$eq": type}}}, {
             "$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}}, {
                                                 "$project": {"_id": 0, "date": "$Date",
                                                              "Type": "$donnees commerce exterieur",
