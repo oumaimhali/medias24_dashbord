@@ -151,29 +151,28 @@ def getComptes(start: str = '', end: str = '', type: str = ''):
         start_date = datetime.datetime.strptime(start, '%Y-%m-%d')
         end_date = datetime.datetime.strptime(end, '%Y-%m-%d')
         b = Comext_TOTAL_CVS_CJO.aggregate(
-            [{"$match": {"$and": [{"date": {"$gte": start_date, "$lte": end_date}, "donnees commerce exterieur": {"$eq": type}}]}},
-             {"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}},
-             {"$project": {"_id": 0, "date": "$Date", "Type": "$donnees commerce exterieur", "Valeur": "$valeur "}}])
+            [{"$match": {"$and": [{"Date": {"$gte": start_date, "$lte": end_date}, "donnees commerce exterieur": {"$eq": type}}]}},
+             {"$addFields": {"date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$Date"}}}},
+             {"$project": {"_id": 0, "date": "$date", "Type": "$donnees commerce exterieur", "Valeur": "$valeur "}}])
     elif (start and end):
         start_date = datetime.datetime.strptime(start, '%Y-%m-%d')
         end_date = datetime.datetime.strptime(end, '%Y-%m-%d')
-        b = Comext_TOTAL_CVS_CJO.aggregate([{"$match": {"date": {"$gte": start_date, "$lte": end_date}}}, {
-            "$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}}, {
-                                                "$project": {"_id": 0, "date": "$Date",
+        b = Comext_TOTAL_CVS_CJO.aggregate([{"$match": {"Date": {"$gte": start_date, "$lte": end_date}}}, {
+            "$addFields": {"date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$Date"}}}}, {
+                                                "$project": {"_id": 0, "date": "$date",
                                                              "Type": "$donnees commerce exterieur",
                                                              "Valeur": "$valeur "}}])
     elif (type):
         b = Comext_TOTAL_CVS_CJO.aggregate([{"$match": {"donnees commerce exterieur": {"$eq": type}}}, {
-            "$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}}, {
-                                                "$project": {"_id": 0, "date": "$Date",
+            "$addFields": {"date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$Date"}}}}, {
+                                                "$project": {"_id": 0, "date": "$date",
                                                              "Type": "$donnees commerce exterieur",
                                                              "Valeur": "$valeur "}}])
     else:
         b = Comext_TOTAL_CVS_CJO.aggregate(
-            [{"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$Date"}}}},
-             {"$project": {"_id": 0, "date": "$Date", "Type": "$donnees commerce exterieur", "Valeur": "$valeur "}}])
+            [{"$addFields": {"date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$Date"}}}},
+             {"$project": {"_id": 0, "date": "$date", "Type": "$donnees commerce exterieur", "Valeur": "$valeur "}}])
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(b)))
-
 
 ###################################################################################################################
 
