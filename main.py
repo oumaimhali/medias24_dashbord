@@ -45,7 +45,7 @@ IDM_etranger_flux_par_nat_operation = db.IDM_à_etranger_Flux_Par_nature_opérat
 IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1 = db.IDM_a_etranger_Flux_Flux_nets_par_secteurs_NMA_1
 IDM_a_Etranger_Flux_Flux_nets_par_pays_0 = db.IDM_a_etranger_Flux_Flux_nets_par_pays_0
 IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0 = db.IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0
-IDM_a_Etranger_Flux_Depenses_par_secteurs_1 = db.IDM_a_etranger_Flux_Depenses_par_secteurs_1
+IDM_a_etranger_Flux_Depenses_par_secteurs_1 = db.IDM_a_etranger_Flux_Depenses_par_secteurs_1
 IDM_a_Etranger_Flux_Depenses_par_pays_0 = db.IDM_a_etranger_Flux_Depenses_par_pays_0
 IDM_a_etranger_Flux_Flux_nets_par_pays_0 = db.IDM_a_etranger_Flux_Flux_nets_par_pays_0
 Balance_Services_4 = db.Balance_Services_4
@@ -393,14 +393,14 @@ def getComptes(start: int = 0, end: int = 0):
 
 #######################################################################################################################
 #####################################IDM_a_Etranger_Flux_Depenses_par_secteurs_1#######################################
-@api.get('/IDM_a_Etranger_Flux_Depenses_par_secteurs_1')
+@api.get('/IDM_a_etranger_Flux_Depenses_par_secteurs_1')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
-        a = list(IDM_a_Etranger_Flux_Depenses_par_secteurs_1.find({"date ": {"$gte": start, "$lte": end}},
+        a = list(IDM_a_etranger_Flux_Depenses_par_secteurs_1.find({"date ": {"$gte": start, "$lte": end}},
                                                                   {"_id": 0, "date ": 1, "SECTEURS D'ACTIVITE": 1,
                                                                    "valeur": 1}));
     else:
-        a = list(IDM_a_Etranger_Flux_Depenses_par_secteurs_1.find({}, {"_id": 0, "date ": 1, "SECTEURS D'ACTIVITE": 1,
+        a = list(IDM_a_etranger_Flux_Depenses_par_secteurs_1.find({}, {"_id": 0, "date ": 1, "SECTEURS D'ACTIVITE": 1,
                                                                        "valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
