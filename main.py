@@ -341,8 +341,7 @@ def getComptes(start: int = 0, end: int = 0):
 @api.get('/IDE_Maroc_Recettes_par_pays_0')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
-        a = list(IDE_Maroc_Recettes_par_pays_0.find({"Date": {"$gte": start, "$lte": end}},
-                                                    {"_id": 0, "Date": 1, "Pays ": 1, "Valeur": 1}));
+        a = list(IDE_Maroc_Recettes_par_pays_0.find({"Date": {"$gte": start, "$lte": end}},{"_id": 0, "Date": 1, "Pays ": 1, "Valeur": 1}));
     else:
         a = list(IDE_Maroc_Recettes_par_pays_0.find({}, {"_id": 0, "Date": 1, "Pays ": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
