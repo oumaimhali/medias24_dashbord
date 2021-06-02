@@ -20,6 +20,7 @@ client = MongoClient('mongodb://oumaima_hl:Oumaimamedias24@cluster0-shard-00-00.
 
 db = client['office_des_changes']
 
+
 Voyages_Pays_0 = db.Voyages_Pays_0
 compte_courant = db.compte_courant
 Comext_import_GU_CVS = db.Comext_import_GU_CVS
