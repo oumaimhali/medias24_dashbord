@@ -198,7 +198,7 @@ def getComptes(start: str = '', end: str = ''):
 #####################Dep_Voyages_Nature_0#############################################################
 @api.get('/Dep_Voyages_Nature_0')
 def getComptes(start: int = '', end: str = ''):
-    ##########################Evol_MRE#########################= 0 , end: int = 0):
+  
     if (start and end):
         a = list(Dep_Voyages_Nature_0.find({"Date": {"$gte": start, "$lte": end}},
                                            {"_id": 0, "Date": 1, "nature d'operation": 1, "valeur ": 1}));
