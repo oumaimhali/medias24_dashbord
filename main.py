@@ -58,6 +58,285 @@ BP_A_MBP5 = db.BP_A_MBP5
 BP_A_MBP6_0 = db.BP_A_MBP6_0
 BP_T_MBP5 = db.BP_T_MBP5
 BP_T_MBP6_3 = db.BP_T_MBP6_3
+###############################################################################################################################################################################
+###############################################################structure projet #################################################################################################
+################################################################################################################################################################################
+
+@api.get("/structure/")
+async def structure ():
+    structure = [
+
+    {
+        "name": "Commerce extérieur",
+        "elements": [
+            {
+                "name": "Comext_import_GU_CVS",
+                "url": "Comext_import_GU_CVS"
+            },
+            {
+                "name": "Comext_Export_GU_CVS",
+                "url": "Comext_Export_GU_CVS"
+            },
+            {
+                "name": "Comext_TOTAL_CVS_CJO",
+                "url": "Comext_TOTAL_CVS_CJO"
+            }
+        ]
+    },
+    {
+        "name": "Investissements internationaux",
+        "elements": [
+            {
+                "name": "Investissements directs étrangers au Maroc",
+                "elements":[
+                    {
+                        "name": "Flux",
+                        "elements":[
+                            {
+                                "name": "Par nature d'opération",
+                                "elements": [
+                                    {
+                                        "name": "IDE_Maroc_Flux_Par_Nature_opération_0",
+                                        "url": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Par pays",
+                                "elements": [
+                                    {
+                                        "name": "IDE_Maroc_Recettes_par_pays_0",
+                                        "url": "IDE_Maroc_Recettes_par_pays_0"
+                                    },
+                                    {
+                                        "name": "IDE_Maroc_flux_Flux_nets_par_pays_0",
+                                        "url": "IDE_Maroc_flux_Flux_nets_par_pays_0"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Par secteurs",
+                                "elements": [
+                                    {
+                                        "name": "IDE_Maroc_Recettes_par_secteurs_0",
+                                        "url": "IDE_Maroc_Recettes_par_secteurs_0"
+                                    },
+                                    {
+                                        "name": "IDE_Maroc_Recettes_par_secteurs_NMA_0",
+                                        "url": "IDE_Maroc_Recettes_par_secteurs_NMA_0"
+                                    },
+                                    {
+                                        "name": "IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0",
+                                        "url": "IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Stock",
+                        "elements":[
+                            {
+                                "name": "IDE_Maroc_Stock_Par_pays",
+                                "url": "IDE_Maroc_Stock_Par_pays"
+                            },
+                            {
+                                "name": "IDE_Maroc_Stock_Par_secteurs",
+                                "url": "IDE_Maroc_Stock_Par_secteurs"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Investissements directs marocains à l’étranger",
+                "elements":[
+                    {
+                        "name": "Flux",
+                        "elements":[
+                            {
+                                "name": "Par nature d'opération",
+                                "elements": [
+                                    {
+                                        "name": "IDM_etranger_flux_par_nat_operation",
+                                        "url": "IDM_etranger_flux_par_nat_operation"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Par pays",
+                                "elements": [
+                                    {
+                                        "name": "IDM_a_Etranger_Flux_Depenses_par_pays_0",
+                                        "url": "IDM_a_Etranger_Flux_Depenses_par_pays_0"
+                                    },
+                                    {
+                                        "name": "IDM_a_etranger_Flux_Flux_nets_par_pays_0",
+                                        "url": "IDM_a_etranger_Flux_Flux_nets_par_pays_0"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Par secteurs",
+                                "url": "",
+                                "elements": [
+                                    {
+                                        "name": "IDM_a_etranger_Flux_Depenses_par_secteurs_1",
+                                        "url": "IDM_a_etranger_Flux_Depenses_par_secteurs_1"
+                                    },
+                                    {
+                                        "name": "IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0",
+                                        "url": "IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0"
+                                    },
+                                    {
+                                        "name": "IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1",
+                                        "url": "IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Stock",
+                        "elements":[
+                            {
+                                "name": "Par pays",
+                                "elements":[
+                                    {
+                                        "name": "IDM_a_etranger_Stock_Par_pays",
+                                        "url": "IDM_a_etranger_Stock_Par_pays"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Par pays",
+                                "elements":[
+                                    {
+                                        "name": "IDM_à_etranger_Stock_Par_secteurs",
+                                        "url": "IDM_à_etranger_Stock_Par_secteurs"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    {
+        "name": "Balance des paiements et position extérieure globale",
+        "elements": [
+            {
+                "name": "Etat de la Balance des paiements",
+                "elements":[
+                    {
+                        "name":"Balance des paiements annuelle",
+                        "elements":[
+                            {
+                                "name":"BP_A_MBP5",
+                                "url":"BP_A_MBP5"
+                            },
+                            {
+                                "name":"BP_A_MBP6_0",
+                                "url":"BP_A_MBP6_0"
+                            }
+                        ]
+                    },
+                    {
+                        "name":"Balance des paiements trimestrielle",
+                        "elements":[
+                            {
+                                "name":"BP_T_MBP5",
+                                "url":"BP_T_MBP5"
+                            },
+                            {
+                                "name":"BP_T_MBP6_3",
+                                "url":"BP_T_MBP6_3"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Transactions courantes",
+                "elements":[
+                    {
+                        "name":"compte_courant",
+                        "url":"/compte_courant"
+                    },
+                    {
+                        "name":"Les échanges de services",
+                        "elements":[
+                            {
+                                "name":"Balance_Services_4",
+                                "url":"/Balance_Services_4"
+                            },
+                            {
+                                "name":"imp_services_nature_4_avant2014",
+                                "url":"/imp_services_nature_4_avant2014"
+                            },
+                            {
+                                "name":"Imp_Services_Nature_4_depuis2014",
+                                "url":"/Imp_Services_Nature_4_depuis2014"
+                            },
+                            {
+                                "name":"Exp_services_nature_4_avant2014",
+                                "url":"/Exp_services_nature_4_avant2014"
+                            },
+                            {
+                                "name":"Exp_Services_Nature_4_depuis2014",
+                                "url":"/Exp_Services_Nature_4_depuis2014"
+                            },
+                            {
+                                "name":"Offshoring",
+                                "url":"Offshoring_3"
+                            }
+                        ]
+                    },
+                    {
+                        "name":"Les voyages",
+                        "elements":[
+                            {
+                                "name":"Voyages_Pays_0",
+                                "url":"Voyages_Pays_0"
+                            },
+                            {
+                                "name":"Evol_Recettes_Voyages_5",
+                                "url":"Evol_Recettes_Voyages_5"
+                            },
+                            {
+                                "name":"Dep_Voyages_Nature_0",
+                                "url":"Dep_Voyages_Nature_0"
+                            },
+                            {
+                                "name":"Evol_voyages_CVS",
+                                "url":"Evol_voyages_CVS"
+                            }
+                        ]
+                    },
+                    {
+                        "name":"Les recettes MRE",
+                        "elements":[
+                            {
+                                "name":"Evol_MRE_PAYS",
+                                "url":"Evol_MRE_PAYS"
+                            },
+                            {
+                                "name":"Evol_MRE_3",
+                                "url":""
+                            },
+                            {
+                                "name":"Evol_MRE_CVS",
+                                "url":"Evol_MRE_CVS"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+    return structure()
 
 
 # list the collections =>
