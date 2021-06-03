@@ -70,16 +70,16 @@ async def structure ():
         "name": "Commerce extérieur",
         "elements": [
             {
-                "name": "Les importations CVS",
+                "name": "Les importations CVS/Historique",
                 "url": "/Comext_import_GU_CVS"
             },
             {
                 "name": "Les exportations CVS",
-                "url": "/Comext_Export_GU_CVS"
+                "url": "/Comext_Export_GU_CVS/Historique"
             },
             {
                 "name": "Total Commerce extérieur",
-                "url": "/Comext_TOTAL_CVS_CJO"
+                "url": "/Comext_TOTAL_CVS_CJO/Historique"
             }
         ]
     },
@@ -97,7 +97,7 @@ async def structure ():
                                 "elements": [
                                     {
                                         "name": "Investissements directs étrangers au Maroc Flux Par nature d'opération",
-                                        "url": "/IDE_Maroc_Flux_Par_Nature_opération_0"
+                                        "url": "/IDE_Maroc_Flux_Par_Nature_opération_0/Historique"
                                     }
                                 ]
                             },
@@ -106,11 +106,11 @@ async def structure ():
                                 "elements": [
                                     {
                                         "name": "Investissements directs étrangers au Maroc Recettes par pays",
-                                        "url": "/IDE_Maroc_Recettes_par_pays_0"
+                                        "url": "/IDE_Maroc_Recettes_par_pays_0/Historique"
                                     },
                                     {
                                         "name": "Investissements directs étrangers au Maroc flux Flux nets par pays",
-                                        "url": "/IDE_Maroc_flux_Flux_nets_par_pays_0"
+                                        "url": "/IDE_Maroc_flux_Flux_nets_par_pays_0/Historique"
                                     }
                                 ]
                             },
@@ -119,15 +119,15 @@ async def structure ():
                                 "elements": [
                                     {
                                         "name": "Investissements directs étrangers au Maroc Recettes par secteurs",
-                                        "url": "/IDE_Maroc_Recettes_par_secteurs_0"
+                                        "url": "/IDE_Maroc_Recettes_par_secteurs_0/Historique"
                                     },
                                     {
                                         "name": "Investissements directs étrangers au Maroc Recettes par secteurs NMA",
-                                        "url": "/IDE_Maroc_Recettes_par_secteurs_NMA_0"
+                                        "url": "/IDE_Maroc_Recettes_par_secteurs_NMA_0/Historique"
                                     },
                                     {
                                         "name": "Investissements directs étrangers au Maroc Flux flux nets par secteurs NMA",
-                                        "url": "/IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0"
+                                        "url": "/IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0/Historique"
                                     }
                                 ]
                             }
@@ -138,11 +138,11 @@ async def structure ():
                         "elements":[
                             {
                                 "name": "Investissements directs étrangers au Maroc Stock Par pays",
-                                "url": "/IDE_Maroc_Stock_Par_pays"
+                                "url": "/IDE_Maroc_Stock_Par_pays/Historique"
                             },
                             {
                                 "name": "Investissements directs étrangers au Maroc Stock Par secteurs",
-                                "url": "/IDE_Maroc_Stock_Par_secteurs"
+                                "url": "/IDE_Maroc_Stock_Par_secteurs/Historique"
                             }
                         ]
                     }
@@ -159,7 +159,7 @@ async def structure ():
                                 "elements": [
                                     {
                                         "name": "Investissements directs marocains à l’étranger flux par nature d'opération",
-                                        "url": "/IDM_etranger_flux_par_nat_operation"
+                                        "url": "/IDM_etranger_flux_par_nat_operation/Historique"
                                     }
                                 ]
                             },
@@ -168,11 +168,11 @@ async def structure ():
                                 "elements": [
                                     {
                                         "name": "Investissements directs marocains à l’étranger Flux Dépenses par pays",
-                                        "url": "/IDM_a_Etranger_Flux_Depenses_par_pays_0"
+                                        "url": "/IDM_a_Etranger_Flux_Depenses_par_pays_0/Historique"
                                     },
                                     {
                                         "name": "Investissements directs marocains à l’étranger Flux Flux nets par pays",
-                                        "url": "/IDM_a_etranger_Flux_Flux_nets_par_pays_0"
+                                        "url": "/IDM_a_etranger_Flux_Flux_nets_par_pays_0/Historique"
                                     }
                                 ]
                             },
@@ -181,15 +181,15 @@ async def structure ():
                                 "elements": [
                                     {
                                         "name": "Investissements directs marocains à l’étranger Flux Depenses par secteurs",
-                                        "url": "/IDM_a_etranger_Flux_Depenses_par_secteurs_1"
+                                        "url": "/IDM_a_etranger_Flux_Depenses_par_secteurs_1/Historique"
                                     },
                                     {
                                         "name": "Investissements directs marocains à l’étranger Flux Depenses par secteurs NMA",
-                                        "url": "/IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0"
+                                        "url": "/IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0/Historique"
                                     },
                                     {
                                         "name": "Investissements directs marocains à l’étranger Flux Flux nets par secteurs NMA",
-                                        "url": "/IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1"
+                                        "url": "/IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1/Historique"
                                     }
                                 ]
                             }
@@ -203,7 +203,7 @@ async def structure ():
                                 "elements":[
                                     {
                                         "name": "Investissements directs marocains à l’étranger Stock Par pays",
-                                        "url": "/IDM_a_etranger_Stock_Par_pays"
+                                        "url": "/IDM_a_etranger_Stock_Par_pays/Historique"
                                     }
                                 ]
                             },
@@ -212,7 +212,7 @@ async def structure ():
                                 "elements":[
                                     {
                                         "name": "Investissements directs marocains à l’étranger Stock Par secteurs",
-                                        "url": "/IDM_à_etranger_Stock_Par_secteurs"
+                                        "url": "/IDM_à_etranger_Stock_Par_secteurs/Historique"
                                     }
                                 ]
                             }
@@ -233,11 +233,11 @@ async def structure ():
                         "elements":[
                             {
                                 "name":"Balance des paiements annuelle selon MBP5",
-                                "url":"/BP_A_MBP5"
+                                "url":"/BP_A_MBP5/Historique"
                             },
                             {
                                 "name":"Balance des paiements annuelle seleon MBP6",
-                                "url":"/BP_A_MBP6_0"
+                                "url":"/BP_A_MBP6_0/Historique"
                             }
                         ]
                     },
@@ -246,11 +246,11 @@ async def structure ():
                         "elements":[
                             {
                                 "name":"Balance des paiements trimestrielle selon MBP5",
-                                "url":"/BP_T_MBP5"
+                                "url":"/BP_T_MBP5/Historique"
                             },
                             {
                                 "name":"BP_T_MBP6_3",
-                                "url":"/Balance des paiements trimestrielle selon MBP6"
+                                "url":"/Balance des paiements trimestrielle selon MBP6/Historique"
                             }
                         ]
                     }
@@ -261,34 +261,34 @@ async def structure ():
                 "elements":[
                     {
                         "name":"compte_courant",
-                        "url":"/compte_courant"
+                        "url":"/compte_courant/Historique"
                     },
                     {
                         "name":"Les échanges de services",
                         "elements":[
                             {
                                 "name":"Balance des Services",
-                                "url":"/Balance_Services_4"
+                                "url":"/Balance_Services_4/Historique"
                             },
                             {
                                 "name":"Importations des services nature avant 2014",
-                                "url":"/imp_services_nature_4_avant2014"
+                                "url":"/imp_services_nature_4_avant2014/Historique"
                             },
                             {
                                 "name":"Importations des services nature depuis 2014",
-                                "url":"/Imp_Services_Nature_4_depuis2014"
+                                "url":"/Imp_Services_Nature_4_depuis2014/Historique"
                             },
                             {
                                 "name":"Exportations des services nature avant 2014",
-                                "url":"/Exp_services_nature_4_avant2014"
+                                "url":"/Exp_services_nature_4_avant2014/Historique"
                             },
                             {
                                 "name":"Exportations des services nature depuis 2014",
-                                "url":"/Exp_Services_Nature_4_depuis2014"
+                                "url":"/Exp_Services_Nature_4_depuis2014/Historique"
                             },
                             {
                                 "name":"Offshoring",
-                                "url":"/Offshoring_3"
+                                "url":"/Offshoring_3/Historique"
                             }
                         ]
                     },
@@ -297,19 +297,19 @@ async def structure ():
                         "elements":[
                             {
                                 "name":"Recettes Voyages par pays",
-                                "url":"/Voyages_Pays_0"
+                                "url":"/Voyages_Pays_0/Historique"
                             },
                             {
                                 "name":"Evolution mensuelle des recettes Voyages",
-                                "url":"/Evol_Recettes_Voyages_5"
+                                "url":"/Evol_Recettes_Voyages_5/Historique"
                             },
                             {
                                 "name":"Evolution annuelle des dépenses Voyages par nature d’opération",
-                                "url":"/Dep_Voyages_Nature_0"
+                                "url":"/Dep_Voyages_Nature_0/Historique"
                             },
                             {
                                 "name":"Evolution mensuelle des recettes Voyages CVS",
-                                "url":"/Evol_voyages_CVS"
+                                "url":"/Evol_voyages_CVS/Historique"
                             }
                         ]
                     },
@@ -318,15 +318,15 @@ async def structure ():
                         "elements":[
                             {
                                 "name":"Recettes MRE par pays",
-                                "url":"/Evol_MRE_PAYS"
+                                "url":"/Evol_MRE_PAYS/Historique"
                             },
                             {
                                 "name":"Evolution mensuelle des recettes MRE",
-                                "url":"/Evol_MRE_3"
+                                "url":"/Evol_MRE_3/Historique"
                             },
                             {
                                 "name":"Evolution des recettes MRE CVS",
-                                "url":"/Evol_MRE_CVS"
+                                "url":"/Evol_MRE_CVS/Historique"
                             }
                         ]
                     }
@@ -337,13 +337,14 @@ async def structure ():
 ]
     return structure
 
+
 # list the collections =>
 # for coll in db.list_collection_names():
 #    stocker les collections dans une list
 
 ##############################compte_courant############################
 
-@api.get('/compte_courant')
+@api.get('/compte_courant/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(compte_courant.find({"date": {"$gte": start, "$lte": end}},
@@ -355,7 +356,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ######################################################################################################################
 ############################Comext_import_GU_CVS####################################################################
-@api.get('/Comext_import_GU_CVS')
+@api.get('/Comext_import_GU_CVS/Historique')
 def getComptes(start: str = '', end: str = '', type: str = ''):
     if (start and end and type):
         start_date = datetime.datetime.strptime(start, '%Y-%m-%d')
@@ -388,7 +389,7 @@ def getComptes(start: str = '', end: str = '', type: str = ''):
 ####################################################################################################################
 #######################################Comext_export_GU_CVS-CJO######################################################
 # url ==> http://127.0.0.1:8000/Comext_Export_GU_CVS?start=1998-01-01&end=1998-01-01&type=PRODUITS%20FINIS%20D%27EQUIPEMENT%20CVS-CJO
-@api.get('/Comext_Export_GU_CVS')
+@api.get('/Comext_Export_GU_CVS/Historique')
 def getComptes(start: str = '', end: str = '', type: str = ''):
     if (start and end and type):
         start_date = datetime.datetime.strptime(start, '%Y-%m-%d')
@@ -422,7 +423,7 @@ def getComptes(start: str = '', end: str = '', type: str = ''):
 
 ###############################################Comext_TOTAL_CVS_CJO####################################################################
 
-@api.get('/Comext_TOTAL_CVS_CJO')
+@api.get('/Comext_TOTAL_CVS_CJO/Historique')
 def getComptes(start: str = '', end: str = '', type: str = ''):
     if (start and end and type):
         start_date = datetime.datetime.strptime(start, '%Y-%m-%d')
@@ -456,7 +457,7 @@ def getComptes(start: str = '', end: str = '', type: str = ''):
 
 ########################################################################################################
 #####################Dep_Voyages_Nature_0#############################################################
-@api.get('/Dep_Voyages_Nature_0')
+@api.get('/Dep_Voyages_Nature_0/Historique')
 def getComptes(start: int = '', end: str = ''):
   
     if (start and end):
@@ -470,7 +471,7 @@ def getComptes(start: int = '', end: str = ''):
     ###############################################################################################################
 
 
-@api.get('/Evol_MRE_3')
+@api.get('/Evol_MRE_3/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(Evol_MRE_3.find({"Date": {"$gte": start, "$lte": end}},
@@ -481,7 +482,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 
 ####################################################Evol_MRE_PAYS####################################################
-@api.get('/Evol_MRE_PAYS')
+@api.get('/Evol_MRE_PAYS/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(
@@ -495,7 +496,7 @@ def getComptes(start: int = 0, end: int = 0):
 ######################################Evol_MRe_CVS###################################################################
 
 
-@api.get('/Evol_MRE_CVS')  # ==> localhost:8080/vol?start=1996-06-30&end=1999-01-01
+@api.get('/Evol_MRE_CVS/Historique')  # ==> localhost:8080/vol?start=1996-06-30&end=1999-01-01
 def getComptes(start: str = '', end: str = ''):
     if (start and end):
         start_date = datetime.datetime.strptime(start, '%Y-%m-%d')
@@ -515,7 +516,7 @@ def getComptes(start: str = '', end: str = ''):
     ###########################Evol_Recettes_Voyages_5########################
 
 
-@api.get('/Evol_Recettes_Voyages_5')
+@api.get('/Evol_Recettes_Voyages_5/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(Evol_Recettes_Voyages_5.find({"Date": {"$gte": start, "$lte": end}},
@@ -527,7 +528,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ######################################################################################################################
 ############################################Evol_voyages_CVS#########################################################
-@api.get('/Evol_voyages_CVS')  # ==> localhost:8080/vol?start=1996-06-30&end=1999-01-01
+@api.get('/Evol_voyages_CVS/Historique')  # ==> localhost:8080/vol?start=1996-06-30&end=1999-01-01
 def getComptes(start: str = '', end: str = ''):
     if (start and end):
         start_date = datetime.datetime.strptime(start, '%Y-%m-%d')
@@ -546,7 +547,7 @@ def getComptes(start: str = '', end: str = ''):
 
 ####################################################################################################################
 ##########################IDE_Maroc_flux_Flux_nets_par_pays_0##################################
-@api.get('/IDE_Maroc_flux_Flux_nets_par_pays_0')
+@api.get('/IDE_Maroc_flux_Flux_nets_par_pays_0/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDE_Maroc_flux_Flux_nets_par_pays_0.find({"Date ": {"$gte": start, "$lte": end}},
@@ -560,7 +561,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ##############################################################################################################
 ############################################IDE_Maroc_stock_Par_secteurs######################################
-@api.get('/IDE_Maroc_Stock_Par_secteurs')
+@api.get('/IDE_Maroc_Stock_Par_secteurs/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDE_Maroc_Stock_Par_secteurs.find({"Date": {"$gte": start, "$lte": end}},
@@ -572,7 +573,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 #######################################################################################################################
 #############################################IDE_Maroc_Stock_Par_pays##############################################
-@api.get('/IDE_Maroc_Stock_Par_pays')
+@api.get('/IDE_Maroc_Stock_Par_pays/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDE_Maroc_Stock_Par_pays.find({"Date": {"$gte": start, "$lte": end}},
@@ -586,7 +587,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 
 #######################################IDE_Maroc_Recettes_par_Secteurs_NMA_0####################################
-@api.get('/IDE_Maroc_Recettes_par_secteurs_NMA_0')
+@api.get('/IDE_Maroc_Recettes_par_secteurs_NMA_0/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDE_Maroc_Recettes_par_secteurs_NMA_0.find({"Date": {"$gte": start, "$lte": end}},
@@ -602,7 +603,7 @@ def getComptes(start: int = 0, end: int = 0):
     ##################################################################################################
 
 
-@api.get('/IDE_Maroc_Recettes_par_secteurs_0')
+@api.get('/IDE_Maroc_Recettes_par_secteurs_0/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDE_Maroc_Recettes_par_secteurs_0.find({"Date": {"$gte": start, "$lte": end}},
@@ -615,7 +616,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ###############################################################################################################
 #################################IDE_Maroc_Recettes_par_pays_0################################################
-@api.get('/IDE_Maroc_Recettes_par_pays_0')
+@api.get('/IDE_Maroc_Recettes_par_pays_0/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDE_Maroc_Recettes_par_pays_0.find({"Date": {"$gte": start, "$lte": end}},{"_id": 0, "Date": 1, "Pays ": 1, "Valeur": 1}));
@@ -627,7 +628,7 @@ def getComptes(start: int = 0, end: int = 0):
 ##########################################################################################################################
 #################################IDE_Maroc_Flux_Par_Nature_opération_0###################################################
 
-@api.get('/IDE_Maroc_Flux_Par_Nature_opération_0')
+@api.get('/IDE_Maroc_Flux_Par_Nature_opération_0/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDE_Maroc_Flux_Par_Nature_opération_0.find({"Date": {"$gte": start, "$lte": end}},
@@ -642,7 +643,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ################################################################################################################
 #####################################IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0################################
-@api.get('/IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0')
+@api.get('/IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0.find({"date ": {"$gte": start, "$lte": end}},
@@ -656,7 +657,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ####################################################################################################################
 ###################################IDM_a_Etranger_Flux_Depenses_par_pays_0##########################################
-@api.get('/IDM_a_Etranger_Flux_Depenses_par_pays_0')
+@api.get('/IDM_a_Etranger_Flux_Depenses_par_pays_0/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDM_a_Etranger_Flux_Depenses_par_pays_0.find({"date ": {"$gte": start, "$lte": end}},
@@ -670,7 +671,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 #######################################################################################################################
 #####################################IDM_a_Etranger_Flux_Depenses_par_secteurs_1#######################################
-@api.get('/IDM_a_etranger_Flux_Depenses_par_secteurs_1')
+@api.get('/IDM_a_etranger_Flux_Depenses_par_secteurs_1/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDM_a_etranger_Flux_Depenses_par_secteurs_1.find({"date ": {"$gte": start, "$lte": end}},
@@ -684,7 +685,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ######################################################################################################################
 #################################IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0######################################
-@api.get('/IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0')
+@api.get('/IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0.find({"date": {"$gte": start, "$lte": end}},
@@ -700,7 +701,7 @@ def getComptes(start: int = 0, end: int = 0):
 ##################################################################################################################
 ###########################IDM_a_Etranger_Flux_Flux_nets_par_pays_0###############################################
 
-@api.get('/IDM_a_Etranger_Flux_Flux_nets_par_pays_0')
+@api.get('/IDM_a_Etranger_Flux_Flux_nets_par_pays_0/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDM_a_Etranger_Flux_Flux_nets_par_pays_0.find({"Date": {"$gte": start, "$lte": end}},
@@ -714,7 +715,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 #####################################################################################################################
 ####################################IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1#################################
-@api.get('/IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1')
+@api.get('/IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1.find({"date ": {"$gte": start, "$lte": end}},
@@ -729,7 +730,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 #####################################################################################################################
 ###################################IDM_etranger_flux_par_nat_operation###############################################
-@api.get('/IDM_etranger_flux_par_nat_operation')
+@api.get('/IDM_etranger_flux_par_nat_operation/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDM_etranger_flux_par_nat_operation.find({"Date": {"$gte": start, "$lte": end}},
@@ -744,7 +745,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ####################################################################################################################
 ################################IDM_a_etranger_Stock_Par_pays##################################################
-@api.get('/IDM_a_etranger_Stock_Par_pays')
+@api.get('/IDM_a_etranger_Stock_Par_pays/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDM_a_etranger_Stock_Par_pays.find({"Date": {"$gte": start, "$lte": end}},
@@ -757,7 +758,7 @@ def getComptes(start: int = 0, end: int = 0):
 #####################################################################################################################
 #######################################IDM_à_etranger_Stock_Par_secteurs#############################################
 
-@api.get('/IDM_à_etranger_Stock_Par_secteurs')
+@api.get('/IDM_à_etranger_Stock_Par_secteurs/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDM_à_etranger_Stock_Par_secteurs.find({"Date": {"$gte": start, "$lte": end}},
@@ -772,7 +773,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ###############################################################################################################
 #########################################Voyages_Pays_0#######################################################
-@api.get('/Voyages_Pays_0')
+@api.get('/Voyages_Pays_0/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(
@@ -784,7 +785,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ##################################################################################################################
 ###########################IDM_a_etranger_Flux_Flux_nets_par_pays_0###############################################
-@api.get('/IDM_a_etranger_Flux_Flux_nets_par_pays_0')
+@api.get('/IDM_a_etranger_Flux_Flux_nets_par_pays_0/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(IDM_a_etranger_Flux_Flux_nets_par_pays_0.find({"Date": {"$gte": start, "$lte": end}},
@@ -798,7 +799,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 #####################################################################################################################
 ############################################Balance_Services_4#######################################################
-@api.get('/Balance_Services_4')
+@api.get('/Balance_Services_4/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(Balance_Services_4.find({"Date": {"$gte": start, "$lte": end}},
@@ -812,7 +813,7 @@ def getComptes(start: int = 0, end: int = 0):
 #######################################################################################################################
 #########################################imp_services_nature_4_avant2014##############################################
 
-@api.get('/imp_services_nature_4_avant2014')
+@api.get('/imp_services_nature_4_avant2014/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(imp_services_nature_4_avant2014.find({"Date": {"$gte": start, "$lte": end}},
@@ -824,7 +825,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ######################################################################################################################
 ##################################Imp_Services_Nature_4_depuis2014####################################################
-@api.get('/Imp_Services_Nature_4_depuis2014')
+@api.get('/Imp_Services_Nature_4_depuis2014/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(Imp_Services_Nature_4_depuis2014.find({"Date": {"$gte": start, "$lte": end}},
@@ -836,7 +837,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 #######################################################################################################################
 ############################################Exp_services_nature_4_avant2014###########################################
-@api.get('/Exp_services_nature_4_avant2014')
+@api.get('/Exp_services_nature_4_avant2014/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(Exp_services_nature_4_avant2014.find({"date ": {"$gte": start, "$lte": end}},
@@ -848,7 +849,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 #######################################################################################################################
 ###########################################Exp_Services_Nature_4_depuis2014############################################
-@api.get('/Exp_Services_Nature_4_depuis2014')
+@api.get('/Exp_Services_Nature_4_depuis2014/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(Exp_Services_Nature_4_depuis2014.find({"date": {"$gte": start, "$lte": end}},
@@ -860,7 +861,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ######################################################################################################################
 #########################################Offshoring_3#################################################################
-@api.get('/Offshoring_3')
+@api.get('/Offshoring_3/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(Offshoring_3.find({"date": {"$gte": start, "$lte": end}},
@@ -872,7 +873,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 #####################################################################################################################
 ##################################BP_A_MBP5##########################################################################
-@api.get('/BP_A_MBP5')
+@api.get('/BP_A_MBP5/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(BP_A_MBP5.find({"Date": {"$gte": start, "$lte": end}},
@@ -886,7 +887,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ######################################################################################################################
 ##########################################BP_A_MBP6_0#################################################################
-@api.get('/BP_A_MBP6_0')
+@api.get('/BP_A_MBP6_0/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(BP_A_MBP6_0.find({"date": {"$gte": start, "$lte": end}},
@@ -901,7 +902,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ######################################################################################################################
 ########################################BP_T_MBP5_Hierarchy###########################################################
-@api.get("/BP_T_MBP5_H/")
+@api.get("/BP_T_MBP5")
 async def hierarchy():
     BP_T_MBP5_hierarchy=[
 
@@ -1084,7 +1085,7 @@ async def hierarchy():
     return BP_T_MBP5_hierarchy
 ######################################################################################################################
 ###################################################BP_T_MBP5##########################################################
-@api.get('/BP_T_MBP5')
+@api.get('/BP_T_MBP5/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(BP_T_MBP5.find({"date": {"$gte": start, "$lte": end}},
@@ -1099,7 +1100,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 #######################################################################################################################
 ##################################################BP_T_MBP6_3##########################################################
-@api.get('/BP_T_MBP6_3')
+@api.get('/BP_T_MBP6_3/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(BP_T_MBP6_3.find({"Date": {"$gte": start, "$lte": end}},
