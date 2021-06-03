@@ -336,7 +336,7 @@ async def structure ():
         ]
     }
 ]
-    return structure()
+    return structure
 
 
 # list the collections =>
