@@ -71,15 +71,15 @@ async def structure ():
         "elements": [
             {
                 "name": "Comext_import_GU_CVS",
-                "url": "Comext_import_GU_CVS"
+                "url": "/Comext_import_GU_CVS"
             },
             {
                 "name": "Comext_Export_GU_CVS",
-                "url": "Comext_Export_GU_CVS"
+                "url": "/Comext_Export_GU_CVS"
             },
             {
                 "name": "Comext_TOTAL_CVS_CJO",
-                "url": "Comext_TOTAL_CVS_CJO"
+                "url": "/Comext_TOTAL_CVS_CJO"
             }
         ]
     },
@@ -97,7 +97,7 @@ async def structure ():
                                 "elements": [
                                     {
                                         "name": "IDE_Maroc_Flux_Par_Nature_opération_0",
-                                        "url": ""
+                                        "url": "/IDE_Maroc_Flux_Par_Nature_opération_0"
                                     }
                                 ]
                             },
@@ -106,11 +106,11 @@ async def structure ():
                                 "elements": [
                                     {
                                         "name": "IDE_Maroc_Recettes_par_pays_0",
-                                        "url": "IDE_Maroc_Recettes_par_pays_0"
+                                        "url": "/IDE_Maroc_Recettes_par_pays_0"
                                     },
                                     {
                                         "name": "IDE_Maroc_flux_Flux_nets_par_pays_0",
-                                        "url": "IDE_Maroc_flux_Flux_nets_par_pays_0"
+                                        "url": "/IDE_Maroc_flux_Flux_nets_par_pays_0"
                                     }
                                 ]
                             },
@@ -119,15 +119,15 @@ async def structure ():
                                 "elements": [
                                     {
                                         "name": "IDE_Maroc_Recettes_par_secteurs_0",
-                                        "url": "IDE_Maroc_Recettes_par_secteurs_0"
+                                        "url": "/IDE_Maroc_Recettes_par_secteurs_0"
                                     },
                                     {
                                         "name": "IDE_Maroc_Recettes_par_secteurs_NMA_0",
-                                        "url": "IDE_Maroc_Recettes_par_secteurs_NMA_0"
+                                        "url": "/IDE_Maroc_Recettes_par_secteurs_NMA_0"
                                     },
                                     {
                                         "name": "IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0",
-                                        "url": "IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0"
+                                        "url": "/IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0"
                                     }
                                 ]
                             }
@@ -138,11 +138,11 @@ async def structure ():
                         "elements":[
                             {
                                 "name": "IDE_Maroc_Stock_Par_pays",
-                                "url": "IDE_Maroc_Stock_Par_pays"
+                                "url": "/IDE_Maroc_Stock_Par_pays"
                             },
                             {
                                 "name": "IDE_Maroc_Stock_Par_secteurs",
-                                "url": "IDE_Maroc_Stock_Par_secteurs"
+                                "url": "/IDE_Maroc_Stock_Par_secteurs"
                             }
                         ]
                     }
@@ -159,7 +159,7 @@ async def structure ():
                                 "elements": [
                                     {
                                         "name": "IDM_etranger_flux_par_nat_operation",
-                                        "url": "IDM_etranger_flux_par_nat_operation"
+                                        "url": "/IDM_etranger_flux_par_nat_operation"
                                     }
                                 ]
                             },
@@ -168,29 +168,28 @@ async def structure ():
                                 "elements": [
                                     {
                                         "name": "IDM_a_Etranger_Flux_Depenses_par_pays_0",
-                                        "url": "IDM_a_Etranger_Flux_Depenses_par_pays_0"
+                                        "url": "/IDM_a_Etranger_Flux_Depenses_par_pays_0"
                                     },
                                     {
                                         "name": "IDM_a_etranger_Flux_Flux_nets_par_pays_0",
-                                        "url": "IDM_a_etranger_Flux_Flux_nets_par_pays_0"
+                                        "url": "/IDM_a_etranger_Flux_Flux_nets_par_pays_0"
                                     }
                                 ]
                             },
                             {
                                 "name": "Par secteurs",
-                                "url": "",
                                 "elements": [
                                     {
                                         "name": "IDM_a_etranger_Flux_Depenses_par_secteurs_1",
-                                        "url": "IDM_a_etranger_Flux_Depenses_par_secteurs_1"
+                                        "url": "/IDM_a_etranger_Flux_Depenses_par_secteurs_1"
                                     },
                                     {
                                         "name": "IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0",
-                                        "url": "IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0"
+                                        "url": "/IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0"
                                     },
                                     {
                                         "name": "IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1",
-                                        "url": "IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1"
+                                        "url": "/IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1"
                                     }
                                 ]
                             }
@@ -204,7 +203,7 @@ async def structure ():
                                 "elements":[
                                     {
                                         "name": "IDM_a_etranger_Stock_Par_pays",
-                                        "url": "IDM_a_etranger_Stock_Par_pays"
+                                        "url": "/IDM_a_etranger_Stock_Par_pays"
                                     }
                                 ]
                             },
@@ -213,7 +212,7 @@ async def structure ():
                                 "elements":[
                                     {
                                         "name": "IDM_à_etranger_Stock_Par_secteurs",
-                                        "url": "IDM_à_etranger_Stock_Par_secteurs"
+                                        "url": "/IDM_à_etranger_Stock_Par_secteurs"
                                     }
                                 ]
                             }
@@ -234,11 +233,11 @@ async def structure ():
                         "elements":[
                             {
                                 "name":"BP_A_MBP5",
-                                "url":"BP_A_MBP5"
+                                "url":"/BP_A_MBP5"
                             },
                             {
                                 "name":"BP_A_MBP6_0",
-                                "url":"BP_A_MBP6_0"
+                                "url":"/BP_A_MBP6_0"
                             }
                         ]
                     },
@@ -247,11 +246,11 @@ async def structure ():
                         "elements":[
                             {
                                 "name":"BP_T_MBP5",
-                                "url":"BP_T_MBP5"
+                                "url":"/BP_T_MBP5"
                             },
                             {
                                 "name":"BP_T_MBP6_3",
-                                "url":"BP_T_MBP6_3"
+                                "url":"/BP_T_MBP6_3"
                             }
                         ]
                     }
@@ -289,7 +288,7 @@ async def structure ():
                             },
                             {
                                 "name":"Offshoring",
-                                "url":"Offshoring_3"
+                                "url":"/Offshoring_3"
                             }
                         ]
                     },
@@ -298,19 +297,19 @@ async def structure ():
                         "elements":[
                             {
                                 "name":"Voyages_Pays_0",
-                                "url":"Voyages_Pays_0"
+                                "url":"/Voyages_Pays_0"
                             },
                             {
                                 "name":"Evol_Recettes_Voyages_5",
-                                "url":"Evol_Recettes_Voyages_5"
+                                "url":"/Evol_Recettes_Voyages_5"
                             },
                             {
                                 "name":"Dep_Voyages_Nature_0",
-                                "url":"Dep_Voyages_Nature_0"
+                                "url":"/Dep_Voyages_Nature_0"
                             },
                             {
                                 "name":"Evol_voyages_CVS",
-                                "url":"Evol_voyages_CVS"
+                                "url":"/Evol_voyages_CVS"
                             }
                         ]
                     },
@@ -319,15 +318,15 @@ async def structure ():
                         "elements":[
                             {
                                 "name":"Evol_MRE_PAYS",
-                                "url":"Evol_MRE_PAYS"
+                                "url":"/Evol_MRE_PAYS"
                             },
                             {
                                 "name":"Evol_MRE_3",
-                                "url":""
+                                "url":"/Evol_MRE_3"
                             },
                             {
                                 "name":"Evol_MRE_CVS",
-                                "url":"Evol_MRE_CVS"
+                                "url":"/Evol_MRE_CVS"
                             }
                         ]
                     }
