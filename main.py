@@ -70,8 +70,8 @@ async def structure ():
         "name": "Commerce extérieur",
         "elements": [
             {
-                "name": "Les importations CVS/Historique",
-                "url": "/Comext_import_GU_CVS"
+                "name": "Les importations CVS",
+                "url": "/Comext_import_GU_CVS/Historique"
             },
             {
                 "name": "Les exportations CVS",
