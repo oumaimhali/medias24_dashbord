@@ -335,7 +335,7 @@ async def /Historique ():
         ]
     }
 ]
-    return /Historique
+    return Historique
 
 
 # list the collections =>
