@@ -70,15 +70,15 @@ async def structure ():
         "name": "Commerce extérieur",
         "elements": [
             {
-                "name": "Comext_import_GU_CVS",
+                "name": "Les importations CVS",
                 "url": "/Comext_import_GU_CVS"
             },
             {
-                "name": "Comext_Export_GU_CVS",
+                "name": "Les exportations CVS",
                 "url": "/Comext_Export_GU_CVS"
             },
             {
-                "name": "Comext_TOTAL_CVS_CJO",
+                "name": "Total Commerce extérieur",
                 "url": "/Comext_TOTAL_CVS_CJO"
             }
         ]
@@ -96,7 +96,7 @@ async def structure ():
                                 "name": "Par nature d'opération",
                                 "elements": [
                                     {
-                                        "name": "IDE_Maroc_Flux_Par_Nature_opération_0",
+                                        "name": "Investissements directs étrangers au Maroc Flux Par nature d'opération",
                                         "url": "/IDE_Maroc_Flux_Par_Nature_opération_0"
                                     }
                                 ]
@@ -105,11 +105,11 @@ async def structure ():
                                 "name": "Par pays",
                                 "elements": [
                                     {
-                                        "name": "IDE_Maroc_Recettes_par_pays_0",
+                                        "name": "Investissements directs étrangers au Maroc Recettes par pays",
                                         "url": "/IDE_Maroc_Recettes_par_pays_0"
                                     },
                                     {
-                                        "name": "IDE_Maroc_flux_Flux_nets_par_pays_0",
+                                        "name": "Investissements directs étrangers au Maroc flux Flux nets par pays",
                                         "url": "/IDE_Maroc_flux_Flux_nets_par_pays_0"
                                     }
                                 ]
@@ -118,15 +118,15 @@ async def structure ():
                                 "name": "Par secteurs",
                                 "elements": [
                                     {
-                                        "name": "IDE_Maroc_Recettes_par_secteurs_0",
+                                        "name": "Investissements directs étrangers au Maroc Recettes par secteurs",
                                         "url": "/IDE_Maroc_Recettes_par_secteurs_0"
                                     },
                                     {
-                                        "name": "IDE_Maroc_Recettes_par_secteurs_NMA_0",
+                                        "name": "Investissements directs étrangers au Maroc Recettes par secteurs NMA",
                                         "url": "/IDE_Maroc_Recettes_par_secteurs_NMA_0"
                                     },
                                     {
-                                        "name": "IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0",
+                                        "name": "Investissements directs étrangers au Maroc Flux flux nets par secteurs NMA",
                                         "url": "/IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0"
                                     }
                                 ]
@@ -137,11 +137,11 @@ async def structure ():
                         "name": "Stock",
                         "elements":[
                             {
-                                "name": "IDE_Maroc_Stock_Par_pays",
+                                "name": "Investissements directs étrangers au Maroc Stock Par pays",
                                 "url": "/IDE_Maroc_Stock_Par_pays"
                             },
                             {
-                                "name": "IDE_Maroc_Stock_Par_secteurs",
+                                "name": "Investissements directs étrangers au Maroc Stock Par secteurs",
                                 "url": "/IDE_Maroc_Stock_Par_secteurs"
                             }
                         ]
@@ -158,7 +158,7 @@ async def structure ():
                                 "name": "Par nature d'opération",
                                 "elements": [
                                     {
-                                        "name": "IDM_etranger_flux_par_nat_operation",
+                                        "name": "Investissements directs marocains à l’étranger flux par nature d'opération",
                                         "url": "/IDM_etranger_flux_par_nat_operation"
                                     }
                                 ]
@@ -167,11 +167,11 @@ async def structure ():
                                 "name": "Par pays",
                                 "elements": [
                                     {
-                                        "name": "IDM_a_Etranger_Flux_Depenses_par_pays_0",
+                                        "name": "Investissements directs marocains à l’étranger Flux Dépenses par pays",
                                         "url": "/IDM_a_Etranger_Flux_Depenses_par_pays_0"
                                     },
                                     {
-                                        "name": "IDM_a_etranger_Flux_Flux_nets_par_pays_0",
+                                        "name": "Investissements directs marocains à l’étranger Flux Flux nets par pays",
                                         "url": "/IDM_a_etranger_Flux_Flux_nets_par_pays_0"
                                     }
                                 ]
@@ -180,15 +180,15 @@ async def structure ():
                                 "name": "Par secteurs",
                                 "elements": [
                                     {
-                                        "name": "IDM_a_etranger_Flux_Depenses_par_secteurs_1",
+                                        "name": "Investissements directs marocains à l’étranger Flux Depenses par secteurs",
                                         "url": "/IDM_a_etranger_Flux_Depenses_par_secteurs_1"
                                     },
                                     {
-                                        "name": "IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0",
+                                        "name": "Investissements directs marocains à l’étranger Flux Depenses par secteurs NMA",
                                         "url": "/IDM_a_etranger_Flux_Depenses_par_secteurs_NMA_0"
                                     },
                                     {
-                                        "name": "IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1",
+                                        "name": "Investissements directs marocains à l’étranger Flux Flux nets par secteurs NMA",
                                         "url": "/IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_1"
                                     }
                                 ]
@@ -202,7 +202,7 @@ async def structure ():
                                 "name": "Par pays",
                                 "elements":[
                                     {
-                                        "name": "IDM_a_etranger_Stock_Par_pays",
+                                        "name": "Investissements directs marocains à l’étranger Stock Par pays",
                                         "url": "/IDM_a_etranger_Stock_Par_pays"
                                     }
                                 ]
@@ -211,7 +211,7 @@ async def structure ():
                                 "name": "Par pays",
                                 "elements":[
                                     {
-                                        "name": "IDM_à_etranger_Stock_Par_secteurs",
+                                        "name": "Investissements directs marocains à l’étranger Stock Par secteurs",
                                         "url": "/IDM_à_etranger_Stock_Par_secteurs"
                                     }
                                 ]
@@ -232,11 +232,11 @@ async def structure ():
                         "name":"Balance des paiements annuelle",
                         "elements":[
                             {
-                                "name":"BP_A_MBP5",
+                                "name":"Balance des paiements annuelle selon MBP5",
                                 "url":"/BP_A_MBP5"
                             },
                             {
-                                "name":"BP_A_MBP6_0",
+                                "name":"Balance des paiements annuelle seleon MBP6",
                                 "url":"/BP_A_MBP6_0"
                             }
                         ]
@@ -245,12 +245,12 @@ async def structure ():
                         "name":"Balance des paiements trimestrielle",
                         "elements":[
                             {
-                                "name":"BP_T_MBP5",
+                                "name":"Balance des paiements trimestrielle selon MBP5",
                                 "url":"/BP_T_MBP5"
                             },
                             {
                                 "name":"BP_T_MBP6_3",
-                                "url":"/BP_T_MBP6_3"
+                                "url":"/Balance des paiements trimestrielle selon MBP6"
                             }
                         ]
                     }
@@ -267,23 +267,23 @@ async def structure ():
                         "name":"Les échanges de services",
                         "elements":[
                             {
-                                "name":"Balance_Services_4",
+                                "name":"Balance des Services",
                                 "url":"/Balance_Services_4"
                             },
                             {
-                                "name":"imp_services_nature_4_avant2014",
+                                "name":"Importations des services nature avant 2014",
                                 "url":"/imp_services_nature_4_avant2014"
                             },
                             {
-                                "name":"Imp_Services_Nature_4_depuis2014",
+                                "name":"Importations des services nature depuis 2014",
                                 "url":"/Imp_Services_Nature_4_depuis2014"
                             },
                             {
-                                "name":"Exp_services_nature_4_avant2014",
+                                "name":"Exportations des services nature avant 2014",
                                 "url":"/Exp_services_nature_4_avant2014"
                             },
                             {
-                                "name":"Exp_Services_Nature_4_depuis2014",
+                                "name":"Exportations des services nature depuis 2014",
                                 "url":"/Exp_Services_Nature_4_depuis2014"
                             },
                             {
@@ -296,19 +296,19 @@ async def structure ():
                         "name":"Les voyages",
                         "elements":[
                             {
-                                "name":"Voyages_Pays_0",
+                                "name":"Recettes Voyages par pays",
                                 "url":"/Voyages_Pays_0"
                             },
                             {
-                                "name":"Evol_Recettes_Voyages_5",
+                                "name":"Evolution mensuelle des recettes Voyages",
                                 "url":"/Evol_Recettes_Voyages_5"
                             },
                             {
-                                "name":"Dep_Voyages_Nature_0",
+                                "name":"Evolution annuelle des dépenses Voyages par nature d’opération",
                                 "url":"/Dep_Voyages_Nature_0"
                             },
                             {
-                                "name":"Evol_voyages_CVS",
+                                "name":"Evolution mensuelle des recettes Voyages CVS",
                                 "url":"/Evol_voyages_CVS"
                             }
                         ]
@@ -317,15 +317,15 @@ async def structure ():
                         "name":"Les recettes MRE",
                         "elements":[
                             {
-                                "name":"Evol_MRE_PAYS",
+                                "name":"Recettes MRE par pays",
                                 "url":"/Evol_MRE_PAYS"
                             },
                             {
-                                "name":"Evol_MRE_3",
+                                "name":"Evolution mensuelle des recettes MRE",
                                 "url":"/Evol_MRE_3"
                             },
                             {
-                                "name":"Evol_MRE_CVS",
+                                "name":"Evolution des recettes MRE CVS",
                                 "url":"/Evol_MRE_CVS"
                             }
                         ]
@@ -336,7 +336,6 @@ async def structure ():
     }
 ]
     return structure
-
 
 # list the collections =>
 # for coll in db.list_collection_names():
