@@ -64,7 +64,7 @@ BP_T_MBP6_3 = db.BP_T_MBP6_3
 
 @api.get("/Historique")
 async def /Historique ():
-    /Historique = [
+    Historique = [
 
     {
         "name": "Commerce extérieur",
