@@ -467,8 +467,36 @@ def getComptes(start: int = '', end: str = ''):
         a = list(Dep_Voyages_Nature_0.find({}, {"_id": 0, "Date": 1, "nature d'operation ": 1, "valeur ": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
     ###############################################################################################################
+################################################Evol_MRE_3####################################################
+###################################################################################################################
+@api.get("/Evol_MRE/")
+async def hierarchy():
+    Evol_MRE_hierarchy=[
 
+        {"name":"periode",
+        "elements":[
+            {"name":"Janvier","elements": []},
+            {"name": "Février", "elements": []},
+            {"name": "Mars", "elements": []},
+            {"name": "Avril", "elements": []},
+            {"name": "Mai", "elements": []},
+            {"name": "Juin", "elements": []},
+            {"name": "Juillet", "elements": []},
+            {"name": "Août", "elements": []},
+            {"name": "Septembre", "elements": []},
+            {"name": "Octobre", "elements": []},
+            {"name": "Novembre", "elements": []},
+            {"name": "Décembre", "elements": []}
+
+            ]
+            },
+        {"name": "Recette MRE","elements": []}
+
+    ]
+    return Evol_MRE_hierarchy
     ###############################################################################################################
+    ###############################################Evol_MRE_3/Historique#############################################
+    ##################################################################################################################
 
 
 @api.get('/Evol_MRE_3/Historique')
@@ -480,8 +508,9 @@ def getComptes(start: int = 0, end: int = 0):
         a = list(Evol_MRE_3.find({}, {"_id": 0, "Date": 1, "periode": 1, "Recette MRE": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
-
+######################################################################################################################
 ####################################################Evol_MRE_PAYS####################################################
+#######################################################################################################################
 @api.get('/Evol_MRE_PAYS/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
