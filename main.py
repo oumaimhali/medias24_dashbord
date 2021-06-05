@@ -1068,6 +1068,217 @@ def getComptes(start: int = 0, end: int = 0):
                                      "Nature de l'op�ration": 1, "valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
+#######################################################################################################################################################"
+########################################################BP_A_MBP6_hierarchy####################################################################################
+###############################################################################################################################################"############
+########################################################################################################################
+#############################################BP_A_MBP5_Hiérarchie################################################################################
+########################################################################################################################
+@api.get("/BP_A_MBP6/")
+async def hierarchy():
+    BP_A_MBP5_hierarchy=[
+
+        {"name":"SOLDE",
+        "elements":[
+            {"name":"COMPTE DES TRANSACTIONS COURANTES",
+             "elements": [
+                 {"name": "BIENS", "elements": []},
+                 {"name": "SERVICES", "elements": []},
+                 {"name": "REVENU PRIMAIRE", "elements": []},
+                 {"name": "REVENU SECONDAIRE", "elements": []},
+                 {"name": "INVESTISSEMENTS DIRECTS", "elements": []},
+                 {"name": "INVESTISSEMENTS DE PORTEFEUILLE", "elements": []},
+                 {"name": "DÉRIVÉS FINANCIERS", "elements": []},
+                 {"name": "AUTRES INVESTISSEMENTS", "elements": []},
+                 {"name": "AVOIRS DE RÉSERVE", "elements": []}
+                ]
+            }
+        ]},
+        {"name": "CREDIT",
+        "elements": [
+            {"name": "COMPTE DES TRANSACTIONS COURANTES",
+            "elements": [
+                {"name": "BIENS ET SERVICES",
+                 "elements": [
+                     {"name": "BIENS",
+                      "elements": [
+                          {"name": "Marchandises générales", "elements": []},
+                          {"name": "Exportations nettes du négoce", "elements": []},
+                          {"name": "Or non monétaire", "elements": []}
+
+                      ]
+                      },
+                     {"name": "SERVICES",
+                      "elements": [
+                            {"name": "Services de fabrication fournis sur des intrants physiques détenus par des tiers","elements": []},
+                            {"name": "Services d’entretien et de réparation n.i.a.","elements": []},
+                            {"name": "Transports",
+                            "elements": [
+                               {"name": "Transports maritimes", "elements": []},
+                               {"name": "Transports aériens", "elements": []},
+                               {"name": "Autres transports", "elements": []},
+                               {"name": "Services postaux et de messagerie", "elements": []}
+                            ]
+                            },
+                          {"name": "Voyages",
+                           "elements": [
+                               {"name": "Voyages à titre professionnel", "elements": []},
+                               {"name": "Voyages à titre personnel", "elements": []}
+                           ]
+                           },
+                          {"name": "Constructions", "elements": []},
+                          {"name": "Services d’assurance et de pension", "elements": []},
+                          {"name": "Services financiers", "elements": []},
+                          {"name": "Frais pour usage de la propriété intellectuelle n.i.a.", "elements": []},
+                          {"name": "Services de télécommunications, d’informatique et d’information", "elements": []},
+                          {"name": "Autres services aux entreprises", "elements": []},
+                          {"name": "Services personnels, culturels et relatifs aux loisirs", "elements": []},
+                          {"name": "Biens et services des administrations publiques n.i.a.", "elements": []}
+                      ]},
+                     {"name": "REVENU PRIMAIRE",
+                      "elements": [
+                          {"name": "Revenus des investissements",
+                           "elements":[
+                                {"name": "Investissements directs", "elements": []},
+                                {"name": "Investissements de portefeuille", "elements": []},
+                                {"name": "Autres investissements", "elements": []},
+                                {"name": "Autres investissements", "elements": []}
+                           ]
+                           },
+                           {"name": "Revenus des investissements","elements": []}
+                      ]
+                      },
+                     {"name": "REVENU SECONDAIRE",
+                      "elements": [
+                          {"name": "Publics", "elements": []},
+                          {"name": "Privés", "elements": []}
+                      ]
+                      }
+                 ]}
+            ]}
+        ]},
+        {"name": "DEBIT",
+        "elements": [
+            {"name": "COMPTE DES TRANSACTIONS COURANTES ",
+            "elements": [
+                {"name": "BIENS ET SERVICES",
+                 "elements": [
+                     {"name": "BIENS",
+                      "elements": [
+                          {"name": "Marchandises générales", "elements": []},
+                          {"name": "Exportations nettes du négoce", "elements": []},
+                          {"name": "Or non monétaire", "elements": []}
+                      ]
+                      },
+                     {"name": "SERVICES",
+                      "elements": [
+                          {"name": "Services de fabrication fournis sur des intrants physiques détenus par des tiers","elements": []},
+                          {"name": "Services d’entretien et de réparation n.i.a.","elements": []},
+                          {"name": "Transports",
+                           "elements": [
+                               {"name": "Transports maritimes", "elements": []},
+                               {"name": "Transports aériens", "elements": []},
+                               {"name": "Autres transports", "elements": []},
+                               {"name": "Services postaux et de messagerie", "elements": []}
+                           ]
+                           },
+                          {"name": "Voyages",
+                           "elements": [
+                               {"name": "Voyages à titre professionnel", "elements": []},
+                               {"name": "Voyages à titre personnel", "elements": []}
+                           ]},
+                          {"name": "Constructions", "elements": []},
+                          {"name": "Services d’assurance et de pension", "elements": []},
+                          {"name": "Services financiers", "elements": []},
+                          {"name": "Frais pour usage de la propriété intellectuelle n.i.a.", "elements": []},
+                          {"name": "Services de télécommunications, d’informatique et d’information", "elements": []},
+                          {"name": "Autres services aux entreprises", "elements": []},
+                          {"name": "Services personnels, culturels et relatifs aux loisirs", "elements": []},
+                          {"name": "Biens et services des administrations publiques n.i.a.", "elements": []}
+
+                      ]},
+                     {"name": "REVENU PRIMAIRE",
+                      "elements": [
+                          {"name": "Revenus des investissements",
+                           "elements": [
+                               {"name": "Investissements directs", "elements": []},
+                               {"name": "Investissements de portefeuille", "elements": []},
+                               {"name": "Autres investissements", "elements": []},
+                               {"name": "Avoirs de réserve", "elements": []}
+
+                           ]
+                           },
+                          {"name": "Autres revenus primaires", "elements": []}
+                      ]
+                      },
+                     {"name": "REVENU SECONDAIRE",
+                      "elements": [
+                          {"name": "Publics", "elements": []},
+                          {"name": "Privés", "elements": []}
+                      ]
+                      }
+                 ]}
+            ]}
+        ]},
+        {"name": "ACQUISITION NETTE D'AVOIRS",
+        "elements":[
+            {"name":"COMPTE FINANCIER",
+            "elements":[
+                {"name": "Investissements directs",
+                "elements": [
+                    {"name": "Actions et parts de fonds de placement", "elements": []},
+                    {"name": "Instruments de dette", "elements": []}
+                ]
+                },
+                {"name": "Investissements de portefeuille",
+                 "elements": [
+                    {"name": "Actions et parts de fonds de placement", "elements": []},
+                    {"name": "Titres de créance", "elements": []}
+                ]
+                },
+                {"name": "DÉRIVÉS FINANCIERS","elements": []},
+                {"name": "Autres investissements",
+                "elements": [
+                    {"name": "Autres participations","elements": []},
+                    {"name": "Numéraire et dépôts", "elements": []},
+                    {"name": "Prêts", "elements": []},
+                    {"name": "Systèmes d'assurances, de pensions et de garanties standard", "elements": []},
+                    {"name": "Crédits commerciaux et avances", "elements": []},
+                    {"name": "Autres comptes à recevoir/à payer", "elements": []},
+                ]
+                },
+                {"name": "AVOIRS DE RÉSERVE","elements": []}
+            ]
+            },
+        ]},
+
+        {"name": "ACCROISSEMENT NET DES ENGAGEMENTS",
+        "elements": [
+            {"name": "COMPTE FINANCIER",
+            "elements": [
+                {"name": "Investissements directs",
+                "elements": [
+                    {"name": "Actions et parts de fonds de placement", "elements": []},
+                    {"name": "Instruments de dette", "elements": []}
+                ]},
+                {"name": "Investissements de portefeuille",
+                "elements": [
+                    {"name": "Actions et parts de fonds de placement", "elements": []},
+                    {"name": "Titres de créance", "elements": []}
+                ]},
+                {"name": "DÉRIVÉS FINANCIERS","elements": []},
+                {"name": "Autres investissements ",
+                "elements": [
+                    {"name": "Numéraire et dépôts","elements": []},
+                    {"name": "Prêts", "elements": []},
+                    {"name": "Systèmes d'assurances, de pensions et de garanties standard", "elements": []},
+                    {"name": "Crédits commerciaux et avances", "elements": []},
+                    {"name": "Autres comptes à recevoir/à payer", "elements": []}
+                ]}
+            ]}
+        ]}
+    ]
+    return BP_A_MBP6_hierarchy
 
 ######################################################################################################################
 ##########################################BP_A_MBP6_0#################################################################
