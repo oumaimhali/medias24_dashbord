@@ -467,11 +467,32 @@ def getComptes(start: str = '', end: str = '', type: str = ''):
              {"$project": {"_id": 0, "date": "$date", "Type": "$donnees commerce exterieur", "Valeur": "$valeur "}}])
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(b)))
 
-###################################################################################################################
+##############################################################################################################################
+##################################################Dep_Voyages_Nature_hierarchy###############################################
+#############################################################################################################################
 
+@api.get("/Dep_Voyages_Nature/")
+async def hierarchy():
+    Dep_Voyages_Nature_hierarchy=[
 
+        {"name":"Nature d'opération",
+        "elements":[
+            {"name":"TOURISME","elements": []},
+            {"name": "SCOLARITES", "elements": []},
+            {"name": "VOYAGES D'AFFAIRES", "elements": []},
+            {"name": "PELERINAGE ET OMRA", "elements": []},
+            {"name": "STAGES ET MISSIONS", "elements": []},
+            {"name": "SOINS MEDICAUX", "elements": []},
+            {"name": "AUTRES VOYAGES", "elements": []}
+
+            ]
+            },
+        {"name": "Valeur en MDH","elements": []}
+
+    ]
+    return Dep_Voyages_Nature_hierarchy
 ########################################################################################################
-#####################Dep_Voyages_Nature_0#############################################################
+#####################Dep_Voyages_Nature_0_historique#############################################################
 @api.get('/Dep_Voyages_Nature_0/Historique')
 def getComptes(start: int = '', end: str = ''):
   
@@ -706,9 +727,9 @@ def getComptes(start: int = 0, end: int = 0):
                                                             {"_id": 0, "Date": 1, "SECTEURS D'ACTIVITE": 1, "type": 1,
                                                              "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
-    ##################################################################################################
-    #########################IDE_Maroc_recettes_par_secteurs_0########################################
-    ##################################################################################################
+    #################################################################################################################################################"
+    #########################IDE_Maroc_recettes_par_secteurs_0#######################################################################################
+    ######################################################################################################################################################
 
 
 @api.get('/IDE_Maroc_Recettes_par_secteurs_0/Historique')
@@ -749,8 +770,8 @@ def getComptes(start: int = 0, end: int = 0):
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
 
-################################################################################################################
-#####################################IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0################################
+##################################################################################################################################
+#####################################IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0###################################################
 @api.get('/IDE_Maroc_Flux_flux_nets_par_secteurs_NMA_0/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
