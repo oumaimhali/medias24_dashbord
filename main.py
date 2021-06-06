@@ -467,7 +467,7 @@ def getComptes(start: int = '', end: str = ''):
         a = list(Dep_Voyages_Nature_0.find({}, {"_id": 0, "Date": 1, "nature d'operation ": 1, "valeur ": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
     ###############################################################################################################
-################################################Evol_MRE_3####################################################
+################################################Evol_MRE_3_hierarchy####################################################
 ###################################################################################################################
 @api.get("/Evol_MRE/")
 async def hierarchy():
@@ -507,6 +507,41 @@ def getComptes(start: int = 0, end: int = 0):
     else:
         a = list(Evol_MRE_3.find({}, {"_id": 0, "Date": 1, "periode": 1, "Recette MRE": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+######################################################################################################################
+#########################################EVOL_MRE_PAYS_hierarchy#####################################################
+#######################################################################################################################
+@api.get("/Evol_MRE_Pays/")
+async def hierarchy():
+    Evol_MRE_Pays_hierarchy=[
+
+        {"name":"PAYS",
+        "elements":[
+            {"name":"FRANCE","elements": []},
+            {"name": "ITALIE", "elements": []},
+            {"name": "ESPAGNE", "elements": []},
+            {"name": "ARABIE SAOUDITE", "elements": []},
+            {"name": "EMIRATS ARABES UNIS", "elements": []},
+            {"name": "ETATS-UNIS", "elements": []},
+            {"name": "BELGIQUE", "elements": []},
+            {"name": "ALLEMAGNE", "elements": []},
+            {"name": "PAYS-BAS", "elements": []},
+            {"name": "Royaume-Uni", "elements": []},
+            {"name": "QATAR", "elements": []},
+            {"name": "KOWEIT", "elements": []},
+            {"name": "SUISSE", "elements": []},
+            {"name": "CANADA", "elements": []},
+            {"name": "OMAN", "elements": []},
+            {"name": "NORVEGE", "elements": []},
+            {"name": "BAHREIN", "elements": []},
+            {"name": "IRLANDE", "elements": []},
+            {"name": "SUEDE", "elements": []},
+            {"name": "DANEMARK", "elements": []},
+            {"name": "Autres Pays", "elements": []}
+            ]
+            },
+        {"name": "VALEUR","elements": []}
+    ]
+    return Evol_MRE_Pays_hierarchy
 
 ######################################################################################################################
 ####################################################Evol_MRE_PAYS####################################################
