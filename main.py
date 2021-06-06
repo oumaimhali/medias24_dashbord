@@ -627,6 +627,33 @@ def getComptes(start: str = '', end: str = ''):
              ])
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(b)))
     #####################################################################################################################
+    ##########################################Evol_Recettes_Voyages_historique###########################################
+    #####################################################################################################################
+    @api.get("/Evol_Recettes_Voyages/")
+async def hierarchy():
+        Evol_Recettes_Voyages_hierarchy = [
+
+            {"name": "periode",
+             "elements": [
+                 {"name": "Janvier", "elements": []},
+                 {"name": "Février", "elements": []},
+                 {"name": "Mars", "elements": []},
+                 {"name": "Avril", "elements": []},
+                 {"name": "Mai", "elements": []},
+                 {"name": "Juin", "elements": []},
+                 {"name": "Juillet", "elements": []},
+                 {"name": "Août", "elements": []},
+                 {"name": "Septembre", "elements": []},
+                 {"name": "Octobre", "elements": []},
+                 {"name": "Novembre", "elements": []},
+                 {"name": "Décembre", "elements": []}
+
+             ]
+             },
+            {"name": "Recettes Voyages", "elements": []}
+
+        ]
+        return Evol_Recettes_Voyages_hierarchy
     #####################################################################################################################
     ###########################Evol_Recettes_Voyages_5###################################################################
 
