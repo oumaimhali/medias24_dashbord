@@ -986,7 +986,23 @@ def getComptes(start: int = 0, end: int = 0):
                                                                     "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
+####################################################################################################################
+######################################Balance_Services_hierarchy####################################################
+######################################################################################################################
+@api.get("/Balance_Services/")
+async def hierarchy():
+    Balance_Services_hierarchy=[
 
+        {"name": "Evolution des échanges de services",
+         "elements": [
+             {"name": "Importations de services", "elements": []},
+             {"name": "Exportations d services", "elements": []},
+         ]
+         },
+        {"name": "Valeur en MDH", "elements": []}
+
+    ]
+    return Balance_Services_hierarchy
 #####################################################################################################################
 ############################################Balance_Services_4#######################################################
 @api.get('/Balance_Services_4/Historique')
