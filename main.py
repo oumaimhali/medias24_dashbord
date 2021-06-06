@@ -925,7 +925,41 @@ def getComptes(start: int = 0, end: int = 0):
     ################################################################################################################
 
 
-###################################
+ ################################################################################################################
+###################################Voyages_Pays_hierarchy###########################################################
+#####################################################################################################################
+@api.get("/Voyages_Pays/")
+async def hierarchy():
+    Voyages_Pays_hierarchy = [
+
+        {"name": "Pays",
+         "elements": [
+             {"name": "FRANCE", "elements": []},
+             {"name": "ESPAGNE", "elements": []},
+             {"name": "ROYAUME-UNI", "elements": []},
+             {"name": "ALLEMAGNE", "elements": []},
+             {"name": "ITALIE", "elements": []},
+             {"name": "ÉTATS-UNIS", "elements": []},
+             {"name": "BELGIQUE", "elements": []},
+             {"name": "ARABIE SAOUDITE", "elements": []},
+             {"name": "PAYS-BAS", "elements": []},
+             {"name": "ÉMIRATS ARABES UNIS", "elements": []},
+             {"name": "CANADA", "elements": []},
+             {"name": "SUISSE", "elements": []},
+             {"name": "CHINE", "elements": []},
+             {"name": "ALGÉRIE", "elements": []},
+             {"name": "POLOGNE", "elements": []},
+             {"name": "SÉNÉGAL", "elements": []},
+             {"name": "SUÈDE", "elements": []},
+             {"name": "RUSSIE", "elements": []},
+             {"name": "Autres pays", "elements": []}
+
+         ]
+         },
+        {"name": "Valeur en MDH", "elements": []}
+
+    ]
+    return Voyages_Pays_hierarchy
 
 ###############################################################################################################
 #########################################Voyages_Pays_0#######################################################
