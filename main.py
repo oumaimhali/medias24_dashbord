@@ -341,8 +341,23 @@ async def Historique ():
 # list the collections =>
 # for coll in db.list_collection_names():
 #    stocker les collections dans une list
+########################################################################################################################
+##########################################compte_courant_hierarchy######################################################
+"########################################################################################################################
+@api.get("/compte_courant/")
+async def hierarchy():
+    compte_courant_hierarchy=[
 
-##############################compte_courant############################
+        {"name":"compte_courant",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return compte_courant_hierarchy
+########################################################################################################################"
+########################################compte_courant_historique#########################################################
 
 @api.get('/compte_courant/Historique')
 def getComptes(start: int = 0, end: int = 0):
