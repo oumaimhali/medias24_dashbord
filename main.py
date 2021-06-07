@@ -633,23 +633,7 @@ def getComptes(start: str = '', end: str = ''):
 async def hierarchy():
         Evol_Recettes_Voyages_hierarchy = [
 
-            {"name": "periode",
-             "elements": [
-                 {"name": "Janvier", "elements": []},
-                 {"name": "Février", "elements": []},
-                 {"name": "Mars", "elements": []},
-                 {"name": "Avril", "elements": []},
-                 {"name": "Mai", "elements": []},
-                 {"name": "Juin", "elements": []},
-                 {"name": "Juillet", "elements": []},
-                 {"name": "Août", "elements": []},
-                 {"name": "Septembre", "elements": []},
-                 {"name": "Octobre", "elements": []},
-                 {"name": "Novembre", "elements": []},
-                 {"name": "Décembre", "elements": []}
-
-             ]
-             },
+         
             {"name": "Recettes Voyages", "elements": []}
 
         ]
