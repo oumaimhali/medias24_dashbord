@@ -852,6 +852,67 @@ def getComptes(start: int = 0, end: int = 0):
                                                                       {"_id": 0, "date": 1, "SECTEURS D'ACTIVITE": 1,
                                                                        "type": 1, "VALEUR": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+##################################################################################################################
+##################################""IDM_a_Etranger_Flux_Flux_nets_par_pays_hierarchy#############################
+#################################################################################################################
+@api.get("/IDM_a_Etranger_Flux_Flux_nets_par_pays/")
+async def hierarchy():
+    IDM_a_Etranger_Flux_Flux_nets_par_pays_hierarchy=[
+
+        {"name": "PAYS DE DESTINATION",
+         "elements": [
+             {"name": "Emirats Arabes Unis", "elements": []},
+             {"name": "Côte d'Ivoire", "elements": []},
+             {"name": "Cameroun", "elements": []},
+             {"name": "Luxembourg", "elements": []},
+             {"name": "Gabon", "elements": []},
+             {"name": "Burkina Faso", "elements": []},
+             {"name": "Sénégal", "elements": []},
+             {"name": "France", "elements": []},
+             {"name": "Egypte", "elements": []},
+             {"name": "Mali", "elements": []},
+             {"name": "Suisse", "elements": []},
+             {"name": "Guinée", "elements": []},
+             {"name": "Madagascar", "elements": []},
+             {"name": "Inde", "elements": []},
+             {"name": "Tunisie", "elements": []},
+             {"name": "Ghana", "elements": []},
+             {"name": "Congo", "elements": []},
+             {"name": "Nigéria", "elements": []},
+             {"name": "Etats-Unis", "elements": []},
+             {"name": "Portugal", "elements": []},
+             {"name": "Uganda", "elements": []},
+             {"name": "Mauritanie", "elements": []},
+             {"name": "Singapour", "elements": []},
+             {"name": "Togo", "elements": []},
+             {"name": "Belgique", "elements": []},
+             {"name": "Arabie Saoudite", "elements": []},
+             {"name": "Pays-Bas", "elements": []},
+             {"name": "Grande Bretagne", "elements": []},
+             {"name": "Autriche", "elements": []},
+             {"name": "Suède", "elements": []},
+             {"name": "Iles Vierges Britaniques", "elements": []},
+             {"name": "Norvège", "elements": []},
+             {"name": "Australie", "elements": []},
+             {"name": "Monaco", "elements": []},
+             {"name": "Soudan", "elements": []},
+             {"name": "République Démocratique du Congo", "elements": []},
+             {"name": "Malte", "elements": []},
+             {"name": "Allemagne", "elements": []},
+             {"name": "Guinée-Bissau", "elements": []},
+             {"name": "Maurice", "elements": []},
+             {"name": "Tanzanie", "elements": []},
+             {"name": "Espagne", "elements": []},
+             {"name": "République Centrafricaine", "elements": []},
+             {"name": "Liban", "elements": []},
+             {"name": "Tchad", "elements": []},
+             {"name": "Niger", "elements": []},
+             {"name": "Bénin", "elements": []},
+             {"name": "Autres pays", "elements": []},
+         ]},
+
+    ]
+    return IDM_a_Etranger_Flux_Flux_nets_par_pays_hierarchy
 
 
 ##################################################################################################################
