@@ -1058,9 +1058,9 @@ def getComptes(start: int = 0, end: int = 0):
 ######################################################################################################################
 ###########################################Exp_services_nature_4_avant2014###########################################
 ######################################################################################################################
-@api.get("/Exp_services_nature_4_avant2014/")
+@api.get("/Exp_services_nature_avant2014/")
 async def hierarchy():
-    Exp_services_nature_4_avant2014_hierarchy=[
+    Exp_services_nature_avant2014_hierarchy=[
 
         {"name": "Exportations:",
          "elements": [
@@ -1074,7 +1074,7 @@ async def hierarchy():
 
          ]},
     ]
-    return Exp_services_nature_4_avant2014_hierarchy
+    return Exp_services_nature_avant2014_hierarchy
 
 
 #######################################################################################################################
