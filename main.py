@@ -513,7 +513,7 @@ async def hierarchy():
         "elements":[
 
         {"name": "Recette MRE","elements": []}
-
+        ]},
     ]
     return Evol_MRE_hierarchy
     ###############################################################################################################
