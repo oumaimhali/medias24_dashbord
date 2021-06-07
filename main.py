@@ -1111,6 +1111,41 @@ def getComptes(start: int = 0, end: int = 0):
                                                                        {"_id": 0, "date ": 1, "SECTEURS D'ACTIVITE": 1,
                                                                         "type ": 1, "valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+#######################################################################################################################""
+#######################################IDM_etranger_flux_par_nat_operation_hierarchy####################################
+########################################################################################################################
+
+@api.get("/IDM_etranger_flux_par_nat_operation/")
+async def hierarchy():
+    IDM_etranger_flux_par_nat_operation_hierarchy=[
+
+        {"name": "Dépenses",
+         "elements": [
+
+             {"name": "Titres de participation", "elements": []},
+             {"name": "Bénéfices réinvestis", "elements": []},
+             {"name": "Instruments de dette", "elements": []},
+
+         ]},
+        {"name": "Recettes",
+         "elements": [
+
+             {"name": "Titres de participation", "elements": []},
+             {"name": "Bénéfices réinvestis", "elements": []},
+             {"name": "Instruments de dette", "elements": []},
+
+         ]},
+        {"name": "Flux net",
+         "elements": [
+
+             {"name": "Titres de participation", "elements": []},
+             {"name": "Bénéfices réinvestis", "elements": []},
+             {"name": "Instruments de dette", "elements": []},
+
+         ]},
+
+    ]
+    return IDM_etranger_flux_par_nat_operation_hierarchy
 
 
 #####################################################################################################################
