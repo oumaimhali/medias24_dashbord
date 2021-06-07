@@ -935,7 +935,33 @@ def getComptes(start: int = 0, end: int = 0):
     else:
         a = list(IDM_a_etranger_Stock_Par_pays.find({}, {"_id": 0, "Date": 1, "PAYS": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+#######################################################################################################################
+#######################################"IDM_à_etranger_Stock_Par_secteurs_hierarchy####################################
+#######################################################################################################################
+@api.get("/IDM_à_etranger_Stock_Par_secteurs/")
+async def hierarchy():
+    IDM_à_etranger_Stock_Par_secteurs_hierarchy = [
 
+        {"name": "Secteurs",
+         "elements": [
+             {"name": "Banques et activités financières", "elements": []},
+             {"name": "Immobilier", "elements": []},
+             {"name": "Télécommunications", "elements": []},
+             {"name": "Cimenteries", "elements": []},
+             {"name": "Industrie", "elements": []},
+             {"name": "Assurances", "elements": []},
+             {"name": "Holding", "elements": []},
+             {"name": "Energie et mines", "elements": []},
+             {"name": "Commerce", "elements": []},
+             {"name": "Transport", "elements": []},
+             {"name": "Services informatiques", "elements": []},
+             {"name": "Construction et génie civil", "elements": []},
+             {"name": "Autres services ", "elements": []},
+             {"name": "Divers secteurs", "elements": []},
+
+         ]},
+    ]
+    return IDM_à_etranger_Stock_Par_secteurs_hierarchy
 
 #####################################################################################################################
 #######################################IDM_à_etranger_Stock_Par_secteurs#############################################
