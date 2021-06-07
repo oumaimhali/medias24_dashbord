@@ -867,6 +867,62 @@ def getComptes(start: int = 0, end: int = 0):
                                                           {"_id": 0, "Date": 1, "Nature d'operation": 1, "operation": 1,
                                                            "valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+#######################################################################################################################
+####################################IDM_a_etranger_Stock_Par_pays_hierarchy#############################################
+#######################################################################################################################
+@api.get("/IDM_a_etranger_Stock_Par_pays/")
+async def hierarchy():
+    IDM_a_etranger_Stock_Par_pays_hierarchy=[
+
+        {"name": "PAYS",
+         "elements": [
+             {"name": "Côte d'Ivoire", "elements": []},
+             {"name": "Luxembourg", "elements": []},
+             {"name": "France", "elements": []},
+             {"name": "Maurice", "elements": []},
+             {"name": "Egypte", "elements": []},
+             {"name": "Grande Bretagne", "elements": []},
+             {"name": "Gabon", "elements": []},
+             {"name": "Suisse", "elements": []},
+             {"name": "Cameroun", "elements": []},
+             {"name": "Mali", "elements": []},
+             {"name": "Bénin", "elements": []},
+             {"name": "Sénégal", "elements": []},
+             {"name": "Burkina Faso", "elements": []},
+             {"name": "Pays Bas", "elements": []},
+             {"name": "Liban", "elements": []},
+             {"name": "Congo", "elements": []},
+             {"name": "Arabie saoudite", "elements": []},
+             {"name": "Emirats Arabes Unis", "elements": []},
+             {"name": "Belgique", "elements": []},
+             {"name": "Mauritanie ", "elements": []},
+             {"name": "Togo", "elements": []},
+             {"name": "République Centrafricaine", "elements": []},
+             {"name": "Niger", "elements": []},
+             {"name": "Ghana", "elements": []},
+             {"name": "Inde", "elements": []},
+             {"name": "Tchad", "elements": []},
+             {"name": "Espagne", "elements": []},
+             {"name": "Guinée", "elements": []},
+             {"name": "Tunisie", "elements": []},
+             {"name": "Guinée-Bissau", "elements": []},
+             {"name": "Nigeria", "elements": []},
+             {"name": "Etats-Unis", "elements": []},
+             {"name": "Malte", "elements": []},
+             {"name": "Algérie", "elements": []},
+             {"name": "Soudan", "elements": []},
+             {"name": "Iles Vierges Britanniques", "elements": []},
+             {"name": "Irlande", "elements": []},
+             {"name": "République Démocratique du Congo", "elements": []},
+             {"name": "Afrique du sud", "elements": []},
+             {"name": "Guinée Equatoriale", "elements": []},
+             {"name": "Guyana", "elements": []},
+             {"name": "Autres pays", "elements": []},
+
+
+         ]},
+    ]
+    return IDM_a_etranger_Stock_Par_pays_hierarchy
 
 
 ####################################################################################################################
