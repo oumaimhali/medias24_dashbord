@@ -794,6 +794,36 @@ def getComptes(start: int = 0, end: int = 0):
                                                                    "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
+######################################################################################################################
+#########################################IDM_a_etranger_Flux_Depenses_par_secteurs_hierarchy#########################
+#####################################################################################################################
+@api.get("/IDM_a_etranger_Flux_Depenses_par_secteurs/")
+async def hierarchy():
+    IDM_a_etranger_Flux_Depenses_par_secteurs_hierarchy=[
+
+        {"name": "SECTEURS D'ACTIVITE",
+         "elements": [
+             {"name": "Banque", "elements": []},
+             {"name": "Energie et mines", "elements": []},
+             {"name": "Industrie", "elements": []},
+             {"name": "Commerce", "elements": []},
+             {"name": "Télécommunications", "elements": []},
+             {"name": "Assurances", "elements": []},
+             {"name": "Immobilier", "elements": []},
+             {"name": "Grands travaux", "elements": []},
+             {"name": "Holding", "elements": []},
+             {"name": "Transport", "elements": []},
+             {"name": "Etudes", "elements": []},
+             {"name": "Tourisme", "elements": []},
+             {"name": "Pêche", "elements": []},
+             {"name": "Agriculture", "elements": []},
+             {"name": "Autres services", "elements": []},
+             {"name": "Divers secteurs", "elements": []},
+         ]},
+
+    ]
+    return IDM_a_etranger_Flux_Depenses_par_secteurs_hierarchy
+
 
 #######################################################################################################################
 #####################################IDM_a_Etranger_Flux_Depenses_par_secteurs_1#######################################
