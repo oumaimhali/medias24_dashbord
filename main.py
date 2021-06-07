@@ -837,6 +837,110 @@ def getComptes(start: int = 0, end: int = 0):
         a = list(IDM_a_Etranger_Flux_Flux_nets_par_pays_0.find({}, {"_id": 0, "Date": 1, "PAYS DE DESTINATION": 1,
                                                                     "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+#####################################################################################################################"
+######################################IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_hierarchy########################
+#######################################################################################################################
+@api.get("/IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA/")
+async def hierarchy():
+    IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_hierarchy=[
+
+        {"name": "Agriculture sylviculture et pêche",
+         "elements": [
+             {"name": "Culture et production animale, chasse et services annexes", "elements": []},
+             {"name": "Pêche et aquaculture", "elements": []}
+         ]},
+        {"name": "Industries extractives",
+         "elements": [
+             {"name": "Extraction d'hydrocarbures", "elements": []},
+             {"name": "Extraction de minerais métalliques", "elements": []},
+             {"name": "Autres industries extractives", "elements": []}
+         ]},
+        {"name": "Industries manufacturières",
+         "elements": [
+             {"name": "Industries alimentaires", "elements": []},
+             {"name": "Fabrication de boissons", "elements": []},
+             {"name": "Industrie du tabac", "elements": []},
+             {"name": "Fabrication de textiles", "elements": []},
+             {"name": "Industrie de l'habillement", "elements": []},
+             {"name": "Industrie du cuir et de la chaussure", "elements": []},
+             {"name": "Industrie du bois", "elements": []},
+             {"name": "Industrie du papier et du carton", "elements": []},
+             {"name": "Industrie chimique", "elements": []},
+             {"name": "Industrie pharmaceutique", "elements": []},
+             {"name": "Fabrication de produits en caoutchouc et en plastique", "elements": []},
+             {"name": "Fabrication d'autres produits minéraux non métalliques", "elements": []},
+             {"name": "Industrie métallurgique", "elements": []},
+             {"name": "Fabrication de produits métalliques, à l'exception des machines et des équipements", "elements": []},
+             {"name": "Fabrication d'équipements électriques", "elements": []},
+             {"name": "Fabrication de machines et équipements", "elements": []},
+             {"name": "Fabrication automobile", "elements": []},
+             {"name": "Fabrication d'autres matériels de transport", "elements": []},
+             {"name": "Fabrication de meubles ", "elements": []},
+             {"name": "Autres industries manufacturières", "elements": []},
+             {"name": "Réparation et installation de machines et d'équipements", "elements": []}
+         ]},
+
+        {"name": "Electricité, gaz, vapeur et air conditionné","elements": []},
+        {"name": "Eau, assainissement, gestion des déchets et dépollution",
+         "elements": [
+             {"name": "Captage, traitement et distribution d'eau", "elements": []},
+             {"name": "Collecte, traitement et élimination des déchets; récupération", "elements": []},
+             {"name": "Dépollution et autres services de gestion des déchets", "elements": []}
+         ]},
+        {"name": "Construction",
+         "elements": [
+             {"name": "Construction de bâtiments", "elements": []},
+             {"name": "Génie civil", "elements": []},
+             {"name": "Travaux de construction spécialisés", "elements": []}
+         ]},
+        {"name": "Commerce, réparation d'automobiles et de motocycles",
+         "elements": [
+             {"name": "Commerce et réparation d'automobiles et de motocycles", "elements": []},
+             {"name": "Commerce de gros", "elements": []},
+             {"name": "Commerce de détails", "elements": []}
+         ]},
+        {"name": "Transports et entreposage",
+         "elements": [
+             {"name": "Transports terrestres et transports par conduites", "elements": []},
+             {"name": "CTransport par eau", "elements": []},
+             {"name": "Transports aériens", "elements": []},
+             {"name": "TEntreposage et services auxiliaires des transports", "elements": []}
+         ]},
+        {"name": "Hébergement et restauration",
+         "elements": [
+             {"name": "Hébergement", "elements": []},
+             {"name": "Restauration", "elements": []}
+         ]},
+        {"name": "Information et communication",
+         "elements": [
+             {"name": "Édition", "elements": []},
+             {"name": "Production de films cinématographiques, de vidéo et de programme de télévision", "elements": []},
+             {"name": "Programme et diffusion", "elements": []},
+             {"name": "Télécommunication", "elements": []},
+             {"name": "Programmation, conseil et autres activités informatiques", "elements": []},
+             {"name": "Service d'information", "elements": []}
+         ]},
+        {"name": "Activités financières et d'assurance",
+         "elements": [
+             {"name": "Activités des services financiers, hors assurance et caisses de retraite dont activités des sociétés holdings", "elements": []},
+             {"name": "Assurance", "elements": []},
+             {"name": "Activités auxiliaires de services financiers et d'assurance", "elements": []},
+
+         ]},
+        {"name": "Activités immobilières", "elements": []},
+        {"name": "Activités spécialisées, scientifiques et techniques",
+        "elements": [
+            {"name": "Activités juridiques et comptables", "elements": []},
+            {"name": "Activités des sièges sociaux et conseils de gestion", "elements": []},
+            {"name": "Activités d'architecture, d'ingénierie, de contrôle et analyses techniques", "elements": []},
+            {"name": "Publicité et études de marché", "elements": []},
+            {"name": "Autres activités spécialisées, scientifiques et techniques", "elements": []},
+        ]},
+        {"name": "Autres services", "elements": []},
+        {"name": "Divers secteurs", "elements": []},
+
+    ]
+    return IDM_a_Etranger_Flux_Flux_nets_par_secteurs_NMA_hierarchy
 
 
 #####################################################################################################################
