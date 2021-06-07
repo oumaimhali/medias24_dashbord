@@ -1063,7 +1063,26 @@ def getComptes(start: int = 0, end: int = 0):
     else:
         a = list(Exp_Services_Nature_4_depuis2014.find({}, {"_id": 0, "date": 1, "Exportations": 1, "valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+@api.get("/Offshoring/")
+async def hierarchy():
+    Offshoring_hierarchy=[
 
+        {"name": "segments",
+         "elements": [
+             {"name": "Engineering Services Outsourcing", "elements": []},
+             {"name": "Knowledge Process Outsourcing", "elements": []}
+         ]
+         },
+        {"name": " écosysytèmes",
+         "elements": [
+             {"name": "Customer Relationship Management", "elements": []},
+             {"name": "Information Technology Outsourcing", "elements": []},
+             {"name": "Business Process Outsourcing", "elements": []},
+             {"name": "Engineering Services Outsourcing", "elements": []},
+             {"name": "Knowledge Process Outsourcing", "elements": []},
+         ]},
+    ]
+    return Offshoring_hierarchy
 
 ######################################################################################################################
 #########################################Offshoring_3#################################################################
