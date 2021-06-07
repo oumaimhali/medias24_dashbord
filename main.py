@@ -683,6 +683,39 @@ def getComptes(start: int = 0, end: int = 0):
         a = list(IDE_Maroc_flux_Flux_nets_par_pays_0.find({}, {"_id": 0, "Date ": 1, "PAYS/ORGANISMES FINANCIERS": 1,
                                                                "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+    #######################################################################################################################""
+    #######################################IDE_Maroc_Stock_Par_secteurs_hierarchy####################################
+    ########################################################################################################################
+
+@api.get("/IDE_Maroc_Stock_Par_secteurs/")
+async def hierarchy():
+        IDE_Maroc_Stock_Par_secteurs_hierarchy = [
+
+            {"name": "SECTEURS",
+             "elements": [
+
+                 {"name": "Industrie", "elements": []},
+                 {"name": "Immobilier", "elements": []},
+                 {"name": "Télécommunications", "elements": []},
+                 {"name": "Tourisme", "elements": []},
+                 {"name": "Energie et Mines", "elements": []},
+                 {"name": "Banques", "elements": []},
+                 {"name": "Commerce", "elements": []},
+                 {"name": "Grands Travaux", "elements": []},
+                 {"name": "Holding", "elements": []},
+                 {"name": "Transport", "elements": []},
+                 {"name": "Assurances", "elements": []},
+                 {"name": "Cimenteries", "elements": []},
+                 {"name": "Agriculture", "elements": []},
+                 {"name": "Pêche", "elements": []},
+                 {"name": "Etudes", "elements": []},
+                 {"name": "Autres services", "elements": []},
+                 {"name": "Divers secteurs", "elements": []},
+
+             ]},
+
+        ]
+        return IDE_Maroc_Stock_Par_secteurs_hierarchy
 
 
 ##############################################################################################################
