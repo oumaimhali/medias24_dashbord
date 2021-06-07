@@ -1009,6 +1009,26 @@ def getComptes(start: int = 0, end: int = 0):
     else:
         a = list(Imp_Services_Nature_4_depuis2014.find({}, {"_id": 0, "Date": 1, "Importations": 1, "valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+####################################################################################################################
+######################################imp_services_nature_avant2014_hierarchy#######################################
+######################################################################################################################
+@api.get("/imp_services_nature_avant2014/")
+async def hierarchy():
+    imp_services_nature_avant2014_hierarchy=[
+
+        {"name": "Importations:",
+         "elements": [
+             {"name": "Transports", "elements": []},
+             {"name": "Voyages", "elements": []},
+             {"name": "Services de communication", "elements": []},
+             {"name": "Services d'assurance", "elements": []},
+             {"name": "Redevances et droits de licence", "elements": []},
+             {"name": "Autres services aux entreprises", "elements": []},
+             {"name": "Services fournis ou reçus par les administrations publiques N.C.A", "elements": []}
+
+         ]},
+    ]
+    return imp_services_nature_avant2014_hierarchy
 
 
 #######################################################################################################################
