@@ -728,7 +728,47 @@ def getComptes(start: int = 0, end: int = 0):
     else:
         a = list(IDE_Maroc_Stock_Par_secteurs.find({}, {"_id": 0, "Date": 1, "Stock_IDEM_Pays": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+#######################################################################################################################""
+#######################################IDE_Maroc_Stock_Par_Pays_hierarchy####################################
+########################################################################################################################
 
+@api.get("/IDE_Maroc_Stock_Par_Pays/")
+async def hierarchy():
+    IDE_Maroc_Stock_Par_Pays_hierarchy=[
+
+        {"name": "Pays",
+         "elements": [
+
+             {"name": "France", "elements": []},
+             {"name": "Emirats Arabes Unis", "elements": []},
+             {"name": "Espagne", "elements": []},
+             {"name": "Suisse", "elements": []},
+             {"name": "Etats-Unis", "elements": []},
+             {"name": "Arabie Saoudite", "elements": []},
+             {"name": "Grande-Bretagne", "elements": []},
+             {"name": "U.E.B.L", "elements": []},
+             {"name": "Allemagne", "elements": []},
+             {"name": "Irlande", "elements": []},
+             {"name": "Pays-Bas", "elements": []},
+             {"name": "Koweït", "elements": []},
+             {"name": "Italie", "elements": []},
+             {"name": "Singapour", "elements": []},
+             {"name": "Danemark", "elements": []},
+             {"name": "Inde", "elements": []},
+             {"name": "Japon", "elements": []},
+             {"name": "Lybie", "elements": []},
+             {"name": "Suède", "elements": []},
+             {"name": "Tunisie", "elements": []},
+             {"name": "Corée du sud", "elements": []},
+             {"name": "Portugal", "elements": []},
+             {"name": "Pakistan", "elements": []},
+             {"name": "Autres pays", "elements": []},
+
+         ]},
+
+
+    ]
+    return IDE_Maroc_Stock_Par_Pays_hierarchy
 
 #######################################################################################################################
 #############################################IDE_Maroc_Stock_Par_pays##############################################
