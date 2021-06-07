@@ -1041,6 +1041,32 @@ def getComptes(start: int = 0, end: int = 0):
     else:
         a = list(Exp_services_nature_4_avant2014.find({}, {"_id": 0, "date ": 1, "Exportations": 1, "valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+####################################################################################################################
+####################################"Imp_Services_Nature_depuis2014_hierarchy########################################
+######################################################################################################################
+@api.get("/Imp_Services_Nature_depuis2014/")
+async def hierarchy():
+    Imp_Services_Nature_depuis2014_hierarchy = [
+
+        {"name": "Importations:",
+         "elements": [
+             {"name": "Services de fabrication fournis sur des intrants physiques  détenus par des tiers",
+              "elements": []},
+             {"name": "Services d’entretien et de réparation n.i.a.", "elements": []},
+             {"name": "Transports", "elements": []},
+             {"name": "Voyages", "elements": []},
+             {"name": "Constructions", "elements": []},
+             {"name": "Services d’assurance et de pension", "elements": []},
+             {"name": "Services financiers", "elements": []},
+             {"name": "Frais pour usage de la propriété intellectuelle n.i.a.", "elements": []},
+             {"name": "Services de télécommunications, d’informatique et d’information", "elements": []},
+             {"name": "Autres services aux entreprises", "elements": []},
+             {"name": "Services personnels, culturels et relatifs aux loisirs", "elements": []},
+             {"name": "Biens et services des administrations publiques n.i.a.", "elements": []},
+
+         ]},
+    ]
+    return Imp_Services_Nature_depuis2014_hierarchy
 
 
 #######################################################################################################################
