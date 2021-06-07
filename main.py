@@ -487,7 +487,7 @@ async def hierarchy():
 
             ]
             },
-        {"name": "Valeur en MDH","elements": []}
+        
 
     ]
     return Dep_Voyages_Nature_hierarchy
@@ -511,21 +511,7 @@ async def hierarchy():
 
         {"name":"periode",
         "elements":[
-            {"name":"Janvier","elements": []},
-            {"name": "Février", "elements": []},
-            {"name": "Mars", "elements": []},
-            {"name": "Avril", "elements": []},
-            {"name": "Mai", "elements": []},
-            {"name": "Juin", "elements": []},
-            {"name": "Juillet", "elements": []},
-            {"name": "Août", "elements": []},
-            {"name": "Septembre", "elements": []},
-            {"name": "Octobre", "elements": []},
-            {"name": "Novembre", "elements": []},
-            {"name": "Décembre", "elements": []}
 
-            ]
-            },
         {"name": "Recette MRE","elements": []}
 
     ]
@@ -575,7 +561,7 @@ async def hierarchy():
             {"name": "Autres Pays", "elements": []}
             ]
             },
-        {"name": "VALEUR","elements": []}
+        
     ]
     return Evol_MRE_Pays_hierarchy
 
@@ -940,7 +926,7 @@ async def hierarchy():
 
          ]
          },
-        {"name": "Valeur en MDH", "elements": []}
+       
 
     ]
     return Voyages_Pays_hierarchy
@@ -983,7 +969,7 @@ async def hierarchy():
              {"name": "Exportations d services", "elements": []},
          ]
          },
-        {"name": "Valeur en MDH", "elements": []}
+       
 
     ]
     return Balance_Services_hierarchy
