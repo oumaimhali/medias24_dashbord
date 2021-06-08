@@ -1190,7 +1190,41 @@ def getComptes(start: int = 0, end: int = 0):
         a = list(IDE_Maroc_Recettes_par_pays_0.find({}, {"_id": 0, "Date": 1, "Pays ": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
+######################################################################################################################""
+#######################################IDE_Maroc_Flux_Par_Nature_opération_hierarchy####################################
+########################################################################################################################
 
+@api.get("/IDE_Maroc_Flux_Par_Nature_opération/")
+async def hierarchy():
+    IDE_Maroc_Flux_Par_Nature_opération_hierarchy=[
+
+        {"name": "Dépenses",
+         "elements": [
+
+             {"name": "Titres de participation", "elements": []},
+             {"name": "Bénéfices réinvestis", "elements": []},
+             {"name": "Instruments de dette", "elements": []},
+
+         ]},
+        {"name": "Recettes",
+         "elements": [
+
+             {"name": "Titres de participation", "elements": []},
+             {"name": "Bénéfices réinvestis", "elements": []},
+             {"name": "Instruments de dette", "elements": []},
+
+         ]},
+        {"name": "Flux net",
+         "elements": [
+
+             {"name": "Titres de participation", "elements": []},
+             {"name": "Bénéfices réinvestis", "elements": []},
+             {"name": "Instruments de dette", "elements": []},
+
+         ]},
+
+    ]
+    return IDE_Maroc_Flux_Par_Nature_opération_hierarchy
 ##########################################################################################################################
 #################################IDE_Maroc_Flux_Par_Nature_opération_0###################################################
 
