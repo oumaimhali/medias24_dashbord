@@ -920,6 +920,7 @@ def getComptes(start: int = 0, end: int = 0):
 #######################################IDE_Maroc_Recettes_par_secteurs_NMA_hierarchy####################################
 ########################################################################################################################
 
+
 @api.get("/IDE_Maroc_Recettes_par_secteurs_NMA/")
 async def hierarchy():
     IDE_Maroc_Recettes_par_secteurs_NMA_hierarchy=[
@@ -967,7 +968,8 @@ async def hierarchy():
              {"name": "Réparation et installation de machines et d'équipements", "elements": []}
 
          ]},
-        {"name": "Electricité, gaz, vapeur et air conditionné",
+        {"name": "Electricité, gaz, vapeur et air conditionné", "elements": []},
+        {"name": "Eau, assainissement, gestion des déchets et dépollution",
         "elements": [
             {"name": "Captage, traitement et distribution d'eau", "elements": []},
             {"name": "Collecte et traitement des eaux usées", "elements": []},
@@ -1034,6 +1036,7 @@ async def hierarchy():
         {"name": "Divers secteurs", "elements": []}
     ]
     return IDE_Maroc_Recettes_par_secteurs_NMA_hierarchy
+
 
 
 #########################################################################################################
