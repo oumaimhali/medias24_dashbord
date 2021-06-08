@@ -422,7 +422,28 @@ def getComptes(start: str = '', end: str = '', type: str = ''):
 
 
 ####################################################################################################################
+#######################################################################################################################""
+#######################################Comext_Export_hierarchy####################################
+########################################################################################################################
 
+@api.get("/Comext_Export/")
+async def hierarchy():
+    Comext_Export_hierarchy=[
+
+        {"name": "Type",
+         "elements": [
+
+             {"name": "ALIMENTATION. BOISSON ET TABAC CVS-CJO", "elements": []},
+             {"name": "ENERGIE ET LUBRIFIANTS CVS-CJO", "elements": []},
+             {"name": "PRODUITS BRUTS D'ORIGINE ANIMALE ET VEGETALE CVS-CJO", "elements": []},
+             {"name": "PRODUITS BRUTS D'ORIGINE MINERALE CVS-CJO", "elements": []},
+             {"name": "DEMI PRODUITS CVS-CJO", "elements": []},
+             {"name": "PRODUITS FINIS D'EQUIPEMENT CVS-CJO", "elements": []},
+             {"name": "PRODUITS FINIS DE CONSOMMATION CVS-CJO", "elements": []}
+         ]},
+
+    ]
+    return Comext_Export_hierarchy
 ####################################################################################################################
 #######################################Comext_export_GU_CVS-CJO######################################################
 # url ==> http://127.0.0.1:8000/Comext_Export_GU_CVS?start=1998-01-01&end=1998-01-01&type=PRODUITS%20FINIS%20D%27EQUIPEMENT%20CVS-CJO
