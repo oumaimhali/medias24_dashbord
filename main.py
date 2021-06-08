@@ -915,6 +915,37 @@ def getComptes(start: int = 0, end: int = 0):
                                                             {"_id": 0, "Date": 1, "SECTEURS D'ACTIVITE": 1, "type": 1,
                                                              "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+#######################################################################################################################""
+#######################################IDE_Maroc_Recettes_par_secteurs_hierarchy####################################
+########################################################################################################################
+
+@api.get("/IDE_Maroc_Recettes_par_secteurs/")
+async def hierarchy():
+    IDE_Maroc_Recettes_par_secteurs_hierarchy=[
+
+        {"name": "SECTEURS D'ACTIVITE",
+         "elements": [
+
+             {"name": "Industrie", "elements": []},
+             {"name": "Immobilier", "elements": []},
+             {"name": "Commerce", "elements": []},
+             {"name": "Energie et mines", "elements": []},
+             {"name": "Banque", "elements": []},
+             {"name": "Tourisme", "elements": []},
+             {"name": "Transports", "elements": []},
+             {"name": "Holding", "elements": []},
+             {"name": "Grands travaux", "elements": []},
+             {"name": "Agriculture", "elements": []},
+             {"name": "Assurances", "elements": []},
+             {"name": "Etudes", "elements": []},
+             {"name": "Télécommunications", "elements": []},
+             {"name": "Pêche", "elements": []},
+             {"name": "Autres services", "elements": []},
+             {"name": "Divers secteurs", "elements": []}
+         ]},
+
+    ]
+    return IDE_Maroc_Recettes_par_secteurs_hierarchy
     #################################################################################################################################################"
     #########################IDE_Maroc_recettes_par_secteurs_0#######################################################################################
     ######################################################################################################################################################
