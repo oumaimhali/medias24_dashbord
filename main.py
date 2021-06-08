@@ -367,6 +367,28 @@ def getComptes(start: int = 0, end: int = 0):
     else:
         a = list(compte_courant.find({}, {"_id": 0, "date": 1, "Solde du compte courant": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+#######################################################################################################################""
+#######################################Comext_import_hierarchy####################################
+########################################################################################################################
+
+@api.get("/Comext_import/")
+async def hierarchy():
+    Comext_import_hierarchy=[
+
+        {"name": "Type",
+         "elements": [
+
+             {"name": "ALIMENTATION. BOISSON ET TABAC CVS-CJO", "elements": []},
+             {"name": "ENERGIE ET LUBRIFIANTS CVS-CJO", "elements": []},
+             {"name": "PRODUITS BRUTS D'ORIGINE ANIMALE ET VEGETALE CVS-CJO", "elements": []},
+             {"name": "PRODUITS BRUTS D'ORIGINE MINERALE CVS-CJO", "elements": []},
+             {"name": "DEMI PRODUITS CVS-CJO", "elements": []},
+             {"name": "PRODUITS FINIS D'EQUIPEMENT CVS-CJO", "elements": []},
+             {"name": "PRODUITS FINIS DE CONSOMMATION CVS-CJO", "elements": []}
+         ]},
+
+    ]
+    return Comext_import_hierarchy
 
 
 ######################################################################################################################
