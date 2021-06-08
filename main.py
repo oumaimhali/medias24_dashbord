@@ -473,6 +473,25 @@ def getComptes(start: str = '', end: str = '', type: str = ''):
             [{"$addFields": {"Date": {"$dateToString": {"format": "%Y-%m-%d", "date": "$date"}}}},
              {"$project": {"_id": 0, "date": "$Date", "Type": "$Type ", "Valeur": "$Valeur "}}])
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(b)))
+#######################################################################################################################""
+#######################################Comext_TOTAL_hierarchy####################################
+########################################################################################################################
+
+@api.get("/Comext_TOTAL/")
+async def hierarchy():
+    Comext_TOTAL_hierarchy=[
+
+        {"name": "données commerce exterieur",
+         "elements": [
+
+             {"name": "Total Export CVS-CJO", "elements": []},
+             {"name": "Total Import CVS-CJO", "elements": []}
+
+
+         ]},
+
+    ]
+    return Comext_TOTAL_hierarchy
 
 
 ##################################################################################################################
