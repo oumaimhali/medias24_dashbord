@@ -1034,7 +1034,89 @@ def getComptes(start: int = 0, end: int = 0):
         a = list(
             IDE_Maroc_Recettes_par_secteurs_0.find({}, {"_id": 0, "Date": 1, "SECTEURS D'ACTIVITE": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+#######################################################################################################################""
+#######################################IDE_Maroc_Recettes_par_pays_hierarchy####################################
+########################################################################################################################
 
+@api.get("/IDE_Maroc_Recettes_par_pays/")
+async def hierarchy():
+    IDE_Maroc_Recettes_par_pays_hierarchy=[
+
+        {"name": "PAYS/ORGANISMES FINANCIERS",
+         "elements": [
+
+             {"name": "France", "elements": []},
+
+             {"name": "Emirats Arabes Unis", "elements": []},
+             {"name": "Grande Bretagne", "elements": []},
+             {"name": "Espagne", "elements": []},
+             {"name": "Luxembourg", "elements": []},
+             {"name": "Allemagne", "elements": []},
+             {"name": "Pays Bas", "elements": []},
+             {"name": "Qatar", "elements": []},
+             {"name": "Maurice", "elements": []},
+             {"name": "Afrique du Sud", "elements": []},
+             {"name": "Italie", "elements": []},
+             {"name": "Etats-Unis", "elements": []},
+             {"name": "Suisse", "elements": []},
+             {"name": "Irlande", "elements": []},
+             {"name": "Bahreïn", "elements": []},
+
+             {"name": "Malte", "elements": []},
+             {"name": "Chine", "elements": []},
+             {"name": "Belgique", "elements": []},
+             {"name": "Arabie Saoudite", "elements": []},
+             {"name": "Turquie", "elements": []},
+             {"name": "Chypre", "elements": []},
+             {"name": "République de Corée", "elements": []},
+
+             {"name": "Fonds Arabe de Développement Economique et Social", "elements": []},
+             {"name": "Singapour", "elements": []},
+             {"name": "Canada", "elements": []},
+             {"name": "Inde", "elements": []},
+
+             {"name": "Suède", "elements": []},
+
+             {"name": "Tunisie", "elements": []},
+             {"name": "Oman", "elements": []},
+             {"name": "Koweït", "elements": []},
+             {"name": "Malaisie", "elements": []},
+             {"name": "Portugal", "elements": []},
+
+             {"name": "Monaco", "elements": []},
+             {"name": "Roumanie", "elements": []},
+             {"name": "Jersey", "elements": []},
+             {"name": "Russie", "elements": []},
+             {"name": "Grèce", "elements": []},
+             {"name": "Danemark", "elements": []},
+
+
+             {"name": "Hong-Kong", "elements": []},
+             {"name": "Autriche", "elements": []},
+             {"name": "Egypte", "elements": []},
+             {"name": "Côte d'Ivoire", "elements": []},
+             {"name": "Brésil", "elements": []},
+             {"name": "Pologne", "elements": []},
+             {"name": "Panama", "elements": []},
+             {"name": "Japon", "elements": []},
+             {"name": "Congo", "elements": []},
+             {"name": "Islande", "elements": []},
+             {"name": "Slovaquie", "elements": []},
+             {"name": "Gabon", "elements": []},
+             {"name": "Mauritanie", "elements": []},
+             {"name": "Kenya", "elements": []},
+             {"name": "Banque Islamique de Développement", "elements": []},
+
+
+             {"name": "U.E.B.L", "elements": []},
+             {"name": "Banque Africaine de Développement", "elements": []},
+            
+             {"name": "Autres pays", "elements": []}
+
+         ]},
+
+    ]
+    return IDE_Maroc_Recettes_par_pays_hierarchy
 
 ###############################################################################################################
 #################################IDE_Maroc_Recettes_par_pays_0################################################
