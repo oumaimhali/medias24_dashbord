@@ -669,6 +669,80 @@ def getComptes(start: str = '', end: str = ''):
              {"$project": {"_id": 0, "date": "$Date", "voyage": "$Voyages", }}
              ])
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(b)))
+#######################################################################################################################""
+#######################################IDE_Maroc_flux_Flux_nets_par_pays_hierarchy####################################
+########################################################################################################################
+
+@api.get("/IDE_Maroc_flux_Flux_nets_par_pays/")
+async def hierarchy():
+    IDE_Maroc_flux_Flux_nets_par_pays_hierarchy=[
+
+        {"name": "PAYS/ORGANISMES FINANCIERS",
+         "elements": [
+
+             {"name": "France", "elements": []},
+             {"name": "Espagne", "elements": []},
+             {"name": "Emirats Arabes Unis", "elements": []},
+             {"name": "Grande Bretagne", "elements": []},
+             {"name": "Luxembourg", "elements": []},
+             {"name": "Qatar", "elements": []},
+             {"name": "Afrique du Sud", "elements": []},
+             {"name": "Maurice", "elements": []},
+             {"name": "Allemagne", "elements": []},
+             {"name": "Irlande", "elements": []},
+             {"name": "Suisse", "elements": []},
+             {"name": "Etats-Unis", "elements": []},
+             {"name": "Malte", "elements": []},
+             {"name": "Chine", "elements": []},
+             {"name": "Italie", "elements": []},
+             {"name": "Arabie Saoudite", "elements": []},
+             {"name": "Turquie", "elements": []},
+             {"name": "Fonds Arabe de Développement Economique et Social", "elements": []},
+             {"name": "Singapour", "elements": []},
+             {"name": "Canada", "elements": []},
+             {"name": "Belgique", "elements": []},
+             {"name": "Suède", "elements": []},
+             {"name": "Chypre", "elements": []},
+             {"name": "Tunisie", "elements": []},
+             {"name": "Oman", "elements": []},
+             {"name": "Koweït", "elements": []},
+             {"name": "Malaisie", "elements": []},
+             {"name": "Portugal", "elements": []},
+             {"name": "République de Corée", "elements": []},
+             {"name": "Monaco", "elements": []},
+             {"name": "Roumanie", "elements": []},
+             {"name": "Jersey", "elements": []},
+             {"name": "Russie", "elements": []},
+             {"name": "Grèce", "elements": []},
+             {"name": "Hong-Kong", "elements": []},
+             {"name": "Liban", "elements": []},
+             {"name": "Danemark", "elements": []},
+             {"name": "Autriche", "elements": []},
+             {"name": "Pologne", "elements": []},
+             {"name": "Japon", "elements": []},
+             {"name": "Islande", "elements": []},
+             {"name": "Slovaquie", "elements": []},
+             {"name": "Kenya", "elements": []},
+             {"name": "Banque Islamique de Développement", "elements": []},
+             {"name": "Bahamas", "elements": []},
+             {"name": "Banque Africaine de Développement", "elements": []},
+             {"name": "Cameroun", "elements": []},
+             {"name": "Gabon", "elements": []},
+             {"name": "Sénégal", "elements": []},
+             {"name": "Congo", "elements": []},
+             {"name": "Egypte", "elements": []},
+             {"name": "Côte d'Ivoire", "elements": []},
+             {"name": "Inde", "elements": []},
+             {"name": "Jordanie", "elements": []},
+             {"name": "Martinique", "elements": []},
+             {"name": "Bahreïn", "elements": []},
+             {"name": "Pays Bas", "elements": []},
+             {"name": "Autres pays", "elements": []}
+
+         ]},
+
+    ]
+    return IDE_Maroc_flux_Flux_nets_par_pays_hierarchy
 
 
 ####################################################################################################################
