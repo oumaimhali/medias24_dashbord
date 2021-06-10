@@ -3443,9 +3443,9 @@ async def hierarchy():
 @api.get('/BP_A_MBP5_CTC_solde_historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
-        a = list(BP_A_MBP5_CTC_solde.find({"Date": {"$gte": start, "$lte": end}},{"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,"Valeur": 1}));
+        a = list(BP_A_MBP5_CTC_solde.find({"Date": {"$gte": start, "$lte": end}},{"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,"Valeur": 1}));
     else:
-        a = list(BP_A_MBP5_CTC_solde.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,"Valeur": 1}));
+        a = list(BP_A_MBP5_CTC_solde.find({}, {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,"Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
 ##################################################################################################################################################################
@@ -3515,10 +3515,10 @@ async def hierarchy():
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(BP_A_MBP5_CTC_credit.find({"Date": {"$gte": start, "$lte": end}},
-                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                  "Nature de l'op�ration": 1, "Valeur": 1}));
     else:
-        a = list(BP_A_MBP5_CTC_credit.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+        a = list(BP_A_MBP5_CTC_credit.find({}, {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                      "Type": 1,"Segment": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
@@ -3585,10 +3585,10 @@ async def hierarchy():
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(BP_A_MBP5_CTC_debit.find({"Date": {"$gte": start, "$lte": end}},
-                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                  "Nature de l'op�ration": 1, "Valeur": 1}));
     else:
-        a = list(BP_A_MBP5_CTC_debit.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+        a = list(BP_A_MBP5_CTC_debit.find({}, {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                      "Type": 1,"Segment": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
@@ -3646,10 +3646,10 @@ async def hierarchy():
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(BP_A_MBP5_COF_credit.find({"Date": {"$gte": start, "$lte": end}},
-                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                  "Nature de l'op�ration": 1, "Valeur": 1}));
     else:
-        a = list(BP_A_MBP5_COF_credit.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+        a = list(BP_A_MBP5_COF_credit.find({}, {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                      "Type": 1,"Segment": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
@@ -3704,10 +3704,10 @@ async def hierarchy():
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(BP_A_MBP5_COF_debit.find({"Date": {"$gte": start, "$lte": end}},
-                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                  "Nature de l'op�ration": 1, "Valeur": 1}));
     else:
-        a = list(BP_A_MBP5_COF_debit.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+        a = list(BP_A_MBP5_COF_debit.find({}, {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                      "Type": 1,"Segment": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
@@ -3747,10 +3747,10 @@ async def hierarchy():
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(BP_T_MBP5_CTC_SOLDE.find({"Date": {"$gte": start, "$lte": end}},
-                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                   "Valeur": 1}));
     else:
-        a = list(BP_T_MBP5_CTC_SOLDE.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+        a = list(BP_T_MBP5_CTC_SOLDE.find({}, {"_id": 0, "Date": 1,"P�riode":1,"Balance des paiements ": 1, "Cat�gorie": 1,
                                       "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
@@ -3821,10 +3821,10 @@ async def hierarchy():
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(BP_T_MBP5_CTC_CREDIT.find({"Date": {"$gte": start, "$lte": end}},
-                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                  "Nature de l'op�ration": 1, "Valeur": 1}));
     else:
-        a = list(BP_T_MBP5_CTC_CREDIT.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+        a = list(BP_T_MBP5_CTC_CREDIT.find({}, {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                      "Type": 1,"Segment": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
@@ -3891,10 +3891,10 @@ async def hierarchy():
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(BP_T_MBP5_CTC_DEBIT.find({"Date": {"$gte": start, "$lte": end}},
-                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                  "Nature de l'op�ration": 1, "Valeur": 1}));
     else:
-        a = list(BP_T_MBP5_CTC_DEBIT.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+        a = list(BP_T_MBP5_CTC_DEBIT.find({}, {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                      "Type": 1,"Segment": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
@@ -3952,10 +3952,10 @@ async def hierarchy():
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(BP_T_MBP5_COF_CREDIT.find({"Date": {"$gte": start, "$lte": end}},
-                                {"_id": 0, "Date": 1, "Période":1, "Balance des paiements ": 1, "Cat�gorie": 1,
+                                {"_id": 0, "Date": 1, "P�riode":1, "Balance des paiements ": 1, "Cat�gorie": 1,
                                  "Nature de l'op�ration": 1, "Valeur": 1}));
     else:
-        a = list(BP_T_MBP5_COF_CREDIT.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+        a = list(BP_T_MBP5_COF_CREDIT.find({}, {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
                                      "Type": 1,"Segment": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
@@ -4009,8 +4009,8 @@ async def hierarchy():
 @api.get('/BP_T_MBP5_COF_DEBIT/Historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
-        a = list(BP_T_MBP5_COF_DEBIT.find({"Date": {"$gte": start, "$lte": end}}, {"_id": 0, "Date": 1, "Période":1, "Balance des paiements ": 1, "Cat�gorie": 1,"Type": 1, "Segment": 1, "Valeur": 1}));
+        a = list(BP_T_MBP5_COF_DEBIT.find({"Date": {"$gte": start, "$lte": end}}, {"_id": 0, "Date": 1, "P�riode":1, "Balance des paiements ": 1, "Cat�gorie": 1,"Type": 1, "Segment": 1, "Valeur": 1}));
     else:
-        a = list(BP_T_MBP5_COF_DEBIT.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,"Type": 1,"Segment": 1, "Valeur": 1}));
+        a = list(BP_T_MBP5_COF_DEBIT.find({}, {"_id": 0, "Date": 1,"P�riode":1,  "Balance des paiements ": 1, "Cat�gorie": 1,"Type": 1,"Segment": 1, "Valeur": 1}));
 
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
