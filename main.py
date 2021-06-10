@@ -3399,3 +3399,611 @@ def getComptes(start: int = 0, end: int = 0):
         a = list(BP_A_MBP5_COF_debit.find({}, {"_id": 0, "Date": 1, "Balance des paiements ": 1, "Cat�gorie": 1,
                                      "Type": 1,"Segment": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+#######################################################################################
+########################################################################################################################
+#############################################BP_A_MBP5_divisé par 5################################################################################
+########################################################################################################################
+
+
+################################################################################################################################################################
+#############################################################BP_A_MBP5_CTC_solde_hierarchy######################################################################
+###############################################################################################################################################################
+@api.get("/BP_A_MBP5_CTC_solde/")
+async def hierarchy():
+    BP_A_MBP5_CTC_solde_hierarchy=[
+
+
+            {"name":"COMPTE DES TRANSACTIONS COURANTES",
+             "elements": [
+                 {"name": "BIENS", "elements": []},
+                 {"name": "SERVICES", "elements": []},
+                 {"name": "REVENUS", "elements": []},
+                 {"name": "TRANSFERTS COURANTS", "elements": []},
+                 {"name": "INVESTISSEMENTS DIRECTS", "elements": []},
+                 {"name": "INVESTISSEMENTS DE PORTEFEUILLE", "elements": []},
+                 {"name": "AUTRES INVESTISSEMENTS", "elements": []},
+                 {"name": "AVOIRS DE RÉSERVE", "elements": []}
+            ]
+            },
+
+
+     ]
+    return BP_A_MBP5_CTC_solde_hierarchy
+################################################################################################################################################################
+#############################################################BP_A_MBP5_CTC_solde_historique######################################################################
+###############################################################################################################################################################
+@api.get('/BP_A_MBP5_CTC_solde_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(BP_A_MBP5_CTC_solde.find({"Date": {"$gte": start, "$lte": end}},{"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,"Valeur": 1}));
+    else:
+        a = list(BP_A_MBP5_CTC_solde.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,"Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+##################################################################################################################################################################
+################################################################################################################################################################
+##################################################################################################################################################################
+################################################################################################################################################################
+#############################################################BP_A_MBP5_CTC_credit_hierarchy######################################################################
+###############################################################################################################################################################
+@api.get("/BP_A_MBP5_CTC_credit/")
+async def hierarchy():
+    BP_A_MBP5_CTC_credit_hierarchy = [
+
+        {"name": "COMPTE DES TRANSACTIONS COURANTES",
+         "elements": [
+             {"name": "BIENS",
+              "elements": [
+                  {"name": "Marchandises générales", "elements": []},
+                  {"name": "Biens importés sans paiement et réexportés après transformation", "elements": []},
+                  {"name": "Achats de biens dans les ports", "elements": []},
+              ]
+              },
+             {"name": "SERVICES",
+              "elements": [
+                  {"name": "Transports",
+                   "elements": [
+                       {"name": "Transports maritimes", "elements": []},
+                       {"name": "Transports aériens", "elements": []},
+                       {"name": "Autres transports", "elements": []},
+                   ]
+                   },
+                  {"name": "Voyages",
+                   "elements": [
+                       {"name": "Voyages à titre professionnel", "elements": []},
+                       {"name": "Voyages à titre personnel", "elements": []}
+                   ]
+                   },
+                  {"name": "Services de communication", "elements": []},
+                  {"name": "Services d'assurance", "elements": []},
+                  {"name": "Redevances et droits de licence", "elements": []},
+                  {"name": "Autres services aux entreprises", "elements": []},
+                  {"name": "Services fournis ou reçus par les administrations publiques N.C.A", "elements": []}
+              ]},
+             {"name": "REVENUS",
+              "elements": [
+                  {"name": "Administrations", "elements": []},
+                  {"name": "Autorités monétaires", "elements": []},
+                  {"name": "Banques", "elements": []},
+                  {"name": "Autres secteurs", "elements": []},
+              ]
+              },
+             {"name": "TRANSFERTS COURANTS",
+              "elements": [
+                  {"name": "Publics", "elements": []},
+                  {"name": "Privés", "elements": []}
+              ]
+              }
+         ]},
+
+    ]
+    return BP_A_MBP5_CTC_credit_hierarchy
+
+################################################################################################################################################################
+#############################################################BP_A_MBP5_CTC_credit_Historique######################################################################
+###############################################################################################################################################################
+
+@api.get('/BP_A_MBP5_CTC_credit/Historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(BP_A_MBP5_CTC_credit.find({"Date": {"$gte": start, "$lte": end}},
+                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                 "Nature de l'op�ration": 1, "Valeur": 1}));
+    else:
+        a = list(BP_A_MBP5_CTC_credit.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                     "Type": 1,"Segment": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+##################################################################################################################################################################
+################################################################################################################################################################
+#############################################################BP_A_MBP5_CTC_debit_hierarchy######################################################################
+###############################################################################################################################################################
+@api.get("/BP_A_MBP5_CTC_debit/")
+async def hierarchy():
+    BP_A_MBP5_CTC_debit_hierarchy=[
+
+        {"name": "COMPTE DES TRANSACTIONS COURANTES ",
+         "elements": [
+             {"name": "BIENS",
+              "elements": [
+                  {"name": "Marchandises générales", "elements": []},
+                  {"name": "Biens importés sans paiement et réexportés après transformation", "elements": []},
+                  {"name": "Achats de biens dans les ports", "elements": []}
+              ]
+              },
+             {"name": "SERVICES",
+              "elements": [
+                  {"name": "Transports",
+                   "elements": [
+                       {"name": "Transports maritimes", "elements": []},
+                       {"name": "Transports aériens", "elements": []},
+                       {"name": "Autres transports", "elements": []},
+                   ]
+                   },
+                  {"name": "Voyages",
+                   "elements": [
+                       {"name": "Voyages à titre professionnel", "elements": []},
+                       {"name": "Voyages à titre personnel", "elements": []},
+                   ]},
+                  {"name": "Services de communication", "elements": []},
+                  {"name": "Services d'assurance", "elements": []},
+                  {"name": "Redevances et droits de licence", "elements": []},
+                  {"name": "Autres services aux entreprises", "elements": []},
+                  {"name": "Services fournis ou reçus par les administrations publiques N.C.A", "elements": []}
+              ]},
+             {"name": "REVENUS",
+              "elements": [
+                  {"name": "Administrations", "elements": []},
+                  {"name": "Autorités monétaires", "elements": []},
+                  {"name": "Banques", "elements": []},
+                  {"name": "Autres secteurs", "elements": []},
+              ]
+              },
+             {"name": "TRANSFERTS COURANTS",
+              "elements": [
+                  {"name": "Publics", "elements": []},
+                  {"name": "Privés", "elements": []}
+              ]
+              }
+         ]}
+]
+    return BP_A_MBP5_CTC_debit_hierarchy
+
+
+################################################################################################################################################################
+#############################################################BP_A_MBP5_CTC_debit_Historique######################################################################
+###############################################################################################################################################################
+@api.get('/BP_A_MBP5_CTC_debit/Historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(BP_A_MBP5_CTC_debit.find({"Date": {"$gte": start, "$lte": end}},
+                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                 "Nature de l'op�ration": 1, "Valeur": 1}));
+    else:
+        a = list(BP_A_MBP5_CTC_debit.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                     "Type": 1,"Segment": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+
+##################################################################################################################################################################
+################################################################################################################################################################
+#############################################################BP_A_MBP5_COF_credit_hierarchy######################################################################
+###############################################################################################################################################################
+@api.get("/BP_A_MBP5_COF_credit/")
+async def hierarchy():
+    BP_A_MBP5_COF_credit_hierarchy=[
+
+
+             {"name": "COMPTE DES OPERATIONS FINANCIERES",
+              "elements": [
+                  {"name": "Investissements directs",
+                   "elements": [
+                       {"name": "A l'étranger", "elements": []},
+                       {"name": "Dans l' économie nationale", "elements": []}
+                   ]
+                   },
+                  {"name": "Investissements de portefeuille", "elements": [
+                      {"name": "Avoirs", "elements": []},
+                      {"name": "Engagements", "elements": []}
+                  ]
+                   },
+                  {"name": "Autres investissements",
+                   "elements": [
+                       {"name": "Crédits commerciaux",
+                        "elements": [
+                            {"name": "Autres secteurs", "elements": []}
+                        ]},
+                       {"name": "Prêts",
+                        "elements": [
+                            {"name": "Administrations", "elements": []},
+                            {"name": "Banques", "elements": []},
+                            {"name": "Autres secteurs", "elements": []},
+                        ]},
+                       {"name": "Monnaie fiduciaire et dépôts", "elements": []},
+                       {"name": "Autres OF", "elements": []},
+                   ]},
+                  {"name": "Avoirs de réserve ", "elements": []}
+              ]},
+
+    ]
+
+
+    return BP_A_MBP5_COF_credit_hierarchy
+##################################################################################################################################################################
+################################################################################################################################################################
+#############################################################BP_A_MBP5_COF_credit_historique######################################################################
+###############################################################################################################################################################
+
+@api.get('/BP_A_MBP5_COF_credit/Historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(BP_A_MBP5_COF_credit.find({"Date": {"$gte": start, "$lte": end}},
+                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                 "Nature de l'op�ration": 1, "Valeur": 1}));
+    else:
+        a = list(BP_A_MBP5_COF_credit.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                     "Type": 1,"Segment": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+
+
+
+##################################################################################################################################################################
+################################################################################################################################################################
+#############################################################BP_A_MBP5_COF_debit_hierarchy######################################################################
+###############################################################################################################################################################
+@api.get("/BP_A_MBP5_COF_debit/")
+async def hierarchy():
+    BP_A_MBP5_COF_debit_hierarchy=[
+        {"name": "COMPTE DES OPERATIONS FINANCIERES",
+         "elements": [
+             {"name": "Investissements directs",
+              "elements": [
+                  {"name": "A l'étranger", "elements": []},
+                  {"name": "Dans l' économie nationale", "elements": []}
+              ]},
+             {"name": "Investissements de portefeuille",
+              "elements": [
+                  {"name": "Avoirs", "elements": []},
+                  {"name": "Engagements", "elements": []}
+              ]},
+             {"name": "Autres investissements ",
+              "elements": [
+                  {"name": "Crédits commerciaux",
+                   "elements": [
+                       {"name": "Autres secteurs", "elements": []}
+                   ]},
+                  {"name": "Prêts",
+                   "elements": [
+                       {"name": "Administrations", "elements": []},
+                       {"name": "Banques", "elements": []},
+                       {"name": "Autres secteurs", "elements": []}
+                   ]},
+                  {"name": "Monnaie fiduciaire et dépôts", "elements": []},
+                  {"name": "Autres", "elements": []}
+              ]},
+             {"name": "Avoirs de réserve ", "elements": []}
+         ]},
+
+    ]
+    return BP_A_MBP5_COF_debit_hierarchy
+
+##################################################################################################################################################################
+################################################################################################################################################################
+#############################################################BP_A_MBP5_COF_debit_historique######################################################################
+###############################################################################################################################################################
+@api.get('/BP_A_MBP5_COF_debit/Historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(BP_A_MBP5_COF_debit.find({"Date": {"$gte": start, "$lte": end}},
+                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                 "Nature de l'op�ration": 1, "Valeur": 1}));
+    else:
+        a = list(BP_A_MBP5_COF_debit.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                     "Type": 1,"Segment": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+#######################################################################################
+########################################################################################################################
+#############################################BP_T_MBP5_divisé par 5################################################################################
+########################################################################################################################
+
+################################################################################################################################################################
+#############################################################BP_T_MBP5_CTC_solde_hierarchy######################################################################
+###############################################################################################################################################################
+@api.get("/BP_T_MBP5_CTC_SOLDE/")
+async def hierarchy():
+    BP_T_MBP5_CTC_SOLDE_hierarchy=[
+
+
+            {"name":"COMPTE DES TRANSACTIONS COURANTES",
+             "elements": [
+                 {"name": "BIENS", "elements": []},
+                 {"name": "SERVICES", "elements": []},
+                 {"name": "REVENUS", "elements": []},
+                 {"name": "TRANSFERTS COURANTS", "elements": []},
+                 {"name": "INVESTISSEMENTS DIRECTS", "elements": []},
+                 {"name": "INVESTISSEMENTS DE PORTEFEUILLE", "elements": []},
+                 {"name": "AUTRES INVESTISSEMENTS", "elements": []},
+                 {"name": "AVOIRS DE RÉSERVE", "elements": []}
+            ]
+            },
+
+
+     ]
+    return BP_T_MBP5_CTC_SOLDE_hierarchy
+################################################################################################################################################################
+#############################################################BP_T_MBP5_CTC_solde_historique######################################################################
+###############################################################################################################################################################
+@api.get('/BP_T_MBP5_CTC_SOLDE_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(BP_T_MBP5_CTC_SOLDE.find({"Date": {"$gte": start, "$lte": end}},
+                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                  "Valeur": 1}));
+    else:
+        a = list(BP_T_MBP5_CTC_SOLDE.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                      "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+##################################################################################################################################################################
+################################################################################################################################################################
+##################################################################################################################################################################
+################################################################################################################################################################
+#############################################################BP_T_MBP5_CTC_credit_hierarchy######################################################################
+###############################################################################################################################################################
+@api.get("/BP_T_MBP5_CTC_CREDIT/")
+async def hierarchy():
+    BP_T_MBP5_CTC_CREDIT_hierarchy = [
+
+        {"name": "COMPTE DES TRANSACTIONS COURANTES",
+         "elements": [
+             {"name": "BIENS",
+              "elements": [
+                  {"name": "Marchandises générales", "elements": []},
+                  {"name": "Biens importés sans paiement et réexportés après transformation", "elements": []},
+                  {"name": "Achats de biens dans les ports", "elements": []},
+              ]
+              },
+             {"name": "SERVICES",
+              "elements": [
+                  {"name": "Transports",
+                   "elements": [
+                       {"name": "Transports maritimes", "elements": []},
+                       {"name": "Transports aériens", "elements": []},
+                       {"name": "Autres transports", "elements": []},
+                   ]
+                   },
+                  {"name": "Voyages",
+                   "elements": [
+                       {"name": "Voyages à titre professionnel", "elements": []},
+                       {"name": "Voyages à titre personnel", "elements": []}
+                   ]
+                   },
+                  {"name": "Services de communication", "elements": []},
+                  {"name": "Services d'assurance", "elements": []},
+                  {"name": "Redevances et droits de licence", "elements": []},
+                  {"name": "Autres services aux entreprises", "elements": []},
+                  {"name": "Services fournis ou reçus par les administrations publiques N.C.A", "elements": []}
+              ]},
+             {"name": "REVENUS",
+              "elements": [
+                  {"name": "Administrations", "elements": []},
+                  {"name": "Autorités monétaires", "elements": []},
+                  {"name": "Banques", "elements": []},
+                  {"name": "Autres secteurs", "elements": []},
+              ]
+              },
+             {"name": "TRANSFERTS COURANTS",
+              "elements": [
+                  {"name": "Publics", "elements": []},
+                  {"name": "Privés", "elements": []}
+              ]
+              }
+         ]},
+
+    ]
+    return BP_T_MBP5_CTC_CREDIT_hierarchy
+
+################################################################################################################################################################
+#############################################################BP_T_MBP5_CTC_credit_Historique######################################################################
+###############################################################################################################################################################
+
+@api.get('/BP_T_MBP5_CTC_CREDIT/Historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(BP_T_MBP5_CTC_CREDIT.find({"Date": {"$gte": start, "$lte": end}},
+                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                 "Nature de l'op�ration": 1, "Valeur": 1}));
+    else:
+        a = list(BP_T_MBP5_CTC_CREDIT.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                     "Type": 1,"Segment": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+##################################################################################################################################################################
+################################################################################################################################################################
+#############################################################BP_T_MBP5_CTC_debit_hierarchy######################################################################
+###############################################################################################################################################################
+@api.get("/BP_T_MBP5_CTC_DEBIT/")
+async def hierarchy():
+    BP_T_MBP5_CTC_DEBIT_hierarchy=[
+
+        {"name": "COMPTE DES TRANSACTIONS COURANTES ",
+         "elements": [
+             {"name": "BIENS",
+              "elements": [
+                  {"name": "Marchandises générales", "elements": []},
+                  {"name": "Biens importés sans paiement et réexportés après transformation", "elements": []},
+                  {"name": "Achats de biens dans les ports", "elements": []}
+              ]
+              },
+             {"name": "SERVICES",
+              "elements": [
+                  {"name": "Transports",
+                   "elements": [
+                       {"name": "Transports maritimes", "elements": []},
+                       {"name": "Transports aériens", "elements": []},
+                       {"name": "Autres transports", "elements": []},
+                   ]
+                   },
+                  {"name": "Voyages",
+                   "elements": [
+                       {"name": "Voyages à titre professionnel", "elements": []},
+                       {"name": "Voyages à titre personnel", "elements": []},
+                   ]},
+                  {"name": "Services de communication", "elements": []},
+                  {"name": "Services d'assurance", "elements": []},
+                  {"name": "Redevances et droits de licence", "elements": []},
+                  {"name": "Autres services aux entreprises", "elements": []},
+                  {"name": "Services fournis ou reçus par les administrations publiques N.C.A", "elements": []}
+              ]},
+             {"name": "REVENUS",
+              "elements": [
+                  {"name": "Administrations", "elements": []},
+                  {"name": "Autorités monétaires", "elements": []},
+                  {"name": "Banques", "elements": []},
+                  {"name": "Autres secteurs", "elements": []},
+              ]
+              },
+             {"name": "TRANSFERTS COURANTS",
+              "elements": [
+                  {"name": "Publics", "elements": []},
+                  {"name": "Privés", "elements": []}
+              ]
+              }
+         ]}
+]
+    return BP_T_MBP5_CTC_DEBIT_hierarchy
+
+
+################################################################################################################################################################
+#############################################################BP_T_MBP5_CTC_debit_Historique######################################################################
+###############################################################################################################################################################
+@api.get('/BP_T_MBP5_CTC_DEBIT/Historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(BP_T_MBP5_CTC_DEBIT.find({"Date": {"$gte": start, "$lte": end}},
+                                {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                 "Nature de l'op�ration": 1, "Valeur": 1}));
+    else:
+        a = list(BP_T_MBP5_CTC_DEBIT.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                     "Type": 1,"Segment": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+
+##################################################################################################################################################################
+################################################################################################################################################################
+#############################################################BP_T_MBP5_COF_credit_hierarchy######################################################################
+###############################################################################################################################################################
+@api.get("/BP_T_MBP5_COF_CREDIT/")
+async def hierarchy():
+    BP_T_MBP5_COF_CREDIT_hierarchy=[
+
+
+             {"name": "COMPTE DES OPERATIONS FINANCIERES",
+              "elements": [
+                  {"name": "Investissements directs",
+                   "elements": [
+                       {"name": "A l'étranger", "elements": []},
+                       {"name": "Dans l' économie nationale", "elements": []}
+                   ]
+                   },
+                  {"name": "Investissements de portefeuille", "elements": [
+                      {"name": "Avoirs", "elements": []},
+                      {"name": "Engagements", "elements": []}
+                  ]
+                   },
+                  {"name": "Autres investissements",
+                   "elements": [
+                       {"name": "Crédits commerciaux",
+                        "elements": [
+                            {"name": "Autres secteurs", "elements": []}
+                        ]},
+                       {"name": "Prêts",
+                        "elements": [
+                            {"name": "Administrations", "elements": []},
+                            {"name": "Banques", "elements": []},
+                            {"name": "Autres secteurs", "elements": []},
+                        ]},
+                       {"name": "Monnaie fiduciaire et dépôts", "elements": []},
+                       {"name": "Autres OF", "elements": []},
+                   ]},
+                  {"name": "Avoirs de réserve ", "elements": []}
+              ]},
+
+    ]
+
+
+    return BP_T_MBP5_COF_CREDIT_hierarchy
+##################################################################################################################################################################
+################################################################################################################################################################
+#############################################################BP_T_MBP5_COF_credit_historique######################################################################
+###############################################################################################################################################################
+
+@api.get('/BP_T_MBP5_COF_CREDIT/Historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(BP_T_MBP5_COF_CREDIT.find({"Date": {"$gte": start, "$lte": end}},
+                                {"_id": 0, "Date": 1, "Période":1, "Balance des paiements ": 1, "Cat�gorie": 1,
+                                 "Nature de l'op�ration": 1, "Valeur": 1}));
+    else:
+        a = list(BP_T_MBP5_COF_CREDIT.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,
+                                     "Type": 1,"Segment": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+
+
+
+##################################################################################################################################################################
+################################################################################################################################################################
+#############################################################BP_T_MBP5_COF_debit_hierarchy######################################################################
+###############################################################################################################################################################
+@api.get("/BP_T_MBP5_COF_DEBIT/")
+async def hierarchy():
+    BP_T_MBP5_COF_DEBIT_hierarchy=[
+        {"name": "COMPTE DES OPERATIONS FINANCIERES",
+         "elements": [
+             {"name": "Investissements directs",
+              "elements": [
+                  {"name": "A l'étranger", "elements": []},
+                  {"name": "Dans l' économie nationale", "elements": []}
+              ]},
+             {"name": "Investissements de portefeuille",
+              "elements": [
+                  {"name": "Avoirs", "elements": []},
+                  {"name": "Engagements", "elements": []}
+              ]},
+             {"name": "Autres investissements ",
+              "elements": [
+                  {"name": "Crédits commerciaux",
+                   "elements": [
+                       {"name": "Autres secteurs", "elements": []}
+                   ]},
+                  {"name": "Prêts",
+                   "elements": [
+                       {"name": "Administrations", "elements": []},
+                       {"name": "Banques", "elements": []},
+                       {"name": "Autres secteurs", "elements": []}
+                   ]},
+                  {"name": "Monnaie fiduciaire et dépôts", "elements": []},
+                  {"name": "Autres", "elements": []}
+              ]},
+             {"name": "Avoirs de réserve ", "elements": []}
+         ]},
+
+    ]
+    return BP_T_MBP5_COF_DEBIT_hierarchy
+
+##################################################################################################################################################################
+################################################################################################################################################################
+#############################################################BP_T_MBP5_COF_debit_historique######################################################################
+###############################################################################################################################################################
+@api.get('/BP_T_MBP5_COF_DEBIT/Historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(BP_T_MBP5_COF_DEBIT.find({"Date": {"$gte": start, "$lte": end}}, {"_id": 0, "Date": 1, "Période":1, "Balance des paiements ": 1, "Cat�gorie": 1,"Type": 1, "Segment": 1, "Valeur": 1}));
+    else:
+        a = list(BP_T_MBP5_COF_DEBIT.find({}, {"_id": 0, "Date": 1,"Période":1,  "Balance des paiements ": 1, "Cat�gorie": 1,"Type": 1,"Segment": 1, "Valeur": 1}));
+
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
