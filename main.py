@@ -64,6 +64,13 @@ BP_A_MBP5_CTC_credit = db.BP_A_MBP5_CTC_credit
 BP_A_MBP5_CTC_debit = db.BP_A_MBP5_CTC_debit
 BP_A_MBP5_COF_credit = db.BP_A_MBP5_COF_credit
 BP_A_MBP5_COF_debit = db.BP_A_MBP5_COF_debit
+
+BP_T_MBP5_CTC_SOLDE = db.BP_T_MBP5_CTC_SOLDE
+BP_T_MBP5_CTC_CREDIT = db.BP_T_MBP5_CTC_CREDIT
+BP_T_MBP5_CTC_DEBIT = db.BP_T_MBP5_CTC_DEBIT
+BP_T_MBP5_COF_CREDIT = db.BP_T_MBP5_COF_CREDIT
+BP_T_MBP5_COF_DEBIT = db.BP_T_MBP5_COF_DEBIT
+
 ###############################################################################################################################################################################
 ###############################################################historique #################################################################################################
 ################################################################################################################################################################################
