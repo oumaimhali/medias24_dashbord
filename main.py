@@ -4300,36 +4300,41 @@ def getComptes(start: int = 0, end: int = 0):
      #########################################################################################################################
      ##################################BP_A_MBP6_CF_ANE_hierarchy########################################################
      #########################################################################################################################
-@api.get("BP_A_MBP6_CF_ANE/")
+@api.get("/BP_A_MBP6_CF_ANE/")
 async def hierarchy():
-     BP_A_MBP6_CF_ANE_hierarchy = [
+    BP_A_MBP6_CF_ANE_hierarchy = [
+        {"name": "COMPTE FINANCIER",
+         "elements": [
+             {"name": "Investissements directs",
+              "elements": [
+                  {"name": "Actions et parts de fonds de placement", "elements": []},
+                  {"name": "Instruments de dette", "elements": []}
+              ]
+              },
+             {"name": "Investissements de portefeuille",
+              "elements": [
+                  {"name": "Actions et parts de fonds de placement", "elements": []},
+                  {"name": "Titres de créance", "elements": []}
+              ]
+              },
+             {"name": "DÉRIVÉS FINANCIERS", "elements": []},
+             {"name": "Autres investissements",
+              "elements": [
+                  {"name": "Autres participations", "elements": []},
+                  {"name": "Numéraire et dépôts", "elements": []},
+                  {"name": "Prêts", "elements": []},
+                  {"name": "Systèmes d'assurances, de pensions et de garanties standard", "elements": []},
+                  {"name": "Crédits commerciaux et avances", "elements": []},
+                  {"name": "Autres comptes à recevoir/à payer", "elements": []},
+              ]
+              },
+             {"name": "AVOIRS DE RÉSERVE", "elements": []}
+         ]
+         },
 
-            {"name": "COMPTE FINANCIER",
-            "elements": [
-                {"name": "Investissements directs",
-                "elements": [
-                    {"name": "Actions et parts de fonds de placement", "elements": []},
-                    {"name": "Instruments de dette", "elements": []}
-                ]},
-                {"name": "Investissements de portefeuille",
-                "elements": [
-                    {"name": "Actions et parts de fonds de placement", "elements": []},
-                    {"name": "Titres de créance", "elements": []}
-                ]},
-                {"name": "DÉRIVÉS FINANCIERS","elements": []},
-                {"name": "Autres investissements ",
-                "elements": [
-                    {"name": "Numéraire et dépôts","elements": []},
-                    {"name": "Prêts", "elements": []},
-                    {"name": "Systèmes d'assurances, de pensions et de garanties standard", "elements": []},
-                    {"name": "Crédits commerciaux et avances", "elements": []},
-                    {"name": "Autres comptes à recevoir/à payer", "elements": []}
-                ]},
-
-            ]},
     ]
-     return BP_A_MBP6_CF_ANE_hierarchy
-################################################################################################################################
+    return BP_A_MBP6_CF_ANE_hierarchy
+#######################################################################################
 ##########################################BP_A_MBP6_CF_ANE_HISTORIQUE#################################################################
 ################################################################################################################################
 @api.get('/BP_A_MBP6_CF_ANE_HISTORIQUE')
