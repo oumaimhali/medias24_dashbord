@@ -83,8 +83,8 @@ BP_T_MBP6_CTC_DEBIT = db.BP_T_MBP6_CTC_DEBIT
 BP_T_MBP6_CF_ANA = db.BP_T_MBP6_CF_ANA
 BP_T_MBP6_CF_ANE = db.BP_T_MBP6_CF_ANE
 
-IPC_2006=db.IPC_2006
-IPC_2017=db.IPC_2017
+IPC_2006 = db2.IPC_2006
+IPC_2017 = db2.IPC_2017
 ###############################################################################################################################################################################
 ###############################################################historique #################################################################################################
 ################################################################################################################################################################################
@@ -4691,6 +4691,7 @@ def getComptes(start: int = 0, end: int = 0):
 
 ########################################################HCP_inflation#################################################
 
+ 
  ##############################################################################################
  ##################################""IPC_2006_hierarchy##########################################
  #############################################################################################
@@ -4716,7 +4717,7 @@ async def hierarchy():
 @api.get('/IPC_2006_historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
-        a = list(IPC_2006.find({"date": {"$gte": start, "$lte": end}},
+        a = list(IPC_2006.find({"Annee": {"$gte": start, "$lte": end}},
                                 {"_id": 0, "Annee": 1, "Alimentation": 1, "Produits Non Alimentaires": 1,
                                   "Indice General": 1}));
     else:
@@ -4743,14 +4744,14 @@ async def hierarchy():
 #############################################################################################
 #################################IPC_2017_historique#########################################
 #############################################################################################
-@api.get('/IPC_2017_historique')
-def getComptes(start: int = 0, end: int = 0):
-    if (start and end):
-        a = list(IPC_2017.find({"date": {"$gte": start, "$lte": end}},
-                                {"_id": 0, "Annee": 1, "Alimentation": 1, "Produits Non Alimentaires": 1,
-                                  "Indice General": 1}));
-    else:
-        a = list(IPC_2017.find({}, {"_id": 0, "Annee": 1, "Alimentation": 1, "Produits Non Alimentaires": 1,
-                                      "Indice General": 1}));
-    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
+###########################################################################
+
+############################################################################"
+@api.get('/IPC_2017_HISTORIQUE')
+def getComptes(start: int = 0, end: int = 0):
+         if (start and end):
+             a = list(IPC_2017.find({"date": {"$gte": start, "$lte": end}}, {"_id": 0, "Annees": 1,"Alimentation": 1, "Produits Non Alimentaires": 1, "Indice General": 1}));
+         else:
+             a = list(IPC_2017.find({},{"_id": 0, "Annees": 1,"Alimentation": 1, "Produits Non Alimentaires": 1,"Indice General": 1 }));
+         return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
