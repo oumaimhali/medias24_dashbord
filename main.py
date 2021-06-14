@@ -82,6 +82,9 @@ BP_T_MBP6_CTC_CREDIT = db.BP_T_MBP6_CTC_CREDIT
 BP_T_MBP6_CTC_DEBIT = db.BP_T_MBP6_CTC_DEBIT
 BP_T_MBP6_CF_ANA = db.BP_T_MBP6_CF_ANA
 BP_T_MBP6_CF_ANE = db.BP_T_MBP6_CF_ANE
+
+IPC_2006=db.IPC_2006
+IPC_2017=db.IPC_2017
 ###############################################################################################################################################################################
 ###############################################################historique #################################################################################################
 ################################################################################################################################################################################
@@ -4681,4 +4684,73 @@ def getComptes(start: int = 0, end: int = 0):
                                                 {"_id": 0, "Date": 1,"P�riode": 1, "Balance des paiements ": 1,"Cat�gorie": 1, "Type": 1,  "Valeur": 1}));
          return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 ########################################################################################################################
+
+
+
+
+
+########################################################HCP_inflation#################################################
+
+ ##############################################################################################
+ ##################################""IPC_2006_hierarchy##########################################
+ #############################################################################################
+@api.get("IPC_2006/")
+async def hierarchy():
+     IPC_2006_hierarchy = [
+
+            {"name": "Indice des prix à la consommation 2006",
+            "elements": [
+                {"name": "Alimentation","elements": []},
+                {"name": "Produits Non Alimentaires","elements": []},
+                {"name": "Indice Général","elements": []}
+
+
+            ]},
+
+    ]
+     return IPC_2006_hierarchy
+
+#############################################################################################
+#################################IPC_2006_historique#########################################
+#############################################################################################
+@api.get('/IPC_2006_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(IPC_2006.find({"Annee": {"$gte": start, "$lte": end}},
+                                {"_id": 0, "Annee": 1, "Alimentation": 1, "Produits Non Alimentaires": 1,
+                                  "Indice General": 1}));
+    else:
+        a = list(IPC_2006.find({}, {"_id": 0, "Annee": 1, "Alimentation": 1, "Produits Non Alimentaires": 1,
+                                      "Indice General": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################
+#############################IPC_2017_hierarchy###############################################
+################################################################################################
+@api.get("IPC_2017/")
+async def hierarchy():
+     IPC_2017_hierarchy = [
+
+            {"name": "Indice des prix à la consommation 2017",
+            "elements": [
+                {"name": "Alimentation", "elements": []},
+                {"name": "Produits Non Alimentaires", "elements": []},
+                {"name": "Indice Général", "elements": []}
+
+            ]},
+
+    ]
+     return IPC_2017_hierarchy
+#############################################################################################
+#################################IPC_2017_historique#########################################
+#############################################################################################
+@api.get('/IPC_2017_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(IPC_2017.find({"Annee": {"$gte": start, "$lte": end}},
+                                {"_id": 0, "Annee": 1, "Alimentation": 1, "Produits Non Alimentaires": 1,
+                                  "Indice General": 1}));
+    else:
+        a = list(IPC_2017.find({}, {"_id": 0, "Annee": 1, "Alimentation": 1, "Produits Non Alimentaires": 1,
+                                      "Indice General": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
