@@ -4782,8 +4782,7 @@ async def hierarchy():
 @api.get('/Recettes_en_devises_HISTORIQUE')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
-        a = list(Recettes_en_devises.find({"Date": {"$gte": start, "$lte": end}},
-                                     {"_id": 0, "Date": 1, "Montant en MDHs": 1}));
+        a = list(Recettes_en_devises.find({"Date": {"$gte": start, "$lte": end}}, {"_id": 0, "Date": 1, "Montant en MDHs": 1}));
     else:
         a = list(Recettes_en_devises.find({}, {"_id": 0, "Date": 1, "Montant en MDHs": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
