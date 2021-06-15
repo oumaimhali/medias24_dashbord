@@ -4872,7 +4872,7 @@ async def hierarchy():
 ################################################################################################################
 ###########################################arrivees_touristiques_par_nat_historique#########################################
 ###################################################################################################################
-@api.get('/arrivees_touristiques_par_nat')
+@api.get('/arrivees_touristiques_par_nat_historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(arrivees_touristiques_par_nat.find({"Date": {"$gte": start, "$lte": end}},
