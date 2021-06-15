@@ -4779,7 +4779,7 @@ async def hierarchy():
 ################################################################################################################
 ###########################################Recettes_en_devises_historique#########################################
 ###################################################################################################################
-@api.get('/Recettes_en_devises')
+@api.get('/Recettes_en_devises_HISTORIQUE')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(Recettes_en_devises.find({"Date": {"$gte": start, "$lte": end}},
@@ -4827,7 +4827,7 @@ async def hierarchy():
 ################################################################################################################
 ###########################################Arrivees_touristiques_historique#########################################
 ###################################################################################################################
-@api.get('/Arrivees_touristiques')
+@api.get('/Arrivees_touristiques_HISTORIQUE')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(Arrivees_touristiques.find({"Date": {"$gte": start, "$lte": end}},
