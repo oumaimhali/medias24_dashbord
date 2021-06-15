@@ -20,6 +20,7 @@ client = MongoClient('mongodb://oumaima_hl:Oumaimamedias24@cluster0-shard-00-00.
 
 db = client['office_des_changes']
 db2 = client['HCP']
+db3 = client['Tourisme']
 
 Voyages_Pays_0 = db.Voyages_Pays_0
 compte_courant = db.compte_courant
@@ -83,6 +84,9 @@ BP_T_MBP6_CTC_CREDIT = db.BP_T_MBP6_CTC_CREDIT
 BP_T_MBP6_CTC_DEBIT = db.BP_T_MBP6_CTC_DEBIT
 BP_T_MBP6_CF_ANA = db.BP_T_MBP6_CF_ANA
 BP_T_MBP6_CF_ANE = db.BP_T_MBP6_CF_ANE
+
+Arrivees_touristiques	= db3.Arrivees_touristiques
+Recettes_en_devises  = db3.Recettes_en_devises
 
 IPC_2006 = db2.IPC_2006
 IPC_2017 = db2.IPC_2017
@@ -4756,3 +4760,52 @@ def getComptes(start: int = 0, end: int = 0):
          else:
              a = list(IPC_2017.find({},{"_id": 0, "Annees": 1,"Alimentation": 1, "Produits Non Alimentaires": 1,"Indice General": 1 }));
          return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+    
+    
+    #######################################################################################################################################################
+    @api.get("/Arrivees_touristiques /")
+async def hierarchy():
+    Arrivees_touristiques_hierarchy=[
+        {"name": "Aéroports",
+         "elements": [
+             {"name": "T.AIR", "elements": []},
+             {"name": "A Mohammed V", "elements": []},
+             {"name": "A Agadir Almassira", "elements": []},
+             {"name": "A Tanger Ibn Battouta", "elements": []},
+             {"name": "A Fes-Saiss", "elements": []},
+             {"name": "A Rabat-Salé", "elements": []},
+             {"name": "A Laaroui", "elements": []},
+             {"name": "A Oujda", "elements": []},
+             {"name": "A Essaouira", "elements": []},
+             {"name": "A Oaurzazate", "elements": []},
+             {"name": "A Al Hoceima", "elements": []},
+             {"name": "T.MER", "elements": []},
+             {"name": "P Tanger Med", "elements": []},
+             {"name": "P Tanger", "elements": []},
+             {"name": "P Nador", "elements": []},
+             {"name": "T.TERRE", "elements": []},
+             {"name": "T Bab Sebta", "elements": []},
+             {"name": "T Béni Anzar", "elements": []}
+             
+
+
+
+         ]
+         },
+
+        {"name":"Arrivees_touristiques ","elements":[]},
+
+    ]
+    return Arrivees_touristiques_hierarchy
+################################################################################################################
+###########################################Arrivees_touristiques_historique#########################################
+###################################################################################################################
+@api.get('/Arrivees_touristiques')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Arrivees_touristiques.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Regions": 1, "Valeur": 1}));
+    else:
+        a = list(Arrivees_touristiques.find({}, {"_id": 0, "Date": 1,"Regions": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
