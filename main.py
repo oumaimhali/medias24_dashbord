@@ -4761,10 +4761,36 @@ def getComptes(start: int = 0, end: int = 0):
              a = list(IPC_2017.find({},{"_id": 0, "Annees": 1,"Alimentation": 1, "Produits Non Alimentaires": 1,"Indice General": 1 }));
          return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
-    
+    ################################################################################################################
+###########################################Recettes_en_devises_hierarchy#########################################
+###################################################################################################################
+@api.get("/Recettes_en_devises/")
+async def hierarchy():
+    Recettes_en_devises_hierarchy=[
+
+        {"name":"Recettes_en_devises",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Recettes_en_devises_hierarchy
+################################################################################################################
+###########################################Recettes_en_devises_historique#########################################
+###################################################################################################################
+@api.get('/Recettes_en_devises')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Recettes_en_devises.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Montant en MDHs": 1}));
+    else:
+        a = list(Recettes_en_devises.find({}, {"_id": 0, "Date": 1, "Montant en MDHs": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
     
     #######################################################################################################################################################
-    @api.get("/Arrivees_touristiques /")
+@api.get("/Arrivees_touristiques/")
 async def hierarchy():
     Arrivees_touristiques_hierarchy=[
         {"name": "Aéroports",
