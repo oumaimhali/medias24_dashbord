@@ -4792,7 +4792,7 @@ def getComptes(start: int = 0, end: int = 0):
 @api.get("/Arrivees_touristiques/")
 async def hierarchy():
     Arrivees_touristiques_hierarchy=[
-        {"name": "Aéroports",
+        {"name": "Postes frontières",
          "elements": [
              {"name": "T.AIR", "elements": []},
              {"name": "A Mohammed V", "elements": []},
@@ -4830,7 +4830,7 @@ async def hierarchy():
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(Arrivees_touristiques.find({"Date": {"$gte": start, "$lte": end}},
-                                     {"_id": 0, "Date": 1,"Regions": 1, "Valeur": 1}));
+                                     {"_id": 0, "Date": 1,"Postes frontières": 1, "Valeur": 1}));
     else:
-        a = list(Arrivees_touristiques.find({}, {"_id": 0, "Date": 1,"Regions": 1, "Valeur": 1}));
+        a = list(Arrivees_touristiques.find({}, {"_id": 0, "Date": 1,"Postes frontières": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
