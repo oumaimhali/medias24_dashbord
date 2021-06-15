@@ -87,6 +87,7 @@ BP_T_MBP6_CF_ANE = db.BP_T_MBP6_CF_ANE
 
 Arrivees_touristiques	= db3.Arrivees_touristiques
 Recettes_en_devises  = db3.Recettes_en_devises
+arrivees_touristiques_par_nat = db3.arrivees_touristiques_par_nat
 
 IPC_2006 = db2.IPC_2006
 IPC_2017 = db2.IPC_2017
