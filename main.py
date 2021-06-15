@@ -4834,3 +4834,48 @@ def getComptes(start: int = 0, end: int = 0):
     else:
         a = list(Arrivees_touristiques.find({}, {"_id": 0, "Date": 1,"Postes frontières": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+#######################################################################################################################
+################################################################################################################
+###########################################arrivees_touristiques_par_nat_hierarchie#########################################
+###################################################################################################################
+##############################################################################################################################
+@api.get("/arrivees_touristiques_par_nat/")
+async def hierarchy():
+    arrivees_touristiques_par_nat_hierarchy = [
+        {"name": "Postes frontières",
+         "elements": [
+             {"name": "Touristes Etrangers", "elements": []},
+             {"name": "France", "elements": []},
+             {"name": "Espagne", "elements": []},
+             {"name": "Royaume-Uni", "elements": []},
+             {"name": "Allemagne", "elements": []},
+             {"name": "Italie", "elements": []},
+             {"name": "Etats Unis", "elements": []},
+             {"name": "Belgique", "elements": []},
+             {"name": "Hollande", "elements": []},
+             {"name": "Maghreb", "elements": []},
+             {"name": "Chine", "elements": []},
+             {"name": "Scandinavie", "elements": []},
+             {"name": "MRE", "elements": []}
+
+
+         ]
+         },
+
+        {"name": "arrivees_touristiques_par_nat", "elements": []},
+
+    ]
+    return arrivees_touristiques_par_nat_hierarchy
+
+
+################################################################################################################
+###########################################arrivees_touristiques_par_nat_historique#########################################
+###################################################################################################################
+@api.get('/arrivees_touristiques_par_nat')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(arrivees_touristiques_par_nat.find({"Date": {"$gte": start, "$lte": end}},
+                                            {"_id": 0, "Date": 1, "Nationalit�": 1, "Valeur": 1}));
+    else:
+        a = list(arrivees_touristiques_par_nat.find({}, {"_id": 0, "Date": 1, "Nationalit�": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
