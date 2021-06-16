@@ -21,7 +21,7 @@ client = MongoClient('mongodb://oumaima_hl:Oumaimamedias24@cluster0-shard-00-00.
 db = client['office_des_changes']
 db2 = client['HCP']
 db3 = client['Tourisme']
-
+db4 = client['MEF']
 Voyages_Pays_0 = db.Voyages_Pays_0
 compte_courant = db.compte_courant
 Comext_import_GU_CVS = db.Comext_import_GU_CVS
@@ -91,6 +91,8 @@ arrivees_touristiques_par_nat = db3.arrivees_touristiques_par_nat
 
 IPC_2006 = db2.IPC_2006
 IPC_2017 = db2.IPC_2017
+
+DETTE_EXTERIEURE_PUBLIQUE = db4.DETTE_EXTERIEURE_PUBLIQUE
 ###############################################################################################################################################################################
 ###############################################################historique #################################################################################################
 ################################################################################################################################################################################
@@ -4879,4 +4881,45 @@ def getComptes(start: int = 0, end: int = 0):
                                             {"_id": 0, "Date": 1, "Nationalit�": 1, "Valeur": 1}));
     else:
         a = list(arrivees_touristiques_par_nat.find({}, {"_id": 0, "Date": 1, "Nationalit�": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+
+################################################################################################################
+###########################################DETTE_EXTERIEURE_PUBLIQUE_hierarchie#########################################
+###################################################################################################################
+##############################################################################################################################
+@api.get("/DETTE_EXTERIEURE_PUBLIQUE/")
+async def hierarchy():
+    DETTE_EXTERIEURE_PUBLIQUE_hierarchy = [
+        {"name": "DETTE_EXTERIEURE_PUBLIQUE",
+         "elements": [
+             {"name": "Encours de la dette extérieure publique (En millions $US)", "elements": []},
+             {"name": "Encours de la dette extérieure publique (En millions DH)", "elements": []},
+             {"name": "En %  du PIB", "elements": []},
+             {"name": "Service de la dette (En millions $US)", "elements": []},
+             {"name": "Service de la dette (En millions DH)", "elements": []},
+             {"name": "En % des recettes courantes", "elements": []},
+             {"name": "Charges en intérêts (En millions DH)", "elements": []},
+             {"name": "En %  du PIB", "elements": []},
+             {"name": "Coût moyen (%)", "elements": []}
+
+         ]
+         },
+
+
+
+    ]
+    return DETTE_EXTERIEURE_PUBLIQUE_hierarchy
+
+
+################################################################################################################
+###########################################DETTE_EXTERIEURE_PUBLIQUE_historique#########################################
+###################################################################################################################
+@api.get('/DETTE_EXTERIEURE_PUBLIQUE_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(DETTE_EXTERIEURE_PUBLIQUE.find({"Date": {"$gte": start, "$lte": end}},
+                                            {"_id": 0, "Date": 1, "Dette exterieure publique": 1, "Valeur": 1}));
+    else:
+        a = list(DETTE_EXTERIEURE_PUBLIQUE.find({}, {"_id": 0, "Date": 1, "Dette exterieure publique": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
