@@ -94,6 +94,7 @@ IPC_2017 = db2.IPC_2017
 
 DETTE_EXTERIEURE_PUBLIQUE = db4.DETTE_EXTERIEURE_PUBLIQUE
 DETTE_DU_TRESOR_SERVICE_DE_LA_DETTE = db4.DETTE_DU_TRESOR_SERVICE_DE_LA_DETTE
+DETTE_DU_TRESOR_ENCOURS_DE_LA_DETTE = db4.DETTE_DU_TRESOR_ENCOURS_DE_LA_DETTE
 ###############################################################################################################################################################################
 ###############################################################historique #################################################################################################
 ################################################################################################################################################################################
@@ -4936,8 +4937,7 @@ def getComptes(start: int = 0, end: int = 0):
 @api.get("/Dette_du_tresor_service_de_la_dette/")
 async def hierarchy():
     Dette_du_tresor_service_de_la_dette_hierarchy = [
-        {"name": "Dette_du_tresor",
-         "elements": [
+
              {"name": "Dette_du_tresor_service_de_la_dette",
               "elements": [
                 {"name": "Court terme",
@@ -4953,9 +4953,7 @@ async def hierarchy():
                      {"name": "Dette extérieure", "elements": []}
                  ]}
               ]}
-         ]
-         },
-
+       
     ]
     return Dette_du_tresor_service_de_la_dette_hierarchy
 ############################################################################################################################
@@ -4969,5 +4967,40 @@ def getComptes(start: int = 0, end: int = 0):
     else:
         a = list(DETTE_DU_TRESOR_SERVICE_DE_LA_DETTE.find({}, {"_id": 0, "Date": 1, "Periode": 1,"Dette tresor": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################DETTE_DU_TRESOR_ENCOURS_DE_LA_DETTE_hierarchy###############################
+#####################################################################################################################
+@api.get("/DETTE_DU_TRESOR_ENCOURS_DE_LA_DETTE/")
+async def hierarchy():
+    DETTE_DU_TRESOR_ENCOURS_DE_LA_DETTE_hierarchy = [
 
+             {"name": "DETTE_DU_TRESOR_ENCOURS_DE_LA_DETTE",
+              "elements": [
+                {"name": "Court terme",
+                 "elements": [
+
+                     {"name": "Dette intérieure", "elements": []},
+                     {"name": "Dette extérieure", "elements": []}
+                ]},
+
+                 {"name": "Moyen et long terme",
+                 "elements": [
+                     {"name": "Dette intérieure", "elements": []},
+                     {"name": "Dette extérieure", "elements": []}
+                 ]}
+              ]}
+
+
+    ]
+    return DETTE_DU_TRESOR_ENCOURS_DE_LA_DETTE_hierarchy
+############################################################################################################################
+##############################################DETTE_DU_TRESOR_ENCOURS_DE_LA_DETTE_historique##################################
+################################################################################################################################
+@api.get('/DETTE_DU_TRESOR_ENCOURS_DE_LA_DETTE_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(DETTE_DU_TRESOR_ENCOURS_DE_LA_DETTE.find({"Date": {"$gte": start, "$lte": end}},
+                                            {"_id": 0, "Date": 1, "Periode": 1, "Dette tresor": 1,"Valeur": 1}));
+    else:
+        a = list(DETTE_DU_TRESOR_ENCOURS_DE_LA_DETTE.find({}, {"_id": 0, "Date": 1, "Periode": 1,"Dette tresor": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
