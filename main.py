@@ -98,7 +98,7 @@ DETTE_DU_TRESOR_ENCOURS_DE_LA_DETTE = db4.DETTE_DU_TRESOR_ENCOURS_DE_LA_DETTE
 DETTE_DU_TRESOR_CHARGES_EN_PRINCIPAL = db4.DETTE_DU_TRESOR_CHARGES_EN_PRINCIPAL
 DETTE_DU_TRESOR_CHARGES_EN_INTERETS = db4.DETTE_DU_TRESOR_CHARGES_EN_INTERETS
 dette_des_etab_et_Eses_Services_DE_LA_DETTE = db4.dette_des_etab_et_Eses_Services_DE_LA_DETTE
-dette_des_etab_et_Eses_Services_DE_LA_DETTE = db4.dette_des_etab_et_Eses_Services_DE_LA_DETTE
+dette_des_etab_et_Eses_ENCOURS_DE_LA_DETTE = db4.dette_des_etab_et_Eses_ENCOURS_DE_LA_DETTE
 
 ###############################################################################################################################################################################
 ###############################################################historique #################################################################################################
