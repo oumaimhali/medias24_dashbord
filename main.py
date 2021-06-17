@@ -5150,7 +5150,7 @@ async def hierarchy():
 ############################################################################################################################
 ##############################################dette_des_etab_et_Eses_ENCOURS_DE_LA_DETTE_historique##################################
 ################################################################################################################################
-@api.get('dette_des_etab_et_Eses_ENCOURS_DE_LA_DETTE_historique')
+@api.get('/dette_des_etab_et_Eses_ENCOURS_DE_LA_DETTE_historique')
 def getComptes(start: int = 0, end: int = 0):
     if (start and end):
         a = list(dette_des_etab_et_Eses_ENCOURS_DE_LA_DETTE.find({"Date": {"$gte": start, "$lte": end}},
