@@ -4936,7 +4936,7 @@ def getComptes(start: int = 0, end: int = 0):
 @api.get("/Dette_du_tresor_service_de_la_dette/")
 async def hierarchy():
     Dette_du_tresor_service_de_la_dette_hierarchy = [
-        {"name": "DETTE_EXTERIEURE_PUBLIQUE",
+        {"name": "Dette_du_tresor",
          "elements": [
              {"name": "Dette_du_tresor_service_de_la_dette",
               "elements": [
