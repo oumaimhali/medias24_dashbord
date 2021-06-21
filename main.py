@@ -99,6 +99,7 @@ DETTE_DU_TRESOR_CHARGES_EN_PRINCIPAL = db4.DETTE_DU_TRESOR_CHARGES_EN_PRINCIPAL
 DETTE_DU_TRESOR_CHARGES_EN_INTERETS = db4.DETTE_DU_TRESOR_CHARGES_EN_INTERETS
 dette_des_etab_et_Eses_Services_DE_LA_DETTE = db4.dette_des_etab_et_Eses_Services_DE_LA_DETTE
 dette_des_etab_et_Eses_ENCOURS_DE_LA_DETTE = db4.dette_des_etab_et_Eses_ENCOURS_DE_LA_DETTE 
+dette_des_etab_et_Eses_charges_en_principal = db4.dette_des_etab_et_Eses_charges_en_principal
 
 
 ###############################################################################################################################################################################
@@ -5158,3 +5159,45 @@ def getComptes(start: int = 0, end: int = 0):
     else:
         a = list(dette_des_etab_et_Eses_ENCOURS_DE_LA_DETTE.find({}, {"_id": 0, "Date": 1, "Periode": 1,"Dette tresor": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+##################################################################################################################################################
+#############################################################################################################################################
+#################################################################################################################################"
+###############################################dette_des_etab_et_Eses_charges_en_principal_hierarchy###############################
+#####################################################################################################################
+@api.get("/dette_des_etab_et_Eses_charges_en_principal/")
+async def hierarchy():
+    dette_des_etab_et_Eses_charges_en_principal_hierarchy = [
+
+             {"name": "dette_des_etab_et_Eses_charges_en_principal",
+              "elements": [
+                {"name": "Court terme",
+                 "elements": [
+
+                     {"name": "Dette intérieure", "elements": []},
+                     {"name": "Dette extérieure", "elements": []}
+                ]},
+
+                 {"name": "Moyen et long terme",
+                 "elements": [
+                     {"name": "Dette intérieure", "elements": []},
+                     {"name": "Dette extérieure", "elements": []}
+                 ]}
+              ]}
+
+
+    ]
+    return dette_des_etab_et_Eses_charges_en_principal_hierarchy
+############################################################################################################################
+##############################################dette_des_etab_et_Eses_charges_en_principal_historique##################################
+################################################################################################################################
+@api.get('/dette_des_etab_et_Eses_charges_en_principal_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(dette_des_etab_et_Eses_charges_en_principal.find({"Date": {"$gte": start, "$lte": end}},
+                                            {"_id": 0, "Date": 1, "Periode": 1, "Dette tresor": 1,"Valeur": 1}));
+    else:
+        a = list(dette_des_etab_et_Eses_charges_en_principal.find({}, {"_id": 0, "Date": 1, "Periode": 1,"Dette tresor": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+
+
