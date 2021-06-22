@@ -102,6 +102,12 @@ dette_des_etab_et_Eses_ENCOURS_DE_LA_DETTE = db4.dette_des_etab_et_Eses_ENCOURS_
 dette_des_etab_et_Eses_charges_en_principal = db4.dette_des_etab_et_Eses_charges_en_principal
 Dette_des_etab_et_Eses_charges_en_interet = db4.Dette_des_etab_et_Eses_charges_en_interet
 
+dette_brute_sec_bancaire = db4.dette_brute_sec_bancaire
+dette_brute_inves_directs = db4.dette_brute_inves_directs
+dette_brute_autres_sec = db4.dette_brute_autres_sec
+dette_brute_autorites_mon = db4.dette_brute_autorites_mon
+dette_brute_administration = db4.dette_brute_administration
+
 
 ###############################################################################################################################################################################
 ###############################################################historique #################################################################################################
@@ -5240,4 +5246,213 @@ def getComptes(start: int = 0, end: int = 0):
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 ############################################################################################################################
 
+############################################################################################################################
+############################################################################################################################
+#################################################################################################################################"
+###############################################dette_brute_sec_bancaire_hierarchy###############################
+#####################################################################################################################
+@api.get("/dette_brute_sec_bancaire/")
+async def hierarchy():
+    dette_brute_sec_bancaire_hierarchy = [
 
+             {"name": "dette_brute_sec_bancaire",
+              "elements": [
+                {"name": "Court terme",
+                 "elements": [
+
+                     {"name": "Instruments du marché monétaire", "elements": []},
+                     {"name": "Emprunts", "elements": []},
+                     {"name": "Monnaie fiduciaire et dépôts", "elements": []},
+                     {"name": "Autres engagements (dettes)", "elements": []}
+                ]},
+
+                 {"name": "Moyen et long terme",
+                 "elements": [
+                     {"name": "Obligations et titres", "elements": []},
+                     {"name": "Emprunts", "elements": []},
+                     {"name": "Monnaie fiduciaire et dépôts", "elements": []},
+                     {"name": "Autres engagements (dettes)", "elements": []}
+                 ]}
+              ]}
+
+
+    ]
+    return dette_brute_sec_bancaire_hierarchy
+############################################################################################################################
+##############################################dette_brute_sec_bancaire_historique##################################
+################################################################################################################################
+@api.get('/dette_brute_sec_bancaire_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(dette_brute_sec_bancaire.find({"Date": {"$gte": start, "$lte": end}},
+                                            {"_id": 0, "Date": 1, "Periode": 1,"Dette brute trimestrielle": 1,"Categorie": 1, "Type": 1,"Valeur": 1}));
+    else:
+        a = list(dette_brute_sec_bancaire.find({}, {"_id": 0, "Date": 1, "Periode": 1,"Dette brute trimestrielle": 1,"Categorie": 1, "Type": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+############################################################################################################################
+############################################################################################################################
+#################################################################################################################################"
+##############################################dette_brute_inves_directs_hierarchy###############################
+#####################################################################################################################
+@api.get("/dette_brute_inves_directs/")
+async def hierarchy():
+    dette_brute_inves_directs_hierarchy = [
+
+             {"name": " Investissements Directs",
+              "elements": [
+                {"name": "Engagements envers les investisseurs directs","elements": []},
+              ]},
+             {"name": "TOTALE DE LA DETTE EXTERIEURE BRUTE","elements": []}
+
+
+    ]
+    return dette_brute_inves_directs_hierarchy
+############################################################################################################################
+##############################################dette_brute_inves_directs_historique##################################
+################################################################################################################################
+@api.get('/dette_brute_inves_directs_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(dette_brute_inves_directs.find({"Date": {"$gte": start, "$lte": end}},
+                                            {"_id": 0, "Date": 1, "Periode": 1,"Dette brute trimestrielle": 1,"Valeur": 1}));
+    else:
+        a = list(dette_brute_inves_directs.find({}, {"_id": 0, "Date": 1, "Periode": 1,"Dette brute trimestrielle": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+############################################################################################################################
+############################################################################################################################
+#################################################################################################################################"
+###############################################dette_brute_autres_sec_hierarchy###############################
+#####################################################################################################################
+@api.get("/dette_brute_autres_sec/")
+async def hierarchy():
+    dette_brute_autres_sec_hierarchy = [
+
+             {"name": "Autres Secteurs",
+              "elements": [
+                  {"name": "Dette des établissements publics et dette garantie par l'Etat",
+                   "elements": [
+
+                       {"name": "Court terme",
+                     "elements": [
+
+                        {"name": "Instruments du marché monétaire", "elements": []},
+                        {"name": "Emprunts", "elements": []},
+                        {"name": "Monnaie fiduciaire et dépôts", "elements": []},
+                        {"name": "Autres engagements (dettes)", "elements": []}
+                    ]}
+                   ]},
+                  {"name": "Dette des établissements publics et dette garantie par l'Etat",
+                  "elements": [
+
+                    {"name": "Moyen et long terme",
+                    "elements": [
+                        {"name": "Obligations et titres", "elements": []},
+                        {"name": "Emprunts", "elements": []},
+                        {"name": "Monnaie fiduciaire et dépôts", "elements": []},
+                        {"name": "Autres engagements (dettes)", "elements": []}
+                    ]}
+                  ]},
+              ]}
+
+
+    ]
+    return dette_brute_autres_sec_hierarchy
+############################################################################################################################
+##############################################dette_brute_autres_sec_historique##################################
+################################################################################################################################
+@api.get('/dette_brute_autres_sec_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(dette_brute_autres_sec.find({"Date": {"$gte": start, "$lte": end}},
+                                            {"_id": 0, "Date": 1, "Periode": 1,"Dette brute trimestrielle": 1,"Categorie": 1, "Type": 1,"Valeur": 1}));
+    else:
+        a = list(dette_brute_autres_sec.find({}, {"_id": 0, "Date": 1, "Periode": 1,"Dette brute trimestrielle": 1,"Categorie": 1,"Segment": 1, "Type": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+############################################################################################################################
+#################################################################################################################################"
+###############################################dette_brute_autorites_mon_hierarchy###############################
+#####################################################################################################################
+@api.get("/dette_brute_autorites_mon/")
+async def hierarchy():
+    dette_brute_autorites_mon_hierarchy = [
+
+             {"name": "dette_brute_autorites_mon",
+              "elements": [
+                {"name": "Court terme",
+                 "elements": [
+
+                     {"name": "Instruments du marché monétaire", "elements": []},
+                     {"name": "Emprunts", "elements": []},
+                     {"name": "Monnaie fiduciaire et dépôts", "elements": []},
+                     {"name": "Autres engagements (dettes)", "elements": []}
+                ]},
+
+                 {"name": "Moyen et long terme",
+                 "elements": [
+                     {"name": "Obligations et titres", "elements": []},
+                     {"name": "Emprunts", "elements": []},
+                     {"name": "Monnaie fiduciaire et dépôts", "elements": []},
+                     {"name": "Autres engagements (dettes)", "elements": []}
+                 ]}
+              ]}
+
+
+    ]
+    return dette_brute_autorites_mon_hierarchy
+############################################################################################################################
+##############################################dette_brute_autorites_mon_historique##################################
+################################################################################################################################
+@api.get('/dette_brute_autorites_mon_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(dette_brute_autorites_mon.find({"Date": {"$gte": start, "$lte": end}},
+                                            {"_id": 0, "Date": 1, "Periode": 1,"Dette brute trimestrielle": 1,"Categorie": 1, "Type": 1,"Valeur": 1}));
+    else:
+        a = list(dette_brute_autorites_mon.find({}, {"_id": 0, "Date": 1, "Periode": 1,"Dette brute trimestrielle": 1,"Categorie": 1, "Type": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+############################################################################################################################
+#################################################################################################################################"
+###############################################dette_brute_administration_hierarchy###############################
+#####################################################################################################################
+@api.get("/dette_brute_administration/")
+async def hierarchy():
+    dette_brute_administration_hierarchy = [
+
+             {"name": "dette_brute_administration",
+              "elements": [
+                {"name": "Court terme",
+                 "elements": [
+
+                     {"name": "Instruments du marché monétaire", "elements": []},
+                     {"name": "Emprunts", "elements": []},
+                     {"name": "Monnaie fiduciaire et dépôts", "elements": []},
+                     {"name": "Autres engagements (dettes)", "elements": []}
+                ]},
+
+                 {"name": "Moyen et long terme",
+                 "elements": [
+                     {"name": "Obligations et titres", "elements": []},
+                     {"name": "Emprunts", "elements": []},
+                     {"name": "Monnaie fiduciaire et dépôts", "elements": []},
+                     {"name": "Autres engagements (dettes)", "elements": []}
+                 ]}
+              ]}
+
+
+    ]
+    return dette_brute_administration_hierarchy
+############################################################################################################################
+##############################################dette_brute_autorites_mon_historique##################################
+################################################################################################################################
+@api.get('/dette_brute_administration_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(dette_brute_administration.find({"Date": {"$gte": start, "$lte": end}},
+                                            {"_id": 0, "Date": 1, "Periode": 1,"Dette brute trimestrielle": 1,"Categorie": 1, "Type": 1,"Valeur": 1}));
+    else:
+        a = list(dette_brute_administration.find({}, {"_id": 0, "Date": 1, "Periode": 1,"Dette brute trimestrielle": 1,"Categorie": 1, "Type": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
