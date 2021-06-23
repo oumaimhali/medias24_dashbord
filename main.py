@@ -110,7 +110,7 @@ dette_brute_administration = db4.dette_brute_administration
 
 PIB_approche_revenu = db2.PIB_approche_revenu
 PIB_prix_constants = db2.PIB_prix_constants
-PIB_approche_revenu = db2.PIB_approche_revenu
+PIB_prix_courants = db2.PIB_prix_courants
 
 
 ###############################################################################################################################################################################
