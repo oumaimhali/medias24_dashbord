@@ -108,9 +108,9 @@ dette_brute_autres_sec = db4.dette_brute_autres_sec
 dette_brute_autorites_mon = db4.dette_brute_autorites_mon
 dette_brute_administration = db4.dette_brute_administration
 
-PIB_approche_revenu = db5.PIB_approche_revenu
-PIB_prix_constants = db5.PIB_prix_constants
-PIB_approche_revenu = db5.PIB_approche_revenu
+PIB_approche_revenu = db2.PIB_approche_revenu
+PIB_prix_constants = db2.PIB_prix_constants
+PIB_approche_revenu = db2.PIB_approche_revenu
 
 
 ###############################################################################################################################################################################
