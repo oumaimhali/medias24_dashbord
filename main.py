@@ -108,6 +108,10 @@ dette_brute_autres_sec = db4.dette_brute_autres_sec
 dette_brute_autorites_mon = db4.dette_brute_autorites_mon
 dette_brute_administration = db4.dette_brute_administration
 
+PIB_approche_revenu = db5.PIB_approche_revenu
+PIB_prix_constants = db5.PIB_prix_constants
+PIB_approche_revenu = db5.PIB_approche_revenu
+
 
 ###############################################################################################################################################################################
 ###############################################################historique #################################################################################################
@@ -5456,3 +5460,88 @@ def getComptes(start: int = 0, end: int = 0):
     else:
         a = list(dette_brute_administration.find({}, {"_id": 0, "Date": 1, "Periode": 1,"Dette brute trimestrielle": 1,"Categorie": 1, "Type": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+
+########################################################################################################################
+######################################""PIB_prix_courants_hierarchy########################################################
+#######################################################################################################################
+@api.get("/PIB_prix_courants/")
+async def hierarchy():
+    PIB_prix_courants_hierarchy=[
+
+        {"name":"PIB_prix_courants",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return PIB_prix_courants_hierarchy
+########################################################################################################################
+##############################PIB_prix_courants_historique##################################################################
+
+@api.get('/PIB_prix_courants_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(PIB_prix_courants.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(PIB_prix_courants.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+#######################################################################################################################""
+########################################################################################################################
+######################################""PIB_prix_constants_hierarchy########################################################
+#######################################################################################################################
+@api.get("/PIB_prix_constants/")
+async def hierarchy():
+    PIB_prix_constants_hierarchy=[
+
+        {"name":"PIB_prix_constants",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return PIB_prix_constants_hierarchy
+########################################################################################################################
+##############################PIB_prix_constants_historique##################################################################
+
+@api.get('/PIB_prix_constants_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(PIB_prix_constants.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(PIB_prix_constants.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+#######################################################################################################################""
+#######################################################################################################################""
+########################################################################################################################
+######################################"PIB_approche_revenu_hierarchy########################################################
+#######################################################################################################################
+@api.get("/PIB_approche_revenu/")
+async def hierarchy():
+    PIB_approche_revenu_hierarchy=[
+
+        {"name":"PIB_approche_revenu",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return PIB_approche_revenu_hierarchy
+########################################################################################################################
+##############################PIB_approche_revenu_historique##################################################################
+
+@api.get('/PIB_approche_revenu_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(PIB_approche_revenu.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(PIB_approche_revenu.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+#######################################################################################################################""
+
