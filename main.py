@@ -22,6 +22,7 @@ db = client['office_des_changes']
 db2 = client['HCP']
 db3 = client['Tourisme']
 db4 = client['MEF']
+db5 = client ['Enseignement']
 Voyages_Pays_0 = db.Voyages_Pays_0
 compte_courant = db.compte_courant
 Comext_import_GU_CVS = db.Comext_import_GU_CVS
