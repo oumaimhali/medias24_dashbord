@@ -165,12 +165,12 @@ Personnel_enseignant_enseignement_secondaire_qualifiant_public_2 = db5.Personnel
 effectif_etablissement_secondaire_collegial_prive = db5.effectif_etablissement_secondaire_collegial_prive
 effectif_etablissement_secondaire_qualifiant_prive = db5.effectif_etablissement_secondaire_qualifiant_prive
 eleves_doublant_de_enseignement_secondaire_qualifiant_public = db5.eleves_doublant_de_enseignement_secondaire_qualifiant_public
-eleves_niveau_1_ec = db5.eleves_niveau_1_ec
+
 Taux_d_achevement= db5.Taux_d_achevement
 Budget_education_national = db5.Budget_education_national
 Nombre_d_etablissements_EC= db5.Nombre_d_etablissements_EC
 Personnel_enseignant_EC= db5.Personnel_enseignant_EC
-ELEVES_DU_NIVEAU_EC_2 = db5.ELEVES_DU_NIVEAU_EC_2
+
 
 
 ###############################################################################################################################################################################
