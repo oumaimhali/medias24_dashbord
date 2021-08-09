@@ -123,6 +123,55 @@ Superficie_cultivee_des_cultures_fourrageres = db2.Superficie_cultivee_des_cultu
 Superficie_laissee_en_jachere = db2.Superficie_laissee_en_jachere
 superficie_cultivee_des_cereales = db2.superficie_cultivee_des_cereales
 
+NB_DE_CLASSES = db5.NB_DE_CLASSES
+ELEVES_DES_ECOLES_CORANIQUES = db5.ELEVES_DES_ECOLES_CORANIQUES
+Effectif_nouveaux_inscrits_premiere_annee_de_enseignement_primaire_public = db5.Effectif_nouveaux_inscrits_premiere_annee_de_enseignement_primaire_public
+NB_DE_CLASSES_EC = db5.NB_DE_CLASSES_EC
+Nombre_classe_enseignement_primaire_public = db5.Nombre_classe_enseignement_primaire_public
+Nombre_de_classe_du_secondaire_collegial = db5.Nombre_de_classe_du_secondaire_collegial
+Nombre_de_classes_de_enseignement_secondaire_qualifiant_public = db5.Nombre_de_classes_de_enseignement_secondaire_qualifiant_public
+Nombre_de_colleges_annexes_du_secondaire_collegial = db5.Nombre_de_colleges_annexes_du_secondaire_collegial
+Nombre_de_colleges_du_secondaire_collegial = db5.Nombre_de_colleges_du_secondaire_collegial
+Nombre_de_salles_utilisees_du_secondaire_collegial = db5.Nombre_de_salles_utilisees_du_secondaire_collegial
+Nombre_ecoles_autonomes_primaire = db5.Nombre_ecoles_autonomes_primaire
+Nombre_eleve_enseignement_secondaire_qualifiant_prive = db5.Nombre_eleve_enseignement_secondaire_qualifiant_prive
+Nombre_eleve_enseignement_secondaire_qualifiant_public = db5.Nombre_eleve_enseignement_secondaire_qualifiant_public
+Nombre_eleves_dans_enseignement_primaire_public = db5.Nombre_eleves_dans_enseignement_primaire_public
+Nombre_eleves_doublant_dans_enseignement_primaire_public = db5.Nombre_eleves_doublant_dans_enseignement_primaire_public
+Nombre_eleves_doublant_du_secondaire_collegial = db5.Nombre_eleves_doublant_du_secondaire_collegial
+Nombre_eleves_du_secondaire_collegial = db5.Nombre_eleves_du_secondaire_collegial
+Nombre_eleves_enseignement_primaire_prive = db5.Nombre_eleves_enseignement_primaire_prive
+Nombre_eleves_enseignement_primaire_public = db5.Nombre_eleves_enseignement_primaire_public
+Nombre_eleves_enseignement_secondaire_collegial_prive = db5.Nombre_eleves_enseignement_secondaire_collegial_prive
+Nombre_enseignant_du_secondaire_collegial_prive = db5.Nombre_enseignant_du_secondaire_collegial_prive
+Nombre_etablissements_enseignement_primaire_prive = db5.Nombre_etablissements_enseignement_primaire_prive
+Nombre_etablissements_primaire = db5.Nombre_etablissements_primaire
+Nombre_formateurs_dans_les_centres_de_formation_professionnelle = db5.Nombre_formateurs_dans_les_centres_de_formation_professionnelle
+Nombre_laureats_centres_formation_professionnelle = db5.Nombre_laureats_centres_formation_professionnelle
+Nombre_lycees_annexes_enseignement_secondaire_qualifiant_public = db5.Nombre_lycees_annexes_enseignement_secondaire_qualifiant_public
+Nombre_lycees_enseignement_secondaire_qualifiant_public = db5.Nombre_lycees_enseignement_secondaire_qualifiant_public
+Nombre_salles_enseignement_secondaire_qualifiant_prive = db5.Nombre_salles_enseignement_secondaire_qualifiant_prive
+Nombre_salles_utilisees_enseignement_primaire_prive = db5.Nombre_salles_utilisees_enseignement_primaire_prive
+Nombre_salles_utilisees_enseignement_primaire_public = db5.Nombre_salles_utilisees_enseignement_primaire_public
+Nombre_salles_utilisees_enseignement_secondaire_qualifiant = db5.Nombre_salles_utilisees_enseignement_secondaire_qualifiant
+Nombre_satellites_primaire = db5.Nombre_satellites_primaire
+Nombre_secteurs_scolaires_primaire = db5.Nombre_secteurs_scolaires_primaire
+Personnel_enseignant_de_enseignement_primaire_prive = db5.Personnel_enseignant_de_enseignement_primaire_prive
+Personnel_enseignant_de_enseignement_secondaire_collegial_public = db5.Personnel_enseignant_de_enseignement_secondaire_collegial_public
+Personnel_enseignant_enseignement_primaire_public = db5.Personnel_enseignant_enseignement_primaire_public
+Personnel_enseignant_enseignement_secondaire_qualifiant_prive = db5.Personnel_enseignant_enseignement_secondaire_qualifiant_prive
+Personnel_enseignant_enseignement_secondaire_qualifiant_public = db5.Personnel_enseignant_enseignement_secondaire_qualifiant_public
+Personnel_enseignant_enseignement_secondaire_qualifiant_public_2 = db5.Personnel_enseignant_enseignement_secondaire_qualifiant_public_2
+effectif_etablissement_secondaire_collegial_prive = db5.effectif_etablissement_secondaire_collegial_prive
+effectif_etablissement_secondaire_qualifiant_prive = db5.effectif_etablissement_secondaire_qualifiant_prive
+eleves_doublant_de_enseignement_secondaire_qualifiant_public = db5.eleves_doublant_de_enseignement_secondaire_qualifiant_public
+eleves_niveau_1_ec = db5.eleves_niveau_1_ec
+Taux_d_achevement= db5.Taux_d_achevement
+Budget_education_national = db5.Budget_education_national
+Nombre_d_etablissements_EC= db5.Nombre_d_etablissements_EC
+Personnel_enseignant_EC= db5.Personnel_enseignant_EC
+ELEVES_DU_NIVEAU_EC_2 = db5.ELEVES_DU_NIVEAU_EC_2
+
 
 ###############################################################################################################################################################################
 ###############################################################historique #################################################################################################
@@ -5863,6 +5912,1187 @@ def getComptes(start: int = 0, end: int = 0):
         a = list(superficie_cultivee_des_cereales.find({}, {"_id": 0, "Date": 1, "Valeur en Millers de HA": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 ###############################################################################################################################
+################################################################################################################################
+################################################################################################################################
+############################################Enseignement###############################################################
+#######################################################################################################################
+#######################################################################################################################
+###############################################################################################################################
+############################################################################################################################
+##############################################NB_DE_CLASSES_hierarchy##################################
+###############################################################################################################################
+@api.get("/NB_DE_CLASSES/")
+async def hierarchy():
+    NB_DE_CLASSES_hierarchy=[
+
+        {"name":"NB_DE_CLASSES",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return NB_DE_CLASSES_hierarchy
+############################################################################################################################
+##############################################NB_DE_CLASSES_historique##################################
+###############################################################################################################################
+@api.get('/NB_DE_CLASSES_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(NB_DE_CLASSES.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(NB_DE_CLASSES.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+##########################################################################################################################
+############################################################################################################################
+##############################################ELEVES_DES_ECOLES_CORANIQUES_hierarchy##################################
+###############################################################################################################################
+@api.get("/ELEVES_DES_ECOLES_CORANIQUES/")
+async def hierarchy():
+    ELEVES_DES_ECOLES_CORANIQUES_hierarchy=[
+
+        {"name":"ELEVES_DES_ECOLES_CORANIQUES",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return ELEVES_DES_ECOLES_CORANIQUES_hierarchy
+############################################################################################################################
+##############################################ELEVES_DES_ECOLES_CORANIQUES_historique##################################
+###############################################################################################################################
+@api.get('/ELEVES_DES_ECOLES_CORANIQUES_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(ELEVES_DES_ECOLES_CORANIQUES.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(ELEVES_DES_ECOLES_CORANIQUES.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+##########################################################################################################################
+############################################################################################################################
+##############################################Effectif_nouveaux_inscrits_premiere_annee_de_enseignement_primaire_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/Effectif_nouveaux_inscrits_premiere_annee_de_enseignement_primaire_public/")
+async def hierarchy():
+    Effectif_nouveaux_inscrits_premiere_annee_de_enseignement_primaire_public_hierarchy=[
+
+        {"name":"Effectif_nouveaux_inscrits_premiere_annee_de_enseignement_primaire_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Effectif_nouveaux_inscrits_premiere_annee_de_enseignement_primaire_public_hierarchy
+############################################################################################################################
+##############################################Effectif_nouveaux_inscrits_premiere_annee_de_enseignement_primaire_public_historique##################################
+###############################################################################################################################
+@api.get('/Effectif_nouveaux_inscrits_premiere_annee_de_enseignement_primaire_public_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Effectif_nouveaux_inscrits_premiere_annee_de_enseignement_primaire_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Effectif_nouveaux_inscrits_premiere_annee_de_enseignement_primaire_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+############################################################################################################################
+##############################################NB_DE_CLASSES_EC_hierarchy##################################
+###############################################################################################################################
+@api.get("/NB_DE_CLASSES_EC/")
+async def hierarchy():
+    NB_DE_CLASSES_EC_hierarchy=[
+
+        {"name":"NB_DE_CLASSES_EC",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return NB_DE_CLASSES_EC_hierarchy
+############################################################################################################################
+##############################################NB_DE_CLASSES_EC_historique##################################
+###############################################################################################################################
+@api.get('/NB_DE_CLASSES_EC_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(NB_DE_CLASSES_EC.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(NB_DE_CLASSES_EC.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_classe_enseignement_primaire_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_classe_enseignement_primaire_public/")
+async def hierarchy():
+    Nombre_classe_enseignement_primaire_public_hierarchy=[
+
+        {"name":"Nombre_classe_enseignement_primaire_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_classe_enseignement_primaire_public_hierarchy
+############################################################################################################################
+##############################################Nombre_classe_enseignement_primaire_public_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_classe_enseignement_primaire_public_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_classe_enseignement_primaire_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_classe_enseignement_primaire_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_de_classe_du_secondaire_collegial_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_de_classe_du_secondaire_collegial/")
+async def hierarchy():
+    Nombre_de_classe_du_secondaire_collegial_hierarchy=[
+
+        {"name":"Nombre_de_classe_du_secondaire_collegial",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_classe_du_secondaire_collegial_hierarchy
+############################################################################################################################
+##############################################Nombre_de_classe_du_secondaire_collegial_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_de_classe_du_secondaire_collegial_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_classe_du_secondaire_collegial.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_classe_du_secondaire_collegial.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_de_classes_de_enseignement_secondaire_qualifiant_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_de_classes_de_enseignement_secondaire_qualifiant_public/")
+async def hierarchy():
+    Nombre_de_classes_de_enseignement_secondaire_qualifiant_public_hierarchy=[
+
+        {"name":"Nombre_de_classes_de_enseignement_secondaire_qualifiant_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_classes_de_enseignement_secondaire_qualifiant_public_hierarchy
+############################################################################################################################
+##############################################Nombre_de_classes_de_enseignement_secondaire_qualifiant_public_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_de_classes_de_enseignement_secondaire_qualifiant_public_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_classes_de_enseignement_secondaire_qualifiant_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_classes_de_enseignement_secondaire_qualifiant_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_de_colleges_annexes_du_secondaire_collegial_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_de_colleges_annexes_du_secondaire_collegial/")
+async def hierarchy():
+    Nombre_de_colleges_annexes_du_secondaire_collegial_hierarchy=[
+
+        {"name":"Nombre_de_colleges_annexes_du_secondaire_collegial",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_colleges_annexes_du_secondaire_collegial_hierarchy
+############################################################################################################################
+##############################################Nombre_de_colleges_annexes_du_secondaire_collegial_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_de_colleges_annexes_du_secondaire_collegial_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_colleges_annexes_du_secondaire_collegial.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_colleges_annexes_du_secondaire_collegial.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_de_colleges_du_secondaire_collegial_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_de_colleges_du_secondaire_collegial/")
+async def hierarchy():
+    Nombre_de_colleges_du_secondaire_collegial_hierarchy=[
+
+        {"name":"Nombre_de_colleges_du_secondaire_collegial",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_colleges_du_secondaire_collegial_hierarchy
+############################################################################################################################
+##############################################Nombre_de_colleges_du_secondaire_collegial_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_de_colleges_du_secondaire_collegial_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_colleges_du_secondaire_collegial.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_colleges_du_secondaire_collegial.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_de_salles_utilisees_du_secondaire_collegial_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_de_salles_utilisees_du_secondaire_collegial/")
+async def hierarchy():
+    Nombre_de_salles_utilisees_du_secondaire_collegial_hierarchy=[
+
+        {"name":"Nombre_de_salles_utilisees_du_secondaire_collegial",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_salles_utilisees_du_secondaire_collegial_hierarchy
+############################################################################################################################
+##############################################Nombre_de_salles_utilisees_du_secondaire_collegial_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_de_salles_utilisees_du_secondaire_collegial_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_salles_utilisees_du_secondaire_collegial.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_salles_utilisees_du_secondaire_collegial.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_ecoles_autonomes_primaire_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_ecoles_autonomes_primaire/")
+async def hierarchy():
+    Nombre_ecoles_autonomes_primaire_hierarchy=[
+
+        {"name":"Nombre_ecoles_autonomes_primaire",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_ecoles_autonomes_primaire_hierarchy
+############################################################################################################################
+##############################################Nombre_ecoles_autonomes_primaire_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_ecoles_autonomes_primaire_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_ecoles_autonomes_primaire.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_ecoles_autonomes_primaire.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_eleve_enseignement_secondaire_qualifiant_prive_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_eleve_enseignement_secondaire_qualifiant_prive/")
+async def hierarchy():
+    Nombre_eleve_enseignement_secondaire_qualifiant_prive_hierarchy=[
+
+        {"name":"Nombre_eleve_enseignement_secondaire_qualifiant_prive",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_eleve_enseignement_secondaire_qualifiant_prive_hierarchy
+############################################################################################################################
+##############################################Nombre_eleve_enseignement_secondaire_qualifiant_prive_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_eleve_enseignement_secondaire_qualifiant_prive_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_eleve_enseignement_secondaire_qualifiant_prive.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_eleve_enseignement_secondaire_qualifiant_prive.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_eleve_enseignement_secondaire_qualifiant_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_eleve_enseignement_secondaire_qualifiant_public/")
+async def hierarchy():
+    Nombre_eleve_enseignement_secondaire_qualifiant_public_hierarchy=[
+
+        {"name":"Nombre_eleve_enseignement_secondaire_qualifiant_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_eleve_enseignement_secondaire_qualifiant_public_hierarchy
+############################################################################################################################
+##############################################Nombre_eleve_enseignement_secondaire_qualifiant_public_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_eleve_enseignement_secondaire_qualifiant_public_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_eleve_enseignement_secondaire_qualifiant_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_eleve_enseignement_secondaire_qualifiant_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_eleves_dans_enseignement_primaire_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_eleves_dans_enseignement_primaire_public/")
+async def hierarchy():
+    Nombre_eleves_dans_enseignement_primaire_public_hierarchy=[
+
+        {"name":"Nombre_eleves_dans_enseignement_primaire_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_eleves_dans_enseignement_primaire_public_hierarchy
+############################################################################################################################
+##############################################Nombre_eleves_dans_enseignement_primaire_public_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_eleves_dans_enseignement_primaire_public_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_eleves_dans_enseignement_primaire_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_eleves_dans_enseignement_primaire_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_eleves_doublant_dans_enseignement_primaire_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_eleves_doublant_dans_enseignement_primaire_public/")
+async def hierarchy():
+    Nombre_eleves_doublant_dans_enseignement_primaire_public_hierarchy=[
+
+        {"name":"Nombre_eleves_doublant_dans_enseignement_primaire_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_eleves_doublant_dans_enseignement_primaire_public_hierarchy
+############################################################################################################################
+##############################################Nombre_eleves_doublant_dans_enseignement_primaire_public_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_eleves_doublant_dans_enseignement_primaire_public')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_eleves_doublant_dans_enseignement_primaire_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_eleves_doublant_dans_enseignement_primaire_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_eleves_doublant_du_secondaire_collegial_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_eleves_doublant_du_secondaire_collegial/")
+async def hierarchy():
+    Nombre_eleves_doublant_du_secondaire_collegial_hierarchy=[
+
+        {"name":"Nombre_eleves_doublant_du_secondaire_collegial",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_eleves_doublant_du_secondaire_collegial_hierarchy
+############################################################################################################################
+##############################################Nombre_eleves_doublant_du_secondaire_collegial_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_eleves_doublant_du_secondaire_collegial')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_eleves_doublant_du_secondaire_collegial.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_eleves_doublant_du_secondaire_collegial.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_eleves_du_secondaire_collegial_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_eleves_du_secondaire_collegial/")
+async def hierarchy():
+    Nombre_eleves_du_secondaire_collegial_hierarchy=[
+
+        {"name":"Nombre_eleves_du_secondaire_collegial",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_eleves_du_secondaire_collegial_hierarchy
+############################################################################################################################
+##############################################Nombre_eleves_du_secondaire_collegial_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_eleves_du_secondaire_collegial')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_eleves_du_secondaire_collegial.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_eleves_du_secondaire_collegial.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_eleves_enseignement_primaire_prive_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_eleves_enseignement_primaire_prive/")
+async def hierarchy():
+    Nombre_eleves_enseignement_primaire_prive_hierarchy=[
+
+        {"name":"Nombre_eleves_enseignement_primaire_prive",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_eleves_enseignement_primaire_prive_hierarchy
+############################################################################################################################
+##############################################Nombre_eleves_enseignement_primaire_prive_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_eleves_enseignement_primaire_prive')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_eleves_enseignement_primaire_prive.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_eleves_enseignement_primaire_prive.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_eleves_enseignement_primaire_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_eleves_enseignement_primaire_public/")
+async def hierarchy():
+    Nombre_eleves_enseignement_primaire_public_hierarchy=[
+
+        {"name":"Nombre_eleves_enseignement_primaire_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_eleves_enseignement_primaire_public_hierarchy
+############################################################################################################################
+##############################################Nombre_eleves_enseignement_primaire_public_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_eleves_enseignement_primaire_public')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_eleves_enseignement_primaire_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_eleves_enseignement_primaire_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_eleves_enseignement_secondaire_collegial_prive_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_eleves_enseignement_secondaire_collegial_prive/")
+async def hierarchy():
+    Nombre_eleves_enseignement_secondaire_collegial_prive_hierarchy=[
+
+        {"name":"Nombre_eleves_enseignement_secondaire_collegial_prive",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_eleves_enseignement_secondaire_collegial_prive_hierarchy
+############################################################################################################################
+##############################################Nombre_eleves_enseignement_secondaire_collegial_prive_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_eleves_enseignement_secondaire_collegial_prive')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_eleves_enseignement_secondaire_collegial_prive.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_eleves_enseignement_secondaire_collegial_prive.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_enseignant_du_secondaire_collegial_prive_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_enseignant_du_secondaire_collegial_prive/")
+async def hierarchy():
+    Nombre_enseignant_du_secondaire_collegial_prive_hierarchy=[
+
+        {"name":"Nombre_enseignant_du_secondaire_collegial_prive",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_enseignant_du_secondaire_collegial_prive_hierarchy
+############################################################################################################################
+#############################################Nombre_enseignant_du_secondaire_collegial_prive_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_enseignant_du_secondaire_collegial_prive')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_enseignant_du_secondaire_collegial_prive.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_enseignant_du_secondaire_collegial_prive.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_etablissements_enseignement_primaire_prive_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_etablissements_enseignement_primaire_prive/")
+async def hierarchy():
+    Nombre_etablissements_enseignement_primaire_prive_hierarchy=[
+
+        {"name":"Nombre_etablissements_enseignement_primaire_prive",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_etablissements_enseignement_primaire_prive_hierarchy
+############################################################################################################################
+#############################################Nombre_etablissements_enseignement_primaire_prive_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_etablissements_enseignement_primaire_prive')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_etablissements_enseignement_primaire_prive.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_etablissements_enseignement_primaire_prive.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_etablissements_primaire_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_etablissements_primaire/")
+async def hierarchy():
+    Nombre_etablissements_primaire_hierarchy=[
+
+        {"name":"Nombre_etablissements_primaire",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_etablissements_primaire_hierarchy
+############################################################################################################################
+#############################################Nombre_etablissements_primaire_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_etablissements_primaire')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_etablissements_primaire.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_etablissements_primaire.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_formateurs_dans_les_centres_de_formation_professionnelle_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_formateurs_dans_les_centres_de_formation_professionnelle/")
+async def hierarchy():
+    Nombre_formateurs_dans_les_centres_de_formation_professionnelle_hierarchy=[
+
+        {"name":"Nombre_formateurs_dans_les_centres_de_formation_professionnelle",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_formateurs_dans_les_centres_de_formation_professionnelle_hierarchy
+############################################################################################################################
+#############################################Nombre_formateurs_dans_les_centres_de_formation_professionnelle_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_formateurs_dans_les_centres_de_formation_professionnelle')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_formateurs_dans_les_centres_de_formation_professionnelle.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_formateurs_dans_les_centres_de_formation_professionnelle.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_laureats_centres_formation_professionnelle_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_laureats_centres_formation_professionnelle/")
+async def hierarchy():
+    Nombre_laureats_centres_formation_professionnelle_hierarchy=[
+
+        {"name":"Nombre_laureats_centres_formation_professionnelle",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_laureats_centres_formation_professionnelle_hierarchy
+############################################################################################################################
+#############################################Nombre_laureats_centres_formation_professionnelle_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_laureats_centres_formation_professionnelle')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_laureats_centres_formation_professionnelle.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_laureats_centres_formation_professionnelle.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_lycees_annexes_enseignement_secondaire_qualifiant_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_lycees_annexes_enseignement_secondaire_qualifiant_public/")
+async def hierarchy():
+    Nombre_lycees_annexes_enseignement_secondaire_qualifiant_public_hierarchy=[
+
+        {"name":"Nombre_lycees_annexes_enseignement_secondaire_qualifiant_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_lycees_annexes_enseignement_secondaire_qualifiant_public_hierarchy
+############################################################################################################################
+#############################################Nombre_lycees_annexes_enseignement_secondaire_qualifiant_public_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_lycees_annexes_enseignement_secondaire_qualifiant_public')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_lycees_annexes_enseignement_secondaire_qualifiant_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_lycees_annexes_enseignement_secondaire_qualifiant_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_lycees_enseignement_secondaire_qualifiant_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_lycees_enseignement_secondaire_qualifiant_public/")
+async def hierarchy():
+    Nombre_lycees_enseignement_secondaire_qualifiant_public_hierarchy=[
+
+        {"name":"Nombre_lycees_enseignement_secondaire_qualifiant_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_lycees_enseignement_secondaire_qualifiant_public_hierarchy
+############################################################################################################################
+#############################################Nombre_lycees_enseignement_secondaire_qualifiant_public_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_lycees_enseignement_secondaire_qualifiant_public')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_lycees_enseignement_secondaire_qualifiant_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_lycees_enseignement_secondaire_qualifiant_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_salles_enseignement_secondaire_qualifiant_prive_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_salles_enseignement_secondaire_qualifiant_prive/")
+async def hierarchy():
+    Nombre_salles_enseignement_secondaire_qualifiant_prive_hierarchy=[
+
+        {"name":"Nombre_salles_enseignement_secondaire_qualifiant_prive",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_salles_enseignement_secondaire_qualifiant_prive_hierarchy
+############################################################################################################################
+#############################################Nombre_salles_enseignement_secondaire_qualifiant_prive_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_salles_enseignement_secondaire_qualifiant_prive')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_salles_enseignement_secondaire_qualifiant_prive.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_salles_enseignement_secondaire_qualifiant_prive.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+##############################################Nombre_salles_utilisees_enseignement_primaire_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_salles_utilisees_enseignement_primaire_public/")
+async def hierarchy():
+    Nombre_salles_utilisees_enseignement_primaire_public_hierarchy=[
+
+        {"name":"Nombre_salles_utilisees_enseignement_primaire_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_salles_utilisees_enseignement_primaire_public_hierarchy
+############################################################################################################################
+#############################################Nombre_salles_utilisees_enseignement_primaire_public_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_salles_utilisees_enseignement_primaire_public')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_salles_utilisees_enseignement_primaire_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_salles_utilisees_enseignement_primaire_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################Nombre_salles_utilisees_enseignement_secondaire_qualifiant_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_salles_utilisees_enseignement_secondaire_qualifiant/")
+async def hierarchy():
+    Nombre_salles_utilisees_enseignement_secondaire_qualifiant_hierarchy=[
+
+        {"name":"Nombre_salles_utilisees_enseignement_secondaire_qualifiant",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_salles_utilisees_enseignement_secondaire_qualifiant_hierarchy
+############################################################################################################################
+#############################################Nombre_salles_utilisees_enseignement_secondaire_qualifiant_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_salles_utilisees_enseignement_secondaire_qualifiant')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_salles_utilisees_enseignement_secondaire_qualifiant.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_salles_utilisees_enseignement_secondaire_qualifiant.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################Nombre_satellites_primaire_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_satellites_primaire/")
+async def hierarchy():
+    Nombre_satellites_primaire_hierarchy=[
+
+        {"name":"Nombre_satellites_primaire",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_satellites_primaire_hierarchy
+############################################################################################################################
+#############################################Nombre_satellites_primaire_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_satellites_primaire')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_satellites_primaire.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_satellites_primaire.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################Nombre_secteurs_scolaires_primaire_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_secteurs_scolaires_primaire/")
+async def hierarchy():
+    Nombre_secteurs_scolaires_primaire_hierarchy=[
+
+        {"name":"Nombre_secteurs_scolaires_primaire",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_secteurs_scolaires_primaire_hierarchy
+############################################################################################################################
+#############################################Nombre_secteurs_scolaires_primaire_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_secteurs_scolaires_primaire')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_secteurs_scolaires_primaire.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_secteurs_scolaires_primaire.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################Personnel_enseignant_de_enseignement_primaire_prive_hierarchy##################################
+###############################################################################################################################
+@api.get("/Personnel_enseignant_de_enseignement_primaire_prive/")
+async def hierarchy():
+    Personnel_enseignant_de_enseignement_primaire_prive_hierarchy=[
+
+        {"name":"Personnel_enseignant_de_enseignement_primaire_prive",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Personnel_enseignant_de_enseignement_primaire_prive_hierarchy
+############################################################################################################################
+#############################################Personnel_enseignant_de_enseignement_primaire_prive_historique##################################
+###############################################################################################################################
+@api.get('/Personnel_enseignant_de_enseignement_primaire_prive')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Personnel_enseignant_de_enseignement_primaire_prive.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Personnel_enseignant_de_enseignement_primaire_prive.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################Personnel_enseignant_de_enseignement_secondaire_collegial_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/Personnel_enseignant_de_enseignement_secondaire_collegial_public/")
+async def hierarchy():
+    Personnel_enseignant_de_enseignement_secondaire_collegial_public_hierarchy=[
+
+        {"name":"Personnel_enseignant_de_enseignement_secondaire_collegial_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Personnel_enseignant_de_enseignement_secondaire_collegial_public_hierarchy
+############################################################################################################################
+#############################################Personnel_enseignant_de_enseignement_secondaire_collegial_public_historique##################################
+###############################################################################################################################
+@api.get('/Personnel_enseignant_de_enseignement_secondaire_collegial_public')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Personnel_enseignant_de_enseignement_secondaire_collegial_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Personnel_enseignant_de_enseignement_secondaire_collegial_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################Personnel_enseignant_enseignement_primaire_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/Personnel_enseignant_enseignement_primaire_public/")
+async def hierarchy():
+    Personnel_enseignant_enseignement_primaire_public_hierarchy=[
+
+        {"name":"Personnel_enseignant_enseignement_primaire_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Personnel_enseignant_enseignement_primaire_public_hierarchy
+############################################################################################################################
+#############################################PPersonnel_enseignant_enseignement_primaire_public_historique##################################
+###############################################################################################################################
+@api.get('/Personnel_enseignant_enseignement_primaire_public')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Personnel_enseignant_enseignement_primaire_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Personnel_enseignant_enseignement_primaire_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################Personnel_enseignant_enseignement_secondaire_qualifiant_prive_hierarchy##################################
+###############################################################################################################################
+@api.get("/Personnel_enseignant_enseignement_secondaire_qualifiant_prive/")
+async def hierarchy():
+    Personnel_enseignant_enseignement_secondaire_qualifiant_prive_hierarchy=[
+
+        {"name":"Personnel_enseignant_enseignement_secondaire_qualifiant_prive",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Personnel_enseignant_enseignement_secondaire_qualifiant_prive_hierarchy
+############################################################################################################################
+#############################################Personnel_enseignant_enseignement_secondaire_qualifiant_prive_historique##################################
+###############################################################################################################################
+@api.get('/Personnel_enseignant_enseignement_secondaire_qualifiant_prive')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Personnel_enseignant_enseignement_secondaire_qualifiant_prive.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Personnel_enseignant_enseignement_secondaire_qualifiant_prive.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################Personnel_enseignant_enseignement_secondaire_qualifiant_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/Personnel_enseignant_enseignement_secondaire_qualifiant_public/")
+async def hierarchy():
+    Personnel_enseignant_enseignement_secondaire_qualifiant_public_hierarchy=[
+
+        {"name":"Personnel_enseignant_enseignement_secondaire_qualifiant_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Personnel_enseignant_enseignement_secondaire_qualifiant_public_hierarchy
+############################################################################################################################
+#############################################Personnel_enseignant_enseignement_secondaire_qualifiant_public_historique##################################
+###############################################################################################################################
+@api.get('/Personnel_enseignant_enseignement_secondaire_qualifiant_public')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Personnel_enseignant_enseignement_secondaire_qualifiant_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Personnel_enseignant_enseignement_secondaire_qualifiant_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################Personnel_enseignant_enseignement_secondaire_qualifiant_public_2_hierarchy##################################
+###############################################################################################################################
+@api.get("/Personnel_enseignant_enseignement_secondaire_qualifiant_public_2/")
+async def hierarchy():
+    Personnel_enseignant_enseignement_secondaire_qualifiant_public_2_hierarchy=[
+
+        {"name":"Personnel_enseignant_enseignement_secondaire_qualifiant_public_2",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Personnel_enseignant_enseignement_secondaire_qualifiant_public_2_hierarchy
+############################################################################################################################
+#############################################Personnel_enseignant_enseignement_secondaire_qualifiant_public_2_historique##################################
+###############################################################################################################################
+@api.get('/Personnel_enseignant_enseignement_secondaire_qualifiant_public_2')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Personnel_enseignant_enseignement_secondaire_qualifiant_public_2.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Personnel_enseignant_enseignement_secondaire_qualifiant_public_2.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################effectif_etablissement_secondaire_collegial_prive_hierarchy##################################
+###############################################################################################################################
+@api.get("/effectif_etablissement_secondaire_collegial_prive/")
+async def hierarchy():
+    effectif_etablissement_secondaire_collegial_prive_hierarchy=[
+
+        {"name":"effectif_etablissement_secondaire_collegial_prive",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return effectif_etablissement_secondaire_collegial_prive_hierarchy
+############################################################################################################################
+#############################################effectif_etablissement_secondaire_collegial_prive_historique##################################
+###############################################################################################################################
+@api.get('/effectif_etablissement_secondaire_collegial_prive')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(effectif_etablissement_secondaire_collegial_prive.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(effectif_etablissement_secondaire_collegial_prive.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################effectif_etablissement_secondaire_qualifiant_prive_hierarchy##################################
+###############################################################################################################################
+@api.get("/effectif_etablissement_secondaire_qualifiant_prive/")
+async def hierarchy():
+    effectif_etablissement_secondaire_qualifiant_prive_hierarchy=[
+
+        {"name":"effectif_etablissement_secondaire_qualifiant_prive",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return effectif_etablissement_secondaire_qualifiant_prive_hierarchy
+############################################################################################################################
+#############################################effectif_etablissement_secondaire_qualifiant_prive_historique##################################
+###############################################################################################################################
+@api.get('/effectif_etablissement_secondaire_qualifiant_prive')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(effectif_etablissement_secondaire_qualifiant_prive.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(effectif_etablissement_secondaire_qualifiant_prive.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################eleves_doublant_de_enseignement_secondaire_qualifiant_public_hierarchy##################################
+###############################################################################################################################
+@api.get("/eleves_doublant_de_enseignement_secondaire_qualifiant_public/")
+async def hierarchy():
+    eleves_doublant_de_enseignement_secondaire_qualifiant_public_hierarchy=[
+
+        {"name":"eleves_doublant_de_enseignement_secondaire_qualifiant_public",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return eleves_doublant_de_enseignement_secondaire_qualifiant_public_hierarchy
+############################################################################################################################
+#############################################eleves_doublant_de_enseignement_secondaire_qualifiant_public_historique##################################
+###############################################################################################################################
+@api.get('/eleves_doublant_de_enseignement_secondaire_qualifiant_public')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(eleves_doublant_de_enseignement_secondaire_qualifiant_public.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(eleves_doublant_de_enseignement_secondaire_qualifiant_public.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+############################################################################################################################
+#############################################Taux_d_achevement_hierarchy##################################
+###############################################################################################################################
+@api.get("/Taux_d_achevement/")
+async def hierarchy():
+    Taux_d_achevement_hierarchy=[
+
+        {"name":"Taux_d_achevement",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Taux_d_achevement_hierarchy
+############################################################################################################################
+#############################################Taux_d_achevement_historique##################################
+###############################################################################################################################
+@api.get('/Taux_d_achevement')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Taux_d_achevement.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Taux_d_achevement.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################Budget_education_national_hierarchy##################################
+###############################################################################################################################
+@api.get("/Budget_education_national/")
+async def hierarchy():
+    Budget_education_national_hierarchy=[
+
+        {"name":"Budget_education_national",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Budget_education_national_hierarchy
+############################################################################################################################
+#############################################Budget_education_national_historique##################################
+###############################################################################################################################
+@api.get('/Budget_education_national')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Budget_education_national.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Budget_education_national.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################Nombre_d_etablissements_EC_hierarchy##################################
+###############################################################################################################################
+@api.get("/Nombre_d_etablissements_EC/")
+async def hierarchy():
+    Nombre_d_etablissements_EC_hierarchy=[
+
+        {"name":"Nombre_d_etablissements_EC",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_d_etablissements_EC_hierarchy
+############################################################################################################################
+#############################################Nombre_d_etablissements_EC_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_d_etablissements_EC')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_d_etablissements_EC.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_d_etablissements_EC.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################Personnel_enseignant_EC_hierarchy##################################
+###############################################################################################################################
+@api.get("/Personnel_enseignant_EC/")
+async def hierarchy():
+    Personnel_enseignant_EC_hierarchy=[
+
+        {"name":"Personnel_enseignant_EC",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Personnel_enseignant_EC_hierarchy
+############################################################################################################################
+#############################################Personnel_enseignant_EC_historique##################################
+###############################################################################################################################
+@api.get('/Personnel_enseignant_EC')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Personnel_enseignant_EC.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Personnel_enseignant_EC.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
 
 
 
