@@ -174,6 +174,33 @@ Personnel_enseignant_EC= db5.Personnel_enseignant_EC
 
 
 
+
+Approvisionnement_energetique_total = db2.Approvisionnement_energetique_total
+Consommation_energie = db2.Consommation_energie
+Consommation_de_produits_petroliers = db2.Consommation_de_produits_petroliers
+Consommation_de_produits_petroliers_energetiques = db2.Consommation_de_produits_petroliers_energetiques
+Consommation_de_produits_petroliers_non_energetiques = db2.Consommation_de_produits_petroliers_non_energetiques
+Consommation_des_huiles_et_graisses = db2.Consommation_des_huiles_et_graisses
+Consommation_par_les_industriels_autoproducteurs = db2.Consommation_par_les_industriels_autoproducteurs
+Consommation_par_les_petites_distributions_isolees = db2.Consommation_par_les_petites_distributions_isolees
+Exportation_de_charbon = db2.Exportation_de_charbon
+Exportation_de_Naphta = db2.Exportation_de_Naphta
+Exportation_des_produits_petroliers = db2.Exportation_des_produits_petroliers
+Longueur_des_lignes_de_transport_electricite_haute_tension = db2.Longueur_des_lignes_de_transport_electricite_haute_tension
+Nombre_dheures_de_travail_dans_les_Charbonnages_du_Maroc = db2.Nombre_dheures_de_travail_dans_les_Charbonnages_du_Maroc
+Personnel_de_ONE = db2.Personnel_de_ONE
+Production_concessionnelle = db2.Production_concessionnelle
+Production_des_apports_des_tiers = db2.Production_des_apports_des_tiers
+Production_du_parc_eolien_de_ONE = db2.Production_du_parc_eolien_de_ONE
+Production_nette_de_charbon = db2.Production_nette_de_charbon
+Production_nette_electricite = db2.Production_nette_electricite
+Production_nette_des_petites_distributions_isolees = db2.Production_nette_des_petites_distributions_isolees
+Production_total_de_ONE = db2.Production_total_de_ONE
+Puissance_installee_par_ONE = db2.Puissance_installee_par_ONE
+Puissance_totale_installee_au_maroc = db2.Puissance_totale_installee_au_maroc
+Ventes_locales_de_charbon = db2.Ventes_locales_de_charbon
+
+
 ###############################################################################################################################################################################
 ###############################################################historique #################################################################################################
 ################################################################################################################################################################################
@@ -7093,7 +7120,685 @@ def getComptes(start: int = 0, end: int = 0):
     else:
         a = list(Personnel_enseignant_EC.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+###########################################################################################################################
+############################################----------ENERGIE---------------#################################################
+#######################################################################################################################
+#######################################################################################################################
+###############################################################################################################################
+############################################################################################################################
+##################################################Approvisionnement énergétique total hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Approvisionnement_energetique_total/")
+async def hierarchy():
+    Approvisionnement_energetique_total_hierarchy=[
 
+        {"name":"Approvisionnement_energetique_total",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Approvisionnement_energetique_total_hierarchy
+############################################################################################################################
+#############################################Approvisionnement énergétique total_historique##################################
+###############################################################################################################################
+@api.get('/Approvisionnement_energetique_total_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Approvisionnement_energetique_total.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en Tonne equivalent Petrole": 1}));
+    else:
+        a = list(Approvisionnement_energetique_total.find({}, {"_id": 0, "Date": 1, "Valeur en Tonne equivalent Petrole": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+##################################################Consommation_energie hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Consommation_energie/")
+async def hierarchy():
+    Consommation_energie_hierarchy=[
+
+        {"name":"Consommation_energie",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Consommation_energie_hierarchy
+############################################################################################################################
+#############################################Consommation_energie_historique##################################
+###############################################################################################################################
+@api.get('/Consommation_energie_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Consommation_energie.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en Tonne equivalent Petrole": 1}));
+    else:
+        a = list(Consommation_energie.find({}, {"_id": 0, "Date": 1, "Valeur en Tonne equivalent Petrole": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+##################################################Consommation_de_produits_petroliers hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Consommation_de_produits_petroliers/")
+async def hierarchy():
+    Consommation_de_produits_petroliers_hierarchy=[
+
+        {"name":"Consommation_de_produits_petroliers",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Consommation_de_produits_petroliers_hierarchy
+############################################################################################################################
+#############################################Consommation_de_produits_petroliers_historique##################################
+###############################################################################################################################
+@api.get('/Consommation_de_produits_petroliers_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Consommation_de_produits_petroliers.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Consommation_de_produits_petroliers.find({}, {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+##################################################Consommation_de_produits_petroliers_energetiques hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Consommation_de_produits_petroliers_energetiques/")
+async def hierarchy():
+    Consommation_de_produits_petroliers_energetiques_hierarchy=[
+
+        {"name":"Consommation_de_produits_petroliers_energetiques",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Consommation_de_produits_petroliers_energetiques_hierarchy
+############################################################################################################################
+#############################################Consommation_de_produits_petroliers_energetiques_historique##################################
+###############################################################################################################################
+@api.get('/Consommation_de_produits_petroliers_energetiques_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Consommation_de_produits_petroliers_energetiques.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Consommation_de_produits_petroliers_energetiques.find({}, {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+#################################################Consommation_de_produits_petroliers_non_energetiques hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Consommation_de_produits_petroliers_non_energetiques/")
+async def hierarchy():
+    Consommation_de_produits_petroliers_non_energetiques_hierarchy=[
+
+        {"name":"Consommation_de_produits_petroliers_non_energetiques",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Consommation_de_produits_petroliers_non_energetiques_hierarchy
+############################################################################################################################
+#############################################Consommation_de_produits_petroliers_non_energetiques_historique##################################
+###############################################################################################################################
+@api.get('/Consommation_de_produits_petroliers_non_energetiques_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Consommation_de_produits_petroliers_non_energetiques.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Consommation_de_produits_petroliers_non_energetiques.find({}, {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+#################################################Consommation_des_huiles_et_graisses_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Consommation_des_huiles_et_graisses/")
+async def hierarchy():
+    Consommation_des_huiles_et_graisses_hierarchy=[
+
+        {"name":"Consommation_des_huiles_et_graisses",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Consommation_des_huiles_et_graisses_hierarchy
+############################################################################################################################
+#############################################Consommation_des_huiles_et_graisses_historique##################################
+###############################################################################################################################
+@api.get('/Consommation_des_huiles_et_graisses_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Consommation_des_huiles_et_graisses.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Consommation_des_huiles_et_graisses.find({}, {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+#################################################Consommation_par_les_industriels_autoproducteurs_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Consommation_par_les_industriels_autoproducteurs/")
+async def hierarchy():
+    Consommation_par_les_industriels_autoproducteurs_hierarchy=[
+
+        {"name":"Consommation_par_les_industriels_autoproducteurs",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Consommation_par_les_industriels_autoproducteurs_hierarchy
+############################################################################################################################
+#############################################Consommation_par_les_industriels_autoproducteurs_historique##################################
+###############################################################################################################################
+@api.get('/Consommation_par_les_industriels_autoproducteurs_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Consommation_par_les_industriels_autoproducteurs.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    else:
+        a = list(Consommation_par_les_industriels_autoproducteurs.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+#################################################Consommation_par_les_petites_distributions_isolees_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Consommation_par_les_petites_distributions_isolees/")
+async def hierarchy():
+    Consommation_par_les_petites_distributions_isolees_hierarchy=[
+
+        {"name":"Consommation_par_les_petites_distributions_isolees",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Consommation_par_les_petites_distributions_isolees_hierarchy
+############################################################################################################################
+#############################################Consommation_par_les_petites_distributions_isolees_historique##################################
+###############################################################################################################################
+@api.get('/Consommation_par_les_petites_distributions_isolees_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Consommation_par_les_petites_distributions_isolees.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    else:
+        a = list(Consommation_par_les_petites_distributions_isolees.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+#################################################Exportation_de_charbon_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Exportation_de_charbon/")
+async def hierarchy():
+    Exportation_de_charbon_hierarchy=[
+
+        {"name":"Exportation_de_charbon",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Exportation_de_charbon_hierarchy
+############################################################################################################################
+#############################################Exportation_de_charbon_historique##################################
+###############################################################################################################################
+@api.get('/Exportation_de_charbon_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Exportation_de_charbon.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date ": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    else:
+        a = list(Exportation_de_charbon.find({}, {"_id": 0, "Date ": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+#################################################Exportation_de_charbon_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Exportation_de_charbon/")
+async def hierarchy():
+    Exportation_de_charbon_hierarchy=[
+
+        {"name":"Exportation_de_charbon",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Exportation_de_charbon_hierarchy
+############################################################################################################################
+#############################################Exportation_de_charbon_historique##################################
+###############################################################################################################################
+@api.get('/Exportation_de_charbon_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Exportation_de_charbon.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date ": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    else:
+        a = list(Exportation_de_charbon.find({}, {"_id": 0, "Date ": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+#################################################Exportation_de_Naphta_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Exportation_de_Naphta/")
+async def hierarchy():
+    Exportation_de_Naphta_hierarchy=[
+
+        {"name":"Exportation_de_Naphta",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Exportation_de_Naphta_hierarchy
+############################################################################################################################
+#############################################Exportation_de_Naphta_historique##################################
+###############################################################################################################################
+@api.get('/Exportation_de_Naphta_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Exportation_de_Naphta.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Exportation_de_Naphta.find({}, {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+#################################################Exportation_des_produits_petroliers_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Exportation_des_produits_petroliers/")
+async def hierarchy():
+    Exportation_des_produits_petroliers_hierarchy=[
+
+        {"name":"Exportation_des_produits_petroliers",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Exportation_des_produits_petroliers_hierarchy
+############################################################################################################################
+#############################################Exportation_des_produits_petroliers_historique##################################
+###############################################################################################################################
+@api.get('/Exportation_des_produits_petroliers_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Exportation_des_produits_petroliers.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Exportation_des_produits_petroliers.find({}, {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+#################################################LoLongueur_des_lignes_de_transport_electricite_haute_tension_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Longueur_des_lignes_de_transport_electricite_haute_tension/")
+async def hierarchy():
+    Longueur_des_lignes_de_transport_electricite_haute_tension_hierarchy=[
+
+        {"name":"Longueur_des_lignes_de_transport_electricite_haute_tension",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Longueur_des_lignes_de_transport_electricite_haute_tension_hierarchy
+############################################################################################################################
+#############################################Longueur_des_lignes_de_transport_electricite_haute_tension_historique##################################
+###############################################################################################################################
+@api.get('/Longueur_des_lignes_de_transport_electricite_haute_tension_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Longueur_des_lignes_de_transport_electricite_haute_tension.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en KM": 1}));
+    else:
+        a = list(Longueur_des_lignes_de_transport_electricite_haute_tension.find({}, {"_id": 0, "Date": 1, "Valeur en KM": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+################################################Nombre_dheures_de_travail_dans_les_Charbonnages_du_Maroc_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Nombre_dheures_de_travail_dans_les_Charbonnages_du_Maroc/")
+async def hierarchy():
+    Nombre_dheures_de_travail_dans_les_Charbonnages_du_Maroc_hierarchy=[
+
+        {"name":"Nombre_dheures_de_travail_dans_les_Charbonnages_du_Maroc",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_dheures_de_travail_dans_les_Charbonnages_du_Maroc_hierarchy
+############################################################################################################################
+#############################################Nombre_dheures_de_travail_dans_les_Charbonnages_du_Maroc_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_dheures_de_travail_dans_les_Charbonnages_du_Maroc_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_dheures_de_travail_dans_les_Charbonnages_du_Maroc.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS HEURES": 1}));
+    else:
+        a = list(Nombre_dheures_de_travail_dans_les_Charbonnages_du_Maroc.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS HEURES": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+################################################Personnel_de_ONE_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Personnel_de_ONE/")
+async def hierarchy():
+    Personnel_de_ONE_hierarchy=[
+
+        {"name":"Personnel_de_ONE",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Personnel_de_ONE_hierarchy
+############################################################################################################################
+#############################################Personnel_de_ONE_historique##################################
+###############################################################################################################################
+@api.get('/Personnel_de_ONE_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Personnel_de_ONE.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Personnel_de_ONE.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+###############################################################################################################################
+############################################################################################################################
+################################################Production_des_apports_des_tiers_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Production_des_apports_des_tiers/")
+async def hierarchy():
+    Production_des_apports_des_tiers_hierarchy=[
+
+        {"name":"Production_des_apports_des_tiers",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Production_des_apports_des_tiers_hierarchy
+############################################################################################################################
+############################################Production_des_apports_des_tiers_historique##################################
+###############################################################################################################################
+@api.get('/Production_des_apports_des_tiers_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_des_apports_des_tiers.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    else:
+        a = list(Production_des_apports_des_tiers.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+################################################Production_du_parc_eolien_de_ONE_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Production_du_parc_eolien_de_ONE/")
+async def hierarchy():
+    Production_du_parc_eolien_de_ONE_hierarchy=[
+
+        {"name":"Production_du_parc_eolien_de_ONE",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Production_du_parc_eolien_de_ONE_hierarchy
+############################################################################################################################
+############################################Production_du_parc_eolien_de_ONE_historique##################################
+###############################################################################################################################
+@api.get('/Production_du_parc_eolien_de_ONE_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_du_parc_eolien_de_ONE.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    else:
+        a = list(Production_du_parc_eolien_de_ONE.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+
+###############################################################################################################################
+############################################################################################################################
+################################################Production_nette_de_charbon_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Production_nette_de_charbon/")
+async def hierarchy():
+    Production_nette_de_charbon_hierarchy=[
+
+        {"name":"Production_nette_de_charbon",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Production_nette_de_charbon_hierarchy
+############################################################################################################################
+############################################Production_nette_de_charbon_historique##################################
+###############################################################################################################################
+@api.get('/Production_nette_de_charbon_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_nette_de_charbon.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    else:
+        a = list(Production_nette_de_charbon.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+################################################Production_nette_electricite_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Production_nette_electricite/")
+async def hierarchy():
+    Production_nette_electricite_hierarchy=[
+
+        {"name":"Production_nette_electricite",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Production_nette_electricite_hierarchy
+############################################################################################################################
+############################################Production_nette_electricite_historique##################################
+###############################################################################################################################
+@api.get('/Production_nette_electricite_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_nette_electricite.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    else:
+        a = list(Production_nette_electricite.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+################################################Production_nette_des_petites_distributions_isolees_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Production_nette_des_petites_distributions_isolees/")
+async def hierarchy():
+    Production_nette_des_petites_distributions_isolees_hierarchy=[
+
+        {"name":"Production_nette_des_petites_distributions_isolees",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Production_nette_des_petites_distributions_isolees_hierarchy
+############################################################################################################################
+############################################Production_nette_electricite_historique##################################
+###############################################################################################################################
+@api.get('/Production_nette_des_petites_distributions_isolees_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_nette_des_petites_distributions_isolees.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    else:
+        a = list(Production_nette_des_petites_distributions_isolees.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+##############################################Production_total_de_ONE_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Production_total_de_ONE/")
+async def hierarchy():
+    Production_total_de_ONE_hierarchy=[
+
+        {"name":"Production_total_de_ONE",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Production_total_de_ONE_hierarchy
+############################################################################################################################
+############################################Production_nette_electricite_historique##################################
+###############################################################################################################################
+@api.get('/Production_total_de_ONE_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_total_de_ONE.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    else:
+        a = list(Production_total_de_ONE.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS DE KWH": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+##############################################Puissance_installee_par_ONE_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Puissance_installee_par_ONE/")
+async def hierarchy():
+    Puissance_installee_par_ONE_hierarchy=[
+
+        {"name":"Puissance_installee_par_ONE",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Puissance_installee_par_ONE_hierarchy
+############################################################################################################################
+############################################Production_nette_electricite_historique##################################
+###############################################################################################################################
+@api.get('/Puissance_installee_par_ONE_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Puissance_installee_par_ONE.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS DE WATTS": 1}));
+    else:
+        a = list(Puissance_installee_par_ONE.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS DE WATTS": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+##############################################Puissance_totale_installee au_maroc_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Puissance_totale_installee_au_maroc/")
+async def hierarchy():
+    Puissance_totale_installee_au_maroc_hierarchy=[
+
+        {"name":"Puissance_totale_installee_au_maroc",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Puissance_totale_installee_au_maroc_hierarchy
+############################################################################################################################
+############################################Puissance_totale_installee_au_maroc_historique##################################
+###############################################################################################################################
+@api.get('/Puissance_totale_installee_au_maroc_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Puissance_totale_installee_au_maroc.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS DE WATTS": 1}));
+    else:
+        a = list(Puissance_totale_installee_au_maroc.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS DE WATTS": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+#############################################Ventes_locales_de_charbon_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Ventes_locales_de_charbon/")
+async def hierarchy():
+    Ventes_locales_de_charbon_hierarchy=[
+
+        {"name":"Ventes_locales_de_charbon",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Ventes_locales_de_charbon_hierarchy
+############################################################################################################################
+############################################Ventes_locales_de_charbon_historique##################################
+###############################################################################################################################
+@api.get('/Ventes_locales_de_charbon_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Ventes_locales_de_charbon.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    else:
+        a = list(Ventes_locales_de_charbon.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
 
 
