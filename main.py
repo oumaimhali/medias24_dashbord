@@ -209,6 +209,11 @@ Investisement_par_secteur = db2.Investisement_par_secteur
 Production_par_secteur = db2.Production_par_secteur
 
 
+Personnel_de_lOffice_Cherifien_des_Phosphates_en_fin_du_mois = db2.Personnel_de_lOffice_Cherifien_des_Phosphates_en_fin_du_mois
+Production_en_quantite_des_phosphates_secs = db2.Production_en_quantite_des_phosphates_secs
+Ventes_locales_en_quantite_des_phosphates_secs = db2.Ventes_locales_en_quantite_des_phosphates_secs
+
+
 ###############################################################################################################################################################################
 ###############################################################historique #################################################################################################
 ################################################################################################################################################################################
@@ -7953,6 +7958,95 @@ def getComptes(start: int = 0, end: int = 0):
                                      {"_id": 0, "Date": 1, "Valeur en millions de DH": 1}));
     else:
         a = list(Production_par_secteur.find({}, {"_id": 0, "Date": 1, "Valeur en millions de DH": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+####################################################################################################################################
+###############################################################################################################################
+############################################################################################################################
+#############################################**********MINES**************###############################################
+###############################################################################################################################
+############################################################################################################################
+###############################################################################################################################
+############################################################################################################################
+#############################################Personnel_de_lOffice_Cherifien_des_Phosphates_en_fin_du_mois_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Personnel_de_lOffice_Cherifien_des_Phosphates_en_fin_du_mois/")
+async def hierarchy():
+    Personnel_de_lOffice_Cherifien_des_Phosphates_en_fin_du_mois_hierarchy=[
+
+        {"name":"Personnel_de_lOffice_Cherifien_des_Phosphates_en_fin_du_mois",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Personnel_de_lOffice_Cherifien_des_Phosphates_en_fin_du_mois_hierarchy
+############################################################################################################################
+############################################Personnel_de_lOffice_Cherifien_des_Phosphates_en_fin_du_mois_historique##################################
+###############################################################################################################################
+@api.get('/Personnel_de_lOffice_Cherifien_des_Phosphates_en_fin_du_mois_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Personnel_de_lOffice_Cherifien_des_Phosphates_en_fin_du_mois.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Personnel_de_lOffice_Cherifien_des_Phosphates_en_fin_du_mois.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###############################################################################################################################
+############################################################################################################################
+#############################################Production_en_quantite_des_phosphates_secs_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Production_en_quantite_des_phosphates_secs/")
+async def hierarchy():
+    Production_en_quantite_des_phosphates_secs_hierarchy=[
+
+        {"name":"Production_en_quantite_des_phosphates_secs",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Production_en_quantite_des_phosphates_secs_hierarchy
+############################################################################################################################
+############################################Production_en_quantite_des_phosphates_secs_historique##################################
+###############################################################################################################################
+@api.get('/Production_en_quantite_des_phosphates_secs_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_en_quantite_des_phosphates_secs.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    else:
+        a = list(Production_en_quantite_des_phosphates_secs.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+############################################################################################################################
+#############################################Ventes_locales_en_quantite_des_phosphates_secs_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Ventes_locales_en_quantite_des_phosphates_secs/")
+async def hierarchy():
+    Ventes_locales_en_quantite_des_phosphates_secs_hierarchy=[
+
+        {"name":"Ventes_locales_en_quantite_des_phosphates_secs",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Ventes_locales_en_quantite_des_phosphates_secs_hierarchy
+############################################################################################################################
+############################################Ventes_locales_en_quantite_des_phosphates_secs_historique##################################
+###############################################################################################################################
+@api.get('/Ventes_locales_en_quantite_des_phosphates_secs_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Ventes_locales_en_quantite_des_phosphates_secs.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    else:
+        a = list(Ventes_locales_en_quantite_des_phosphates_secs.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
 
