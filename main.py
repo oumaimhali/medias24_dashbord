@@ -23,6 +23,62 @@ db2 = client['HCP']
 db3 = client['Tourisme']
 db4 = client['MEF']
 db5 = client ['Enseignement']
+
+db6 = client['Transport_HCP']
+
+Autres_mouvements_non_commerciaux_des_avions = db6.Autres_mouvements_non_commerciaux_des_avions
+Coefficient_d_occupation_des_sieges_de_la_flotte_de_Royal_Air_Maroc = db6.Coefficient_d_occupation_des_sieges_de_la_flotte_de_Royal_Air_Maroc
+Mouvements_des_avions = db6.Mouvements_des_avions
+Mouvements_des_avions_commerciaux = db6.Mouvements_des_avions_commerciaux
+Nombre_de_kilometres_parcourus_par_la_flotte_de_Royal_Air_Maroc = db6.Nombre_de_kilometres_parcourus_par_la_flotte_de_Royal_Air_Maroc
+Nombre_de_passagers_transportes_par_la_flotte_de_Royal_Air_Maroc = db6.Nombre_de_passagers_transportes_par_la_flotte_de_Royal_Air_Maroc
+Nombre_de_voyageurs_Autres_Mouvements = db6.Nombre_de_voyageurs_Autres_Mouvements
+Nombre_de_voyageurs_Trafic_commercial = db6.Nombre_de_voyageurs_Trafic_commercial
+Nombre_dheures_de_vol_realisees_par_la_flotte_de_Royal_Air_Maroc = db6.Nombre_dheures_de_vol_realisees_par_la_flotte_de_Royal_Air_Maroc
+Passagers_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc =db6.Passagers_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc
+Sieges_kilometres_offertes_par_la_flotte_de_Royal_Air_Maroc = db6.Sieges_kilometres_offertes_par_la_flotte_de_Royal_Air_Maroc
+Tonnage_de_courrier_et_de_poste_transporte_par_la_flotte_de_Royal_Air_Maroc = db6.Tonnage_de_courrier_et_de_poste_transporte_par_la_flotte_de_Royal_Air_Maroc
+Tonnage_de_fret_et_de_bagages_transporte_par_la_flotte_de_Royal_Air_Maroc = db6.Tonnage_de_fret_et_de_bagages_transporte_par_la_flotte_de_Royal_Air_Maroc
+Tonnage_du_fret_aerien = db6.Tonnage_du_fret_aerien
+Tonnes_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc= db6.Tonnes_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc
+Distance_parcourue_par_les_trains_durant_lannee = db6.Distance_parcourue_par_les_trains_durant_lannee
+Nombre_de_wagons_charges_par_lONCF = db6.Nombre_de_wagons_charges_par_lONCF
+Nombre_du_parc_ferroviaire_de_lONCF = db6.Nombre_du_parc_ferroviaire_de_lONCF
+Recettes_des_phosphates_transportes_par_lONCF = db6.Recettes_des_phosphates_transportes_par_lONCF
+Tonnage_des_marchandises_transportees_par_ONCF = db6.Tonnage_des_marchandises_transportees_par_ONCF
+Tonnage_des_phosphates_transportes_par_lONCF = db6.Tonnage_des_phosphates_transportes_par_lONCF
+Tonnage_des_services_realises_par_ONCF = db6.Tonnage_des_services_realises_par_ONCF
+Tonnes_kilometres_realises_de_phosphates_transportes_par_lONCF = db6.Tonnes_kilometres_realises_de_phosphates_transportes_par_lONCF
+Tonnes_kilometres_des_services_realises_par_ONCF = db6.Tonnes_kilometres_des_services_realises_par_ONCF
+Tonnes_kilometres_de_marchandises_realisees_par_ONCF = db6.Tonnes_kilometres_de_marchandises_realisees_par_ONCF
+Voyageurs_Kilometres_de_lONCF = db6.Voyageurs_Kilometres_de_lONCF
+Jauge_nette_des_navires_entres_et_sortis_dans_les_ports_marocains = db6.Jauge_nette_des_navires_entres_et_sortis_dans_les_ports_marocains
+Quantite_de_marchandises_chargees_dans_les_ports_marocains = db6.Quantite_de_marchandises_chargees_dans_les_ports_marocains
+Quantite_des_marchandises_dechargees_dans_les_ports_marocains = db6.Quantite_des_marchandises_dechargees_dans_les_ports_marocains
+Capacite_de_chargement_des_vehicules_autorises_pour_demenagements = db6.Capacite_de_chargement_des_vehicules_autorises_pour_demenagements
+Capacite_de_chargement_des_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes = db6.Capacite_de_chargement_des_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes
+Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises = db6.Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises
+Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions = db6.Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions
+Longueur_des_routes = db6.Longueur_des_routes
+Longueur_des_routes_revetues = db6.Longueur_des_routes_revetues
+Nombre_d_accidents_survenus_en_agglomeration = db6.Nombre_d_accidents_survenus_en_agglomeration
+Nombre_de_cars_en_service_destines_pour_le_transport_public_de_voyageurs = db6.Nombre_de_cars_en_service_destines_pour_le_transport_public_de_voyageurs
+Nombre_de_permis_de_conduire_ayant_ete_retires_pour_sanction = db6.Nombre_de_permis_de_conduire_ayant_ete_retires_pour_sanction
+Nombre_de_permis_de_conduire_delivres = db6.Nombre_de_permis_de_conduire_delivres
+Nombre_de_places_offertes_dans_les_cars_destines_pour_le_transport_public_de_voyageurs = db6.Nombre_de_places_offertes_dans_les_cars_destines_pour_le_transport_public_de_voyageurs
+Nombre_de_vehicules_autorises_pour_demenagements = db6.Nombre_de_vehicules_autorises_pour_demenagements
+Nombre_de_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes = db6.Nombre_de_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes
+Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises = db6.Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises
+Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions = db6.Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions
+Nombre_de_victimes_blessees_dans_des_accidents_survenus_en_agglomeration = db6.Nombre_de_victimes_blessees_dans_des_accidents_survenus_en_agglomeration
+Nombre_de_victimes_blessees_dans_des_accidents_survenus_sur_les_routes_hors_agglomeration= db6.Nombre_de_victimes_blessees_dans_des_accidents_survenus_sur_les_routes_hors_agglomeration
+Nombre_de_victimes_tuees_dans_des_accidents_survenus_en_agglomeration= db6.Nombre_de_victimes_tuees_dans_des_accidents_survenus_en_agglomeration
+Nombre_de_victimes_tuees_dans_des_accidents_survenus_sur_les_routes_hors_agglomeration = db6.Nombre_de_victimes_tuees_dans_des_accidents_survenus_sur_les_routes_hors_agglomeration
+Nombre_d_entreprises_proprietaires_de_vehicules_destines_pour_le_transport_public_de_marchandises = db6.Nombre_d_entreprises_proprietaires_de_vehicules_destines_pour_le_transport_public_de_marchandises
+Nombre_total_de_victimes_des_accidents_survenus_en_agglomeration = db6.Nombre_total_de_victimes_des_accidents_survenus_en_agglomeration
+Nombre_total_de_victimes_des_accidents_survenus_sur_les_routes_hors_agglomeration = db6.Nombre_total_de_victimes_des_accidents_survenus_sur_les_routes_hors_agglomeration
+Nombre_total_des_accidents_survenus = db6.Nombre_total_des_accidents_survenus
+###################################################################################################################################################
 Voyages_Pays_0 = db.Voyages_Pays_0
 compte_courant = db.compte_courant
 Comext_import_GU_CVS = db.Comext_import_GU_CVS
@@ -8048,5 +8104,1431 @@ def getComptes(start: int = 0, end: int = 0):
     else:
         a = list(Ventes_locales_en_quantite_des_phosphates_secs.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+########################################################################################################################################################
+############################################################################################################################################################
+##############################################*****************TRANSSPORT***************##################################################################################
+#########################################################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+#############################################Autres_mouvements_non_commerciaux_des_avions_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Autres_mouvements_non_commerciaux_des_avions/")
+async def hierarchy():
+    Autres_mouvements_non_commerciaux_des_avions_hierarchy=[
 
+        {"name":"Autres_mouvements_non_commerciaux_des_avions",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Autres_mouvements_non_commerciaux_des_avions_hierarchy
+############################################################################################################################
+############################################Autres_mouvements_non_commerciaux_des_avions_historique##################################
+###############################################################################################################################
+@api.get('/Autres_mouvements_non_commerciaux_des_avions_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Autres_mouvements_non_commerciaux_des_avions.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Autres_mouvements_non_commerciaux_des_avions.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+##########################################################################################################################################################################
+############################################################################################################################
+#############################################Coefficient_d_occupation_des_sieges_de_la _flotte_de_Royal_Air_Maroc_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Coefficient_d_occupation_des_sieges_de_la _flotte_de_Royal_Air_Maroc/")
+async def hierarchy():
+    Coefficient_d_occupation_des_sieges_de_la_flotte_de_Royal_Air_Maroc_hierarchy=[
+
+        {"name":"Coefficient_d_occupation_des_sieges_de_la_flotte_de_Royal_Air_Maroc",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Coefficient_d_occupation_des_sieges_de_la_flotte_de_Royal_Air_Maroc_hierarchy
+############################################################################################################################
+############################################Autres_mouvements_non_commerciaux_des_avions_historique##################################
+###############################################################################################################################
+@api.get('/Coefficient_d_occupation_des_sieges_de_la_flotte_de_Royal_Air_Maroc_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Coefficient_d_occupation_des_sieges_de_la_flotte_de_Royal_Air_Maroc.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Coefficient_d_occupation_des_sieges_de_la_flotte_de_Royal_Air_Maroc.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+##########################################################################################################################################################################
+############################################################################################################################
+#############################################Mouvements_des_avions_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Mouvements_des_avions/")
+async def hierarchy():
+    Mouvements_des_avions_hierarchy=[
+
+        {"name":"Mouvements_des_avions",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Mouvements_des_avions_hierarchy
+############################################################################################################################
+############################################Autres_mouvements_non_commerciaux_des_avions_historique##################################
+###############################################################################################################################
+@api.get('/Mouvements_des_avions_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Mouvements_des_avions.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Mouvements_des_avions.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+##########################################################################################################################################################################
+############################################################################################################################
+#############################################Mouvements_des_avions_commerciaux_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Mouvements_des_avions_commerciaux/")
+async def hierarchy():
+    Mouvements_des_avions_commerciaux_hierarchy=[
+
+        {"name":"Mouvements_des_avions_commerciaux",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Mouvements_des_avions_commerciaux_hierarchy
+############################################################################################################################
+############################################Autres_mouvements_non_commerciaux_des_avions_historique##################################
+###############################################################################################################################
+@api.get('/Mouvements_des_avions_commerciaux_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Mouvements_des_avions_commerciaux.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Mouvements_des_avions_commerciaux.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+##########################################################################################################################################################################
+############################################################################################################################
+#############################################Nombre_de_kilometres_parcourus_par_la_flotte_de_Royal_Air_Maroc_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Nombre_de_kilometres_parcourus_par_la_flotte_de_Royal_Air_Maroc/")
+async def hierarchy():
+    Nombre_de_kilometres_parcourus_par_la_flotte_de_Royal_Air_Maroc_hierarchy=[
+
+        {"name":"Nombre_de_kilometres_parcourus_par_la_flotte_de_Royal_Air_Maroc",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_kilometres_parcourus_par_la_flotte_de_Royal_Air_Maroc_hierarchy
+############################################################################################################################
+############################################Nombre_de_kilometres_parcourus_par_la_flotte_de_Royal_Air_Maroc_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_de_kilometres_parcourus_par_la_flotte_de_Royal_Air_Maroc_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_kilometres_parcourus_par_la_flotte_de_Royal_Air_Maroc.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE KM": 1}));
+    else:
+        a = list(Nombre_de_kilometres_parcourus_par_la_flotte_de_Royal_Air_Maroc.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE KM": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+##########################################################################################################################################################################
+############################################################################################################################
+#############################################Nombre_de_passagers_transportes_par_la_flotte_de_Royal_Air_Maroc_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Nombre_de_passagers_transportes_par_la_flotte_de_Royal_Air_Maroc/")
+async def hierarchy():
+    Nombre_de_passagers_transportes_par_la_flotte_de_Royal_Air_Maroc_hierarchy=[
+
+        {"name":"Nombre_de_passagers_transportes_par_la_flotte_de_Royal_Air_Maroc",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_passagers_transportes_par_la_flotte_de_Royal_Air_Maroc_hierarchy
+############################################################################################################################
+############################################Nombre_de_passagers_transportes_par_la_flotte_de_Royal_Air_Maroc_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_de_passagers_transportes_par_la_flotte_de_Royal_Air_Maroc_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_passagers_transportes_par_la_flotte_de_Royal_Air_Maroc.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_passagers_transportes_par_la_flotte_de_Royal_Air_Maroc.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+##########################################################################################################################################################################
+############################################################################################################################
+#############################################Nombre_de_voyageurs_Autres_Mouvements_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Nombre_de_voyageurs_Autres_Mouvements/")
+async def hierarchy():
+    Nombre_de_voyageurs_Autres_Mouvements_hierarchy=[
+
+        {"name":"Nombre_de_voyageurs_Autres_Mouvements",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_voyageurs_Autres_Mouvements_hierarchy
+############################################################################################################################
+############################################Nombre_de_voyageurs_Autres_Mouvements_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_de_voyageurs_Autres_Mouvements_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_voyageurs_Autres_Mouvements.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_voyageurs_Autres_Mouvements.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+##########################################################################################################################################################################
+############################################################################################################################
+#############################################Nombre_de_voyageurs_Trafic_commercial_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Nombre_de_voyageurs_Trafic_commercial/")
+async def hierarchy():
+    Nombre_de_voyageurs_Trafic_commercial_hierarchy=[
+
+        {"name":"Nombre_de_voyageurs_Trafic_commercial",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_voyageurs_Trafic_commercial_hierarchy
+############################################################################################################################
+############################################Nombre_de_voyageurs_Trafic_commercial_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_de_voyageurs_Trafic_commercial_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_voyageurs_Trafic_commercial.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_voyageurs_Trafic_commercial.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+##########################################################################################################################################################################
+############################################################################################################################
+#############################################Nombre_dheures_de_vol_realisees_par_la_flotte_de_Royal_Air_Maroc_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Nombre_dheures_de_vol_realisees_par_la_flotte_de_Royal_Air_Maroc/")
+async def hierarchy():
+    Nombre_dheures_de_vol_realisees_par_la_flotte_de_Royal_Air_Maroc_hierarchy=[
+
+        {"name":"Nombre_dheures_de_vol_realisees_par_la_flotte_de_Royal_Air_Maroc",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_dheures_de_vol_realisees_par_la_flotte_de_Royal_Air_Maroc_hierarchy
+############################################################################################################################
+############################################Nombre_dheures_de_vol_realisees_par_la_flotte_de_Royal_Air_Maroc_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_dheures_de_vol_realisees_par_la_flotte_de_Royal_Air_Maroc_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_dheures_de_vol_realisees_par_la_flotte_de_Royal_Air_Maroc.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_dheures_de_vol_realisees_par_la_flotte_de_Royal_Air_Maroc.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+#############################################Passagers_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Passagers_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc/")
+async def hierarchy():
+    Passagers_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc_hierarchy=[
+
+        {"name":"Passagers_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Passagers_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc_hierarchy
+############################################################################################################################
+############################################Passagers_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc_historique##################################
+###############################################################################################################################
+@api.get('/Passagers_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Passagers_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Passagers_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Sieges_kilometres_offertes_par_la_flotte_de_Royal_Air_Maroc_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Sieges_kilometres_offertes_par_la_flotte_de_Royal_Air_Maroc/")
+async def hierarchy():
+    Sieges_kilometres_offertes_par_la_flotte_de_Royal_Air_Maroc_hierarchy=[
+
+        {"name":"Sieges_kilometres_offertes_par_la_flotte_de_Royal_Air_Maroc",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Sieges_kilometres_offertes_par_la_flotte_de_Royal_Air_Maroc_hierarchy
+############################################################################################################################
+############################################Sieges_kilometres_offertes_par_la_flotte_de_Royal_Air_Maroc_historique##################################
+###############################################################################################################################
+@api.get('/Sieges_kilometres_offertes_par_la_flotte_de_Royal_Air_Maroc_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Sieges_kilometres_offertes_par_la_flotte_de_Royal_Air_Maroc.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS de KM": 1}));
+    else:
+        a = list(Sieges_kilometres_offertes_par_la_flotte_de_Royal_Air_Maroc.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS de KM": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Tonnage_de_courrier_et_de_poste_transporte_par_la_flotte_de_Royal_Air_Maroc_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Tonnage_de_courrier_et_de_poste_transporte_par_la_flotte_de_Royal_Air_Maroc/")
+async def hierarchy():
+    Tonnage_de_courrier_et_de_poste_transporte_par_la_flotte_de_Royal_Air_Maroc_hierarchy=[
+
+        {"name":"Tonnage_de_courrier_et_de_poste_transporte_par_la_flotte_de_Royal_Air_Maroc",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Tonnage_de_courrier_et_de_poste_transporte_par_la_flotte_de_Royal_Air_Maroc_hierarchy
+############################################################################################################################
+############################################Tonnage_de_courrier_et_de_poste_transporte_par_la_flotte_de_Royal_Air_Maroc_historique##################################
+###############################################################################################################################
+@api.get('/Tonnage_de_courrier_et_de_poste_transporte_par_la_flotte_de_Royal_Air_Maroc_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Tonnage_de_courrier_et_de_poste_transporte_par_la_flotte_de_Royal_Air_Maroc.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Tonnage_de_courrier_et_de_poste_transporte_par_la_flotte_de_Royal_Air_Maroc.find({}, {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Tonnage_de_fret_et_de_bagages_transporte_par_la_flotte_de_Royal_Air_Maroc_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Tonnage_de_fret_et_de_bagages_transporte_par_la_flotte_de_Royal_Air_Maroc/")
+async def hierarchy():
+    Tonnage_de_fret_et_de_bagages_transporte_par_la_flotte_de_Royal_Air_Maroc_hierarchy=[
+
+        {"name":"Tonnage_de_fret_et_de_bagages_transporte_par_la_flotte_de_Royal_Air_Maroc",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Tonnage_de_fret_et_de_bagages_transporte_par_la_flotte_de_Royal_Air_Maroc_hierarchy
+############################################################################################################################
+############################################Tonnage_de_fret_et_de_bagages_transporte_par_la_flotte_de_Royal_Air_Maroc_historique##################################
+###############################################################################################################################
+@api.get('/Tonnage_de_fret_et_de_bagages_transporte_par_la_flotte_de_Royal_Air_Maroc_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Tonnage_de_fret_et_de_bagages_transporte_par_la_flotte_de_Royal_Air_Maroc.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Tonnage_de_fret_et_de_bagages_transporte_par_la_flotte_de_Royal_Air_Maroc.find({}, {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Tonnage_du_fret_aerien_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Tonnage_du_fret_aerien/")
+async def hierarchy():
+    Tonnage_du_fret_aerien_hierarchy=[
+
+        {"name":"Tonnage_du_fret_aerien",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Tonnage_du_fret_aerien_hierarchy
+############################################################################################################################
+############################################Tonnage_du_fret_aerien_historique##################################
+###############################################################################################################################
+@api.get('/Tonnage_du_fret_aerien_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Tonnage_du_fret_aerien.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Tonnage_du_fret_aerien.find({}, {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Tonnes_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Tonnes_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc/")
+async def hierarchy():
+    Tonnes_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc_hierarchy=[
+
+        {"name":"Tonnes_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Tonnes_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc_hierarchy
+############################################################################################################################
+############################################Tonnes_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc_historique##################################
+###############################################################################################################################
+@api.get('/Tonnes_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Tonnes_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES KM": 1}));
+    else:
+        a = list(Tonnes_kilometres_realises_par_la_flotte_de_Royal_Air_Maroc.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES KM": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Distance_parcourue_par_les_trains_durant_lannee_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Distance_parcourue_par_les_trains_durant_lannee/")
+async def hierarchy():
+    Distance_parcourue_par_les_trains_durant_lannee_hierarchy=[
+
+        {"name":"Distance_parcourue_par_les_trains_durant_lannee",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Distance_parcourue_par_les_trains_durant_lannee_hierarchy
+############################################################################################################################
+############################################Distance_parcourue_par_les_trains_durant_lannee_historique##################################
+###############################################################################################################################
+@api.get('/Distance_parcourue_par_les_trains_durant_lannee_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Distance_parcourue_par_les_trains_durant_lannee.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en KM": 1}));
+    else:
+        a = list(Distance_parcourue_par_les_trains_durant_lannee.find({}, {"_id": 0, "Date": 1, "Valeur en KM": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Nombre_de_wagons_charges_par_lONCF_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Nombre_de_wagons_charges_par_lONCF/")
+async def hierarchy():
+    Nombre_de_wagons_charges_par_lONCF_hierarchy=[
+
+        {"name":"Nombre_de_wagons_charges_par_lONCF",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_wagons_charges_par_lONCF_hierarchy
+############################################################################################################################
+############################################Nombre_de_wagons_charges_par_lONCF_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_de_wagons_charges_par_lONCF_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_wagons_charges_par_lONCF.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS": 1}));
+    else:
+        a = list(Nombre_de_wagons_charges_par_lONCF.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Nombre_du_parc_ferroviaire_de_lONCF_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Nombre_du_parc_ferroviaire_de_lONCF/")
+async def hierarchy():
+    Nombre_du_parc_ferroviaire_de_lONCF_hierarchy=[
+
+        {"name":"Nombre_du_parc_ferroviaire_de_lONCF",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_du_parc_ferroviaire_de_lONCF_hierarchy
+############################################################################################################################
+############################################Nombre_du_parc_ferroviaire_de_lONCF_historique##################################
+###############################################################################################################################
+@api.get('/Nombre_du_parc_ferroviaire_de_lONCF_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_du_parc_ferroviaire_de_lONCF.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_du_parc_ferroviaire_de_lONCF.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Recettes_des_phosphates_transportes_par_lONCF_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Recettes_des_phosphates_transportes_par_lONCF/")
+async def hierarchy():
+    Recettes_des_phosphates_transportes_par_lONCF_hierarchy=[
+
+        {"name":"Recettes_des_phosphates_transportes_par_lONCF",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Recettes_des_phosphates_transportes_par_lONCF_hierarchy
+############################################################################################################################
+############################################Recettes_des_phosphates_transportes_par_lONCF_historique##################################
+###############################################################################################################################
+@api.get('/Recettes_des_phosphates_transportes_par_lONCF_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Recettes_des_phosphates_transportes_par_lONCF.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS DE DH": 1}));
+    else:
+        a = list(Recettes_des_phosphates_transportes_par_lONCF.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS DE DH": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Tonnage_des_marchandises_transportees_par_ONCF_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Tonnage_des_marchandises_transportees_par_ONCF/")
+async def hierarchy():
+    Tonnage_des_marchandises_transportees_par_ONCF_hierarchy=[
+
+        {"name":"Recettes_des_phosphates_transportes_par_lONCF",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Tonnage_des_marchandises_transportees_par_ONCF_hierarchy
+############################################################################################################################
+############################################Tonnage_des_marchandises_transportees_par_ONCF_historique##################################
+###############################################################################################################################
+@api.get('/Tonnage_des_marchandises_transportees_par_ONCF_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Tonnage_des_marchandises_transportees_par_ONCF.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    else:
+        a = list(Tonnage_des_marchandises_transportees_par_ONCF.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Tonnage_des_phosphates_transportes_par_lONCF_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Tonnage_des_phosphates_transportes_par_lONCF/")
+async def hierarchy():
+    Tonnage_des_phosphates_transportes_par_lONCF_hierarchy=[
+
+        {"name":"Tonnage_des_phosphates_transportes_par_lONCF",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Tonnage_des_phosphates_transportes_par_lONCF_hierarchy
+############################################################################################################################
+############################################Tonnage_des_phosphates_transportes_par_lONCF_historique##################################
+###############################################################################################################################
+@api.get('/Tonnage_des_phosphates_transportes_par_lONCF_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Tonnage_des_phosphates_transportes_par_lONCF.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    else:
+        a = list(Tonnage_des_phosphates_transportes_par_lONCF.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Tonnage_des_services_realises_par_ONCF_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Tonnage_des_services_realises_par_ONCF/")
+async def hierarchy():
+    Tonnage_des_services_realises_par_ONCF_hierarchy=[
+
+        {"name":"Tonnage_des_services_realises_par_ONCF",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Tonnage_des_services_realises_par_ONCF_hierarchy
+############################################################################################################################
+############################################Tonnage_des_services_realises_par_ONCF_historique##################################
+###############################################################################################################################
+@api.get('/Tonnage_des_services_realises_par_ONCF_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Tonnage_des_services_realises_par_ONCF.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    else:
+        a = list(Tonnage_des_services_realises_par_ONCF.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Tonnes_kilometres_realises_de_phosphates_transportes_par_lONCF_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Tonnes_kilometres_realises_de_phosphates_transportes_par_lONCF/")
+async def hierarchy():
+    Tonnes_kilometres_realises_de_phosphates_transportes_par_lONCF_hierarchy=[
+
+        {"name":"Tonnes_kilometres_realises_de_phosphates_transportes_par_lONCF",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Tonnes_kilometres_realises_de_phosphates_transportes_par_lONCF_hierarchy
+############################################################################################################################
+############################################Tonnage_des_services_realises_par_ONCF_historique##################################
+###############################################################################################################################
+@api.get('/Tonnes_kilometres_realises_de_phosphates_transportes_par_lONCF_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Tonnes_kilometres_realises_de_phosphates_transportes_par_lONCF.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS DE TONNES KM": 1}));
+    else:
+        a = list(Tonnes_kilometres_realises_de_phosphates_transportes_par_lONCF.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS DE TONNES KM": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Tonnes_kilometres_des_services_realises_par_ONCF_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Tonnes_kilometres_des_services_realises_par_ONCF/")
+async def hierarchy():
+    Tonnes_kilometres_des_services_realises_par_ONCF_hierarchy=[
+
+        {"name":"Tonnes_kilometres_des_services_realises_par_ONCF",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Tonnes_kilometres_des_services_realises_par_ONCF_hierarchy
+############################################################################################################################
+############################################Tonnes_kilometres_des_services_realises_par_ONCF_historique##################################
+###############################################################################################################################
+@api.get('/Tonnes_kilometres_des_services_realises_par_ONCF_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Tonnes_kilometres_des_services_realises_par_ONCF.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS DE TONNES KM": 1}));
+    else:
+        a = list(Tonnes_kilometres_des_services_realises_par_ONCF.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS DE TONNES KM": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Tonnes_kilometres_de_marchandises_realisees_par_ONCF_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Tonnes_kilometres_de_marchandises_realisees_par_ONCF/")
+async def hierarchy():
+    Tonnes_kilometres_de_marchandises_realisees_par_ONCF_hierarchy=[
+
+        {"name":"Tonnes_kilometres_de_marchandises_realisees_par_ONCF",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Tonnes_kilometres_de_marchandises_realisees_par_ONCF_hierarchy
+############################################################################################################################
+############################################Tonnes_kilometres_de_marchandises_realisees_par_ONCF_historique##################################
+###############################################################################################################################
+@api.get('/Tonnes_kilometres_de_marchandises_realisees_par_ONCF_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Tonnes_kilometres_de_marchandises_realisees_par_ONCF.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS DE TONNES KM": 1}));
+    else:
+        a = list(Tonnes_kilometres_de_marchandises_realisees_par_ONCF.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS DE TONNES KM": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Voyageurs_Kilometres_de_lONCF_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Voyageurs_Kilometres_de_lONCF/")
+async def hierarchy():
+    Voyageurs_Kilometres_de_lONCF_hierarchy=[
+
+        {"name":"Voyageurs_Kilometres_de_lONCF",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Voyageurs_Kilometres_de_lONCF_hierarchy
+############################################################################################################################
+############################################Voyageurs_Kilometres_de_lONCF_historique##################################
+###############################################################################################################################
+@api.get('/Voyageurs_Kilometres_de_lONCF_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Voyageurs_Kilometres_de_lONCF.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIONS": 1}));
+    else:
+        a = list(Voyageurs_Kilometres_de_lONCF.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIONS": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Jauge_nette_des_navires_entres_et_sortis_dans_les_ports_marocains_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Jauge_nette_des_navires_entres_et_sortis_dans_les_ports_marocains/")
+async def hierarchy():
+    Jauge_nette_des_navires_entres_et_sortis_dans_les_ports_marocains_hierarchy=[
+
+        {"name":"Jauge_nette_des_navires_entres_et_sortis_dans_les_ports_marocains",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Jauge_nette_des_navires_entres_et_sortis_dans_les_ports_marocains_hierarchy
+############################################################################################################################
+############################################Jauge_nette_des_navires_entres_et_sortis_dans_les_ports_marocains_historique##################################
+###############################################################################################################################
+@api.get('/Jauge_nette_des_navires_entres_et_sortis_dans_les_ports_marocains_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Jauge_nette_des_navires_entres_et_sortis_dans_les_ports_marocains.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur 103 TONNEAUX": 1}));
+    else:
+        a = list(Jauge_nette_des_navires_entres_et_sortis_dans_les_ports_marocains.find({}, {"_id": 0, "Date": 1, "Valeur 103 TONNEAUX": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Quantite_de_marchandises_chargees_dans_les_ports_marocains_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Quantite_de_marchandises_chargees_dans_les_ports_marocains/")
+async def hierarchy():
+    Quantite_de_marchandises_chargees_dans_les_ports_marocains_hierarchy=[
+
+        {"name":"Quantite_de_marchandises_chargees_dans_les_ports_marocains",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Quantite_de_marchandises_chargees_dans_les_ports_marocains_hierarchy
+############################################################################################################################
+############################################Quantite_de_marchandises_chargees_dans_les_ports_marocains_historique##################################
+###############################################################################################################################
+@api.get('/Quantite_de_marchandises_chargees_dans_les_ports_marocains_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Quantite_de_marchandises_chargees_dans_les_ports_marocains.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    else:
+        a = list(Quantite_de_marchandises_chargees_dans_les_ports_marocains.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Quantite_des_marchandises_dechargees_dans_les_ports_marocains_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Quantite_des_marchandises_dechargees_dans_les_ports_marocains/")
+async def hierarchy():
+    Quantite_des_marchandises_dechargees_dans_les_ports_marocains_hierarchy=[
+
+        {"name":"Quantite_des_marchandises_dechargees_dans_les_ports_marocains",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Quantite_des_marchandises_dechargees_dans_les_ports_marocains_hierarchy
+############################################################################################################################
+############################################Quantite_des_marchandises_dechargees_dans_les_ports_marocains_historique##################################
+###############################################################################################################################
+@api.get('/Quantite_des_marchandises_dechargees_dans_les_ports_marocains_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Quantite_des_marchandises_dechargees_dans_les_ports_marocains.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES ": 1}));
+    else:
+        a = list(Quantite_des_marchandises_dechargees_dans_les_ports_marocains.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE TONNES ": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Capacite_de_chargement_des_vehicules_autorises_pour_demenagements_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Capacite_de_chargement_des_vehicules_autorises_pour_demenagements/")
+async def hierarchy():
+    Capacite_de_chargement_des_vehicules_autorises_pour_demenagements_hierarchy=[
+
+        {"name":"Capacite_de_chargement_des_vehicules_autorises_pour_demenagements",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Capacite_de_chargement_des_vehicules_autorises_pour_demenagements_hierarchy
+############################################################################################################################
+############################################Capacite_de_chargement_des_vehicules_autorises_pour_demenagements_historique##################################
+###############################################################################################################################
+@api.get('/Capacite_de_chargement_des_vehicules_autorises_pour_demenagements_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Capacite_de_chargement_des_vehicules_autorises_pour_demenagements.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Capacite_de_chargement_des_vehicules_autorises_pour_demenagements.find({}, {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+############################################Capacite_de_chargement_des_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Capacite_de_chargement_des_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes/")
+async def hierarchy():
+    Capacite_de_chargement_des_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes_hierarchy=[
+
+        {"name":"Capacite_de_chargement_des_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Capacite_de_chargement_des_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes_hierarchy
+############################################################################################################################
+############Capacite_de_chargement_des_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes_historique##################################
+###############################################################################################################################
+@api.get('/Capacite_de_chargement_des_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Capacite_de_chargement_des_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Capacite_de_chargement_des_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes.find({}, {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+############################################################################################################################
+###########################################Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_hierarchy###############################################
+###############################################################################################################################
+############################################################################################################################
+@api.get("/Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises/")
+async def hierarchy():
+    Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_hierarchy=[
+
+        {"name":"Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_hierarchy
+############################################################################################################################
+############Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_historique##################################
+###############################################################################################################################
+@api.get('/Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises.find({}, {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+############Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions/")
+async def hierarchy():
+    Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions_hierarchy=[
+
+        {"name":"Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions_hierarchy
+############################################################################################################################
+############Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions_historique##################################
+###############################################################################################################################
+@api.get('/Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Capacite_de_chargement_des_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions.find({}, {"_id": 0, "Date": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#################################################################Longueur_des_routes_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Longueur_des_routes/")
+async def hierarchy():
+    Longueur_des_routes_hierarchy=[
+
+        {"name":"Longueur_des_routes",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Longueur_des_routes_hierarchy
+############################################################################################################################
+#################################################Longueur_des_routes_historique##################################################
+###############################################################################################################################
+@api.get('/Longueur_des_routes_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Longueur_des_routes.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en KM": 1}));
+    else:
+        a = list(Longueur_des_routes.find({}, {"_id": 0, "Date": 1, "Valeur en KM": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#################################################################Longueur_des_routes_revetues_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Longueur_des_routes_revetues/")
+async def hierarchy():
+    Longueur_des_routes_revetues_hierarchy=[
+
+        {"name":"Longueur_des_routes_revetues",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Longueur_des_routes_revetues_hierarchy
+############################################################################################################################
+################################################Longueur_des_routes_revetues_historique##################################################
+###############################################################################################################################
+@api.get('/Longueur_des_routes_revetues_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Longueur_des_routes_revetues.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en KM": 1}));
+    else:
+        a = list(Longueur_des_routes_revetues.find({}, {"_id": 0, "Date": 1, "Valeur en KM": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#################################################################Nombre_d_accidents_survenus_en_agglomeration_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_d_accidents_survenus_en_agglomeration/")
+async def hierarchy():
+    Nombre_d_accidents_survenus_en_agglomeration_hierarchy=[
+
+        {"name":"Nombre_d_accidents_survenus_en_agglomeration",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_d_accidents_survenus_en_agglomeration_hierarchy
+############################################################################################################################
+################################################Nombre_d_accidents_survenus_en_agglomeration_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_d_accidents_survenus_en_agglomeration_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_d_accidents_survenus_en_agglomeration.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_d_accidents_survenus_en_agglomeration.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#################################################################Nombre_de_cars_en_service_destines_pour_le_transport_public_de_voyageurs_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_de_cars_en_service_destines_pour_le_transport_public_de_voyageurs/")
+async def hierarchy():
+    Nombre_de_cars_en_service_destines_pour_le_transport_public_de_voyageurs_hierarchy=[
+
+        {"name":"Nombre_de_cars_en_service_destines_pour_le_transport_public_de_voyageurs",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_cars_en_service_destines_pour_le_transport_public_de_voyageurs_hierarchy
+############################################################################################################################
+################################################Nombre_de_cars_en_service_destines_pour_le_transport_public_de_voyageurs_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_de_cars_en_service_destines_pour_le_transport_public_de_voyageurs_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_cars_en_service_destines_pour_le_transport_public_de_voyageurs.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_cars_en_service_destines_pour_le_transport_public_de_voyageurs.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+################################################################Nombre_de_permis_de_conduire_ayant_ete_retires_pour_sanction_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_de_permis_de_conduire_ayant_ete_retires_pour_sanction/")
+async def hierarchy():
+    Nombre_de_permis_de_conduire_ayant_ete_retires_pour_sanction_hierarchy=[
+
+        {"name":"Nombre_de_permis_de_conduire_ayant_ete_retires_pour_sanction",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_permis_de_conduire_ayant_ete_retires_pour_sanction_hierarchy
+############################################################################################################################
+################################################Nombre_de_permis_de_conduire_ayant_ete_retires_pour_sanction_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_de_permis_de_conduire_ayant_ete_retires_pour_sanction_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_permis_de_conduire_ayant_ete_retires_pour_sanction.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_permis_de_conduire_ayant_ete_retires_pour_sanction.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+################################################################Nombre_de_permis_de_conduire_delivres_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_de_permis_de_conduire_delivres/")
+async def hierarchy():
+    Nombre_de_permis_de_conduire_delivres_hierarchy=[
+
+        {"name":"Nombre_de_permis_de_conduire_delivres",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_permis_de_conduire_delivres_hierarchy
+############################################################################################################################
+################################################Nombre_de_permis_de_conduire_delivres_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_de_permis_de_conduire_delivres_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_permis_de_conduire_delivres.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_permis_de_conduire_delivres.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+################################################################Nombre_de_places_offertes_dans_les_cars_destines_pour_le_transport_public_de_voyageurs_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_de_places_offertes_dans_les_cars_destines_pour_le_transport_public_de_voyageurs/")
+async def hierarchy():
+    Nombre_de_places_offertes_dans_les_cars_destines_pour_le_transport_public_de_voyageurs_hierarchy=[
+
+        {"name":"Nombre_de_places_offertes_dans_les_cars_destines_pour_le_transport_public_de_voyageurs",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_places_offertes_dans_les_cars_destines_pour_le_transport_public_de_voyageurs_hierarchy
+############################################################################################################################
+##############################################Nombre_de_places_offertes_dans_les_cars_destines_pour_le_transport_public_de_voyageurs_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_de_places_offertes_dans_les_cars_destines_pour_le_transport_public_de_voyageurs_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_places_offertes_dans_les_cars_destines_pour_le_transport_public_de_voyageurs.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_places_offertes_dans_les_cars_destines_pour_le_transport_public_de_voyageurs.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+########################################Nombre_de_vehicules_autorises_pour_demenagements_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_de_vehicules_autorises_pour_demenagements/")
+async def hierarchy():
+    Nombre_de_vehicules_autorises_pour_demenagements_hierarchy=[
+
+        {"name":"Nombre_de_vehicules_autorises_pour_demenagements",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_vehicules_autorises_pour_demenagements_hierarchy
+############################################################################################################################
+####################################Nombre_de_vehicules_autorises_pour_demenagements_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_de_vehicules_autorises_pour_demenagements_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_vehicules_autorises_pour_demenagements.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_vehicules_autorises_pour_demenagements.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+########################################Nombre_de_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_de_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes/")
+async def hierarchy():
+    Nombre_de_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes_hierarchy=[
+
+        {"name":"Nombre_de_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes_hierarchy
+############################################################################################################################
+####################################Nombre_de_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_de_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_vehicules_autorises_pour_le_transport_public_de_marchandises_dans_les_villes.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+########################################Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises/")
+async def hierarchy():
+    Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_hierarchy=[
+
+        {"name":"Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_hierarchy
+############################################################################################################################
+####################################Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#######################################Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions/")
+async def hierarchy():
+    Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions_hierarchy=[
+
+        {"name":"Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions_hierarchy
+############################################################################################################################
+####################################Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_vehicules_destines_pour_le_transport_public_de_marchandises_pour_toutes_les_directions.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#######################################Nombre_de_victimes_blessees_dans_des_accidents_survenus_en_agglomeration_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_de_victimes_blessees_dans_des_accidents_survenus_en_agglomeration/")
+async def hierarchy():
+    Nombre_de_victimes_blessees_dans_des_accidents_survenus_en_agglomeration_hierarchy=[
+
+        {"name":"Nombre_de_victimes_blessees_dans_des_accidents_survenus_en_agglomeration",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_victimes_blessees_dans_des_accidents_survenus_en_agglomeration_hierarchy
+############################################################################################################################
+####################################Nombre_de_victimes_blessees_dans_des_accidents_survenus_en_agglomeration_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_de_victimes_blessees_dans_des_accidents_survenus_en_agglomeration_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_victimes_blessees_dans_des_accidents_survenus_en_agglomeration.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_victimes_blessees_dans_des_accidents_survenus_en_agglomeration.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#######################################Nombre_de_victimes_blessees_dans_des_accidents_survenus_sur_les_routes_hors_agglomeration_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_de_victimes_blessees_dans_des_accidents_survenus_sur_les_routes_hors_agglomeration/")
+async def hierarchy():
+    Nombre_de_victimes_blessees_dans_des_accidents_survenus_sur_les_routes_hors_agglomeration_hierarchy=[
+
+        {"name":"Nombre_de_victimes_blessees_dans_des_accidents_survenus_sur_les_routes_hors_agglomeration",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_victimes_blessees_dans_des_accidents_survenus_sur_les_routes_hors_agglomeration_hierarchy
+############################################################################################################################
+####################################Nombre_de_victimes_blessees_dans_des_accidents_survenus_sur_les_routes_hors_agglomeration_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_de_victimes_blessees_dans_des_accidents_survenus_sur_les_routes_hors_agglomeration_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_victimes_blessees_dans_des_accidents_survenus_sur_les_routes_hors_agglomeration.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_victimes_blessees_dans_des_accidents_survenus_sur_les_routes_hors_agglomeration.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+######################################Nombre_de_victimes_tuees_dans_des_accidents_survenus_en_agglomeration_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_de_victimes_tuees_dans_des_accidents_survenus_en_agglomeration/")
+async def hierarchy():
+    Nombre_de_victimes_tuees_dans_des_accidents_survenus_en_agglomeration_hierarchy=[
+
+        {"name":"Nombre_de_victimes_tuees_dans_des_accidents_survenus_en_agglomeration",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_de_victimes_tuees_dans_des_accidents_survenus_en_agglomeration_hierarchy
+############################################################################################################################
+################################Nombre_de_victimes_tuees_dans_des_accidents_survenus_en_agglomeration_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_de_victimes_tuees_dans_des_accidents_survenus_en_agglomeration_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_de_victimes_tuees_dans_des_accidents_survenus_en_agglomeration.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_de_victimes_tuees_dans_des_accidents_survenus_en_agglomeration.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+######################################Nombre_d_entreprises_proprietaires_de_vehicules_destines_pour_le_transport_public_de_marchandises_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_d_entreprises_proprietaires_de_vehicules_destines_pour_le_transport_public_de_marchandises/")
+async def hierarchy():
+    Nombre_d_entreprises_proprietaires_de_vehicules_destines_pour_le_transport_public_de_marchandises_hierarchy=[
+
+        {"name":"Nombre_d_entreprises_proprietaires_de_vehicules_destines_pour_le_transport_public_de_marchandises",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_d_entreprises_proprietaires_de_vehicules_destines_pour_le_transport_public_de_marchandises_hierarchy
+############################################################################################################################
+###############################Nombre_d_entreprises_proprietaires_de_vehicules_destines_pour_le_transport_public_de_marchandises_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_d_entreprises_proprietaires_de_vehicules_destines_pour_le_transport_public_de_marchandises_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_d_entreprises_proprietaires_de_vehicules_destines_pour_le_transport_public_de_marchandises.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_d_entreprises_proprietaires_de_vehicules_destines_pour_le_transport_public_de_marchandises.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#####################################Nombre_total_de_victimes_des_accidents_survenus_sur_les_routes_hors_agglomeration_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_total_de_victimes_des_accidents_survenus_sur_les_routes_hors_agglomeration/")
+async def hierarchy():
+    Nombre_total_de_victimes_des_accidents_survenus_sur_les_routes_hors_agglomeration_hierarchy=[
+
+        {"name":"Nombre_total_de_victimes_des_accidents_survenus_sur_les_routes_hors_agglomeration",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_total_de_victimes_des_accidents_survenus_sur_les_routes_hors_agglomeration_hierarchy
+############################################################################################################################
+###############################Nombre_total_de_victimes_des_accidents_survenus_sur_les_routes_hors_agglomeration_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_total_de_victimes_des_accidents_survenus_sur_les_routes_hors_agglomeration_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_total_de_victimes_des_accidents_survenus_sur_les_routes_hors_agglomeration.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_total_de_victimes_des_accidents_survenus_sur_les_routes_hors_agglomeration.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#####################################Nombre_total_des_accidents_survenus_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Nombre_total_des_accidents_survenus/")
+async def hierarchy():
+    Nombre_total_des_accidents_survenus_hierarchy=[
+
+        {"name":"Nombre_total_des_accidents_survenus",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Nombre_total_des_accidents_survenus_hierarchy
+############################################################################################################################
+###############################Nombre_total_des_accidents_survenus_historique##################################################
+###############################################################################################################################
+@api.get('/Nombre_total_des_accidents_survenus_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Nombre_total_des_accidents_survenus.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur": 1}));
+    else:
+        a = list(Nombre_total_des_accidents_survenus.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
