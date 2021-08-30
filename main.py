@@ -26,6 +26,34 @@ db5 = client ['Enseignement']
 
 db6 = client['Transport_HCP']
 
+############################################################################################################################################
+Croissance_annuelle_de_la_consommation_reelle_par_habitant = db2.Croissance_annuelle_de_la_consommation_reelle_par_habitant
+Depense_annuelle_moyenne_par_personne = db2.Depense_annuelle_moyenne_par_personne
+Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_monetaire_superieur_a_20_pour_cent = db2.Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_monetaire_superieur_a_20_pour_cent
+Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_multidimentionnelle_superieur_a_20_pour_cent = db2.Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_multidimentionnelle_superieur_a_20_pour_cent
+Indice_de_croissance_de_niveau_de_vie_par_habitant = db2.Indice_de_croissance_de_niveau_de_vie_par_habitant
+Inegalite_de_niveau_de_vie_Coefficient_d_Atkinson = db2.Inegalite_de_niveau_de_vie_Coefficient_d_Atkinson
+Inegalite_de_niveau_de_vie_coefficient_de_Gini = db2.Inegalite_de_niveau_de_vie_coefficient_de_Gini
+Inegalite_de_vie_coefficient_de_Gini = db2.Inegalite_de_vie_coefficient_de_Gini
+La_pauvrete_multidimensionnelle = db2.La_pauvrete_multidimensionnelle
+La_pauvrete_multidimensionnelle_des_enfants = db2.La_pauvrete_multidimensionnelle_des_enfants
+La_pauvrete_subjective = db2.La_pauvrete_subjective
+Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_aises_de_la_population = db2.Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_aises_de_la_population
+Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_pauvres_de_la_population = db2.Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_pauvres_de_la_population
+Part_dans_les_depenses_totales_des_50__pour_cent__les_moins_aises_de_la_population = db2.Part_dans_les_depenses_totales_des_50__pour_cent__les_moins_aises_de_la_population
+Profondeur_de_la_pauvrete_absolue = db2.Profondeur_de_la_pauvrete_absolue
+Proportion_de_personnes_vivant_avec_un_revenu_inferieur_a_50__pour_cent__du_revenu_moyen_national = db2.Proportion_de_personnes_vivant_avec_un_revenu_inferieur_a_50__pour_cent__du_revenu_moyen_national
+Rapport_des_depenses_entre_les_60__pour_cent_les_plus_aises_et_les_40__pour_cent__les_plus_pauvres = db2.Rapport_des_depenses_entre_les_60__pour_cent_les_plus_aises_et_les_40__pour_cent__les_plus_pauvres
+Severite_de_la_pauvrete_absolue = db2.Severite_de_la_pauvrete_absolue
+Taux_de_croissance_annuel_de_la_consommation_pour_les_40__pour_cent__les_plus_pauvres = db2.Taux_de_croissance_annuel_de_la_consommation_pour_les_40__pour_cent__les_plus_pauvres
+Taux_de_croissance_annuel_de_la_consommation_pour_les_60__pour_cent__les_plus_aises = db2.Taux_de_croissance_annuel_de_la_consommation_pour_les_60__pour_cent__les_plus_aises
+Taux_de_la_pauvrete_au_seuil_national = db2.Taux_de_la_pauvrete_au_seuil_national
+Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_en_pourcentage_par_sexe = db2.Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_en_pourcentage_par_sexe
+Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_par_milieu = db2.Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_par_milieu
+Taux_de_pauvrete = db2.Taux_de_pauvrete
+Taux_de_pauvrete_relative_au_seuil_de_60pourcent_de_la_mediane = db2.Taux_de_pauvrete_relative_au_seuil_de_60pourcent_de_la_mediane
+Taux_de_vulnerabilite = db2.Taux_de_vulnerabilite
+#############################################################################################################################################
 Autres_mouvements_non_commerciaux_des_avions = db6.Autres_mouvements_non_commerciaux_des_avions
 Coefficient_d_occupation_des_sieges_de_la_flotte_de_Royal_Air_Maroc = db6.Coefficient_d_occupation_des_sieges_de_la_flotte_de_Royal_Air_Maroc
 Mouvements_des_avions = db6.Mouvements_des_avions
@@ -9530,5 +9558,710 @@ def getComptes(start: int = 0, end: int = 0):
                                      {"_id": 0, "Date": 1, "Valeur": 1}));
     else:
         a = list(Nombre_total_des_accidents_survenus.find({}, {"_id": 0, "Date": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#####################################CONDITIONS DE VIE ,pauvereTE, INEGALITES####################################################
+################################################################################################################################################################################
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#####################################Croissance_annuelle_de_la_consommation_reelle_par_habitant_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Croissance_annuelle_de_la_consommation_reelle_par_habitant/")
+async def hierarchy():
+    Croissance_annuelle_de_la_consommation_reelle_par_habitant_hierarchy=[
+
+        {"name":"Croissance_annuelle_de_la_consommation_reelle_par_habitant",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Croissance_annuelle_de_la_consommation_reelle_par_habitant_hierarchy
+############################################################################################################################
+###############################Croissance_annuelle_de_la_consommation_reelle_par_habitant_historique##################################################
+###############################################################################################################################
+@api.get('/Croissance_annuelle_de_la_consommation_reelle_par_habitant_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Croissance_annuelle_de_la_consommation_reelle_par_habitant.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Croissance_annuelle_de_la_consommation_reelle_par_habitant.find({}, {"_id": 0, "Date": 1, "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#####################################Depense_annuelle_moyenne_par_personne_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Depense_annuelle_moyenne_par_personne/")
+async def hierarchy():
+    Depense_annuelle_moyenne_par_personne_hierarchy=[
+
+        {"name":"Depense_annuelle_moyenne_par_personne",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Depense_annuelle_moyenne_par_personne_hierarchy
+############################################################################################################################
+###############################Depense_annuelle_moyenne_par_personne_historique##################################################
+###############################################################################################################################
+@api.get('/Depense_annuelle_moyenne_par_personne_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Depense_annuelle_moyenne_par_personne.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Classes de depense": 1, "Milieu de residence": 1, "Valeur en DH": 1}));
+    else:
+        a = list(Depense_annuelle_moyenne_par_personne.find({}, {"_id": 0, "Date": 1,  "Classes de depense": 1,"Milieu de residence": 1, "Valeur en DH": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_monetaire_superieur_a_20_pour_cent_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_monetaire_superieur_a_20_pour_cent/")
+async def hierarchy():
+    Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_monetaire_superieur_a_20_pour_cent_hierarchy=[
+
+        {"name":"Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_monetaire_superieur_a_20_pour_cent",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_monetaire_superieur_a_20_pour_cent_hierarchy
+############################################################################################################################
+######Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_monetaire_superieur_a_20_pour_cent_historique##################################################
+###############################################################################################################################
+@api.get('/Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_monetaire_superieur_a_20_pour_cent_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_monetaire_superieur_a_20_pour_cent.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Milieu": 1, "Valeur": 1}));
+    else:
+        a = list(Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_monetaire_superieur_a_20_pour_cent.find({}, {"_id": 0, "Date": 1,"Milieu": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################################Effectif_des_unites_territorriales_les_plus pauvres__communes_et_centre__avec_un_taux_de_pauvrete_multidimentionnelle_superieur_a_20_pour_cent_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Effectif_des_unites_territorriales_les_plus pauvres__communes_et_centre__avec_un_taux_de_pauvrete_multidimentionnelle_superieur_a_20_pour_cent/")
+async def hierarchy():
+    Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_multidimentionnelle_superieur_a_20_pour_cent_hierarchy=[
+
+        {"name":"Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_multidimentionnelle_superieur_a_20_pour_cent",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_multidimentionnelle_superieur_a_20_pour_cent_hierarchy
+############################################################################################################################
+##############################Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_multidimentionnelle_superieur_a_20_pour_cent_historique##################################################
+###############################################################################################################################
+@api.get('/Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_multidimentionnelle_superieur_a_20_pour_cent_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_multidimentionnelle_superieur_a_20_pour_cent.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Milieu": 1, "Valeur": 1}));
+    else:
+        a = list(Effectif_des_unites_territorriales_les_plus_pauvres__communes_et_centre__avec_un_taux_de_pauvrete_multidimentionnelle_superieur_a_20_pour_cent.find({}, {"_id": 0, "Date": 1,"Milieu": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#####################################Indice_de_croissance_de_niveau_de_vie_par_habitant_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Indice_de_croissance_de_niveau_de_vie_par_habitant/")
+async def hierarchy():
+    Indice_de_croissance_de_niveau_de_vie_par_habitant_hierarchy=[
+
+        {"name":"Indice_de_croissance_de_niveau_de_vie_par_habitant",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Indice_de_croissance_de_niveau_de_vie_par_habitant_hierarchy
+############################################################################################################################
+###############################Indice_de_croissance_de_niveau_de_vie_par_habitant_historique##################################################
+###############################################################################################################################
+@api.get('/Indice_de_croissance_de_niveau_de_vie_par_habitant_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Indice_de_croissance_de_niveau_de_vie_par_habitant.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Classes de Menages": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Indice_de_croissance_de_niveau_de_vie_par_habitant.find({}, {"_id": 0, "Date": 1,  "Classes de Menages": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#####################################Inegalite_de_niveau_de_vie_Coefficient_d_Atkinson_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Inegalite_de_niveau_de_vie_Coefficient_d_Atkinson/")
+async def hierarchy():
+    Inegalite_de_niveau_de_vie_Coefficient_d_Atkinson_hierarchy=[
+
+        {"name":"Inegalite_de_niveau_de_vie_Coefficient_d_Atkinson",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Inegalite_de_niveau_de_vie_Coefficient_d_Atkinson_hierarchy
+############################################################################################################################
+###############################Inegalite_de_niveau_de_vie_Coefficient_d_Atkinson_historique##################################################
+###############################################################################################################################
+@api.get('/Inegalite_de_niveau_de_vie_Coefficient_d_Atkinson_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Inegalite_de_niveau_de_vie_Coefficient_d_Atkinson.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Inegalite_de_niveau_de_vie_Coefficient_d_Atkinson.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#####################################Inegalite_de_niveau_de_vie_coefficient_de_Gini_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Inegalite_de_niveau_de_vie_coefficient_de_Gini/")
+async def hierarchy():
+    Inegalite_de_niveau_de_vie_coefficient_de_Gini_hierarchy=[
+
+        {"name":"Inegalite_de_niveau_de_vie_coefficient_de_Gini",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Inegalite_de_niveau_de_vie_coefficient_de_Gini_hierarchy
+############################################################################################################################
+###############################Inegalite_de_niveau_de_vie_coefficient_de_Gini_historique##################################################
+###############################################################################################################################
+@api.get('/Inegalite_de_niveau_de_vie_coefficient_de_Gini_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Inegalite_de_niveau_de_vie_coefficient_de_Gini.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Inegalite_de_niveau_de_vie_coefficient_de_Gini.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#####################################Inegalite_de_vie_coefficient_de_Gini_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Inegalite_de_vie_coefficient_de_Gini/")
+async def hierarchy():
+    Inegalite_de_vie_coefficient_de_Gini_hierarchy=[
+
+        {"name":"Inegalite_de_vie_coefficient_de_Gini",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Inegalite_de_vie_coefficient_de_Gini_hierarchy
+############################################################################################################################
+###############################Inegalite_de_vie_coefficient_de_Gini_historique##################################################
+###############################################################################################################################
+@api.get('/Inegalite_de_vie_coefficient_de_Gini_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Inegalite_de_vie_coefficient_de_Gini.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Inegalite_de_vie_coefficient_de_Gini.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+###################################La_pauvrete_multidimensionnelle_des_enfants_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/La_pauvrete_multidimensionnelle_des_enfants/")
+async def hierarchy():
+    La_pauvrete_multidimensionnelle_des_enfants_hierarchy=[
+
+        {"name":"La_pauvrete_multidimensionnelle_des_enfants",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return La_pauvrete_multidimensionnelle_des_enfants_hierarchy
+############################################################################################################################
+###############################La_pauvrete_multidimensionnelle_des_enfants_historique##################################################
+###############################################################################################################################
+@api.get('/La_pauvrete_multidimensionnelle_des_enfants_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(La_pauvrete_multidimensionnelle_des_enfants.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(La_pauvrete_multidimensionnelle_des_enfants.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+###################################La_pauvrete_subjective_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/La_pauvrete_subjective/")
+async def hierarchy():
+    La_pauvrete_subjective_hierarchy=[
+
+        {"name":"La_pauvrete_subjective",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return La_pauvrete_subjective_hierarchy
+############################################################################################################################
+###############################La_pauvrete_subjective_historique##################################################
+###############################################################################################################################
+@api.get('/La_pauvrete_subjective_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(La_pauvrete_subjective.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(La_pauvrete_subjective.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+###################################Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_aises_de_la_population_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_aises_de_la_population/")
+async def hierarchy():
+    Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_aises_de_la_population_hierarchy=[
+
+        {"name":"Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_aises_de_la_population",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_aises_de_la_population_hierarchy
+############################################################################################################################
+###############################La_pauvrete_subjective_historique##################################################
+###############################################################################################################################
+@api.get('/Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_aises_de_la_population_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_aises_de_la_population.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_aises_de_la_population.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+###################################Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_pauvres_de_la_population_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_pauvres_de_la_population/")
+async def hierarchy():
+    Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_pauvres_de_la_population_hierarchy=[
+
+        {"name":"Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_pauvres_de_la_population",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_pauvres_de_la_population_hierarchy
+############################################################################################################################
+###########Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_pauvres_de_la_population_historique##################################################
+###############################################################################################################################
+@api.get('/Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_pauvres_de_la_population_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_pauvres_de_la_population.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Part_dans_les_depenses_totales_des_10__pour_cent__les_plus_pauvres_de_la_population.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+###############################Part_dans_les_depenses_totales_des_50__pour_cent__les_moins_aises_de_la_population_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Part_dans_les_depenses_totales_des_50__pour_cent__les_moins_aises_de_la_population/")
+async def hierarchy():
+    Part_dans_les_depenses_totales_des_50__pour_cent__les_moins_aises_de_la_population_hierarchy=[
+
+        {"name":"Part_dans_les_depenses_totales_des_50__pour_cent__les_moins_aises_de_la_population",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Part_dans_les_depenses_totales_des_50__pour_cent__les_moins_aises_de_la_population_hierarchy
+############################################################################################################################
+###########Part_dans_les_depenses_totales_des_50__pour_cent__les_moins_aises_de_la_population_historique##################################################
+###############################################################################################################################
+@api.get('/Part_dans_les_depenses_totales_des_50__pour_cent__les_moins_aises_de_la_population_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Part_dans_les_depenses_totales_des_50__pour_cent__les_moins_aises_de_la_population.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Part_dans_les_depenses_totales_des_50__pour_cent__les_moins_aises_de_la_population.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+###############################Profondeur_de_la_pauvrete_absolue_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Profondeur_de_la_pauvrete_absolue/")
+async def hierarchy():
+    Profondeur_de_la_pauvrete_absolue_hierarchy=[
+
+        {"name":"Profondeur_de_la_pauvrete_absolue",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Profondeur_de_la_pauvrete_absolue_hierarchy
+############################################################################################################################
+###########Profondeur_de_la_pauvrete_absolue_historique##################################################
+###############################################################################################################################
+@api.get('/Profondeur_de_la_pauvrete_absolue_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Profondeur_de_la_pauvrete_absolue.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Profondeur_de_la_pauvrete_absolue.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+###############################Proportion_de_personnes_vivant_avec_un_revenu_inferieur_a_50__pour_cent__du_revenu_moyen_national_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Proportion_de_personnes_vivant_avec_un_revenu_inferieur_a_50__pour_cent__du_revenu_moyen_national/")
+async def hierarchy():
+    Proportion_de_personnes_vivant_avec_un_revenu_inferieur_a_50__pour_cent__du_revenu_moyen_national_hierarchy=[
+
+        {"name":"Proportion_de_personnes_vivant_avec_un_revenu_inferieur_a_50__pour_cent__du_revenu_moyen_national",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Proportion_de_personnes_vivant_avec_un_revenu_inferieur_a_50__pour_cent__du_revenu_moyen_national_hierarchy
+############################################################################################################################
+###########Proportion_de_personnes_vivant_avec_un_revenu_inferieur_a_50__pour_cent__du_revenu_moyen_national_historique##################################################
+###############################################################################################################################
+@api.get('/Proportion_de_personnes_vivant_avec_un_revenu_inferieur_a_50__pour_cent__du_revenu_moyen_national_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Proportion_de_personnes_vivant_avec_un_revenu_inferieur_a_50__pour_cent__du_revenu_moyen_national.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Proportion_de_personnes_vivant_avec_un_revenu_inferieur_a_50__pour_cent__du_revenu_moyen_national.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+###############################Rapport_des_depenses_entre_les_60__pour_cent_les_plus_aises_et_les_40__pour_cent__les_plus_pauvres_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Rapport_des_depenses_entre_les_60__pour_cent_les_plus_aises_et_les_40__pour_cent__les_plus_pauvres/")
+async def hierarchy():
+    Rapport_des_depenses_entre_les_60__pour_cent_les_plus_aises_et_les_40__pour_cent__les_plus_pauvres_hierarchy=[
+
+        {"name":"Rapport_des_depenses_entre_les_60__pour_cent_les_plus_aises_et_les_40__pour_cent__les_plus_pauvres",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Rapport_des_depenses_entre_les_60__pour_cent_les_plus_aises_et_les_40__pour_cent__les_plus_pauvres_hierarchy
+############################################################################################################################
+##########Rapport_des_depenses_entre_les_60__pour_cent_les_plus_aises_et_les_40__pour_cent__les_plus_pauvres_historique##################################################
+###############################################################################################################################
+@api.get('/Rapport_des_depenses_entre_les_60__pour_cent_les_plus_aises_et_les_40__pour_cent__les_plus_pauvres_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Rapport_des_depenses_entre_les_60__pour_cent_les_plus_aises_et_les_40__pour_cent__les_plus_pauvres.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Rapport_des_depenses_entre_les_60__pour_cent_les_plus_aises_et_les_40__pour_cent__les_plus_pauvres.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+###############################Severite_de_la_pauvrete_absolue_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Severite_de_la_pauvrete_absolue/")
+async def hierarchy():
+    Severite_de_la_pauvrete_absolue_hierarchy=[
+
+        {"name":"Severite_de_la_pauvrete_absolue",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Severite_de_la_pauvrete_absolue_hierarchy
+############################################################################################################################
+##########Severite_de_la_pauvrete_absolue_historique##################################################
+###############################################################################################################################
+@api.get('/Severite_de_la_pauvrete_absolue_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Severite_de_la_pauvrete_absolue.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Severite_de_la_pauvrete_absolue.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+##############################Taux_de_croissance_annuel_de_la_consommation_pour_les_40__pour_cent__les_plus_pauvres_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Taux_de_croissance_annuel_de_la_consommation_pour_les_40__pour_cent__les_plus_pauvres/")
+async def hierarchy():
+    Taux_de_croissance_annuel_de_la_consommation_pour_les_40__pour_cent__les_plus_pauvres_hierarchy=[
+
+        {"name":"Taux_de_croissance_annuel_de_la_consommation_pour_les_40__pour_cent__les_plus_pauvres",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Taux_de_croissance_annuel_de_la_consommation_pour_les_40__pour_cent__les_plus_pauvres_hierarchy
+############################################################################################################################
+##########Severite_de_la_pauvrete_absolue_historique##################################################
+###############################################################################################################################
+@api.get('/Taux_de_croissance_annuel_de_la_consommation_pour_les_40__pour_cent__les_plus_pauvres_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Taux_de_croissance_annuel_de_la_consommation_pour_les_40__pour_cent__les_plus_pauvres.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Taux_de_croissance_annuel_de_la_consommation_pour_les_40__pour_cent__les_plus_pauvres.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+##############################Taux_de_croissance_annuel_de_la_consommation_pour_les_60__pour_cent__les_plus_aises_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Taux_de_croissance_annuel_de_la_consommation_pour_les_60__pour_cent__les_plus_aises/")
+async def hierarchy():
+    Taux_de_croissance_annuel_de_la_consommation_pour_les_60__pour_cent__les_plus_aises_hierarchy=[
+
+        {"name":"Taux_de_croissance_annuel_de_la_consommation_pour_les_60__pour_cent__les_plus_aises",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Taux_de_croissance_annuel_de_la_consommation_pour_les_60__pour_cent__les_plus_aises_hierarchy
+############################################################################################################################
+##########Taux_de_croissance_annuel_de_la_consommation_pour_les_60__pour_cent__les_plus_aises_historique##################################################
+###############################################################################################################################
+@api.get('/Taux_de_croissance_annuel_de_la_consommation_pour_les_60__pour_cent__les_plus_aises_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Taux_de_croissance_annuel_de_la_consommation_pour_les_60__pour_cent__les_plus_aises.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Taux_de_croissance_annuel_de_la_consommation_pour_les_60__pour_cent__les_plus_aises.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+##############################Taux_de_la_pauvrete_au_seuil_national_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Taux_de_la_pauvrete_au_seuil_national/")
+async def hierarchy():
+    Taux_de_la_pauvrete_au_seuil_national_hierarchy=[
+
+        {"name":"Taux_de_la_pauvrete_au_seuil_national",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Taux_de_la_pauvrete_au_seuil_national_hierarchy
+############################################################################################################################
+##########Taux_de_la_pauvrete_au_seuil_national_historique##################################################
+###############################################################################################################################
+@api.get('/Taux_de_la_pauvrete_au_seuil_national_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Taux_de_la_pauvrete_au_seuil_national.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Taux_de_la_pauvrete_au_seuil_national.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+##############################Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_en_pourcentage_par_sexe_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_en_pourcentage_par_sexe/")
+async def hierarchy():
+    Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_en_pourcentage_par_sexe_hierarchy=[
+
+        {"name":"Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_en_pourcentage_par_sexe",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_en_pourcentage_par_sexe_hierarchy
+############################################################################################################################
+#########Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_en_pourcentage_par_sexe_historique##################################################
+###############################################################################################################################
+@api.get('/Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_en_pourcentage_par_sexe_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_en_pourcentage_par_sexe.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Sexe": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_en_pourcentage_par_sexe.find({}, {"_id": 0, "Date": 1,  "Sexe": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+##################Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_par_milieu_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_par_milieu/")
+async def hierarchy():
+    Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_par_milieu_hierarchy=[
+
+        {"name":"Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_par_milieu",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_par_milieu_hierarchy
+############################################################################################################################
+##########Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_par_milieu_historique##################################################
+###############################################################################################################################
+@api.get('/Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_par_milieu_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_par_milieu.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Taux_de_la_population_vivant_au_dessous_du_seuil_de_pauvrete_fixe_au_niveau_international_au_seuil_1_25dollar_par_milieu.find({}, {"_id": 0, "Date": 1,  "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+#####################Taux_de_pauvrete_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Taux_de_pauvrete/")
+async def hierarchy():
+    Taux_de_pauvrete_hierarchy=[
+
+        {"name":"Taux_de_pauvrete",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Taux_de_pauvrete_hierarchy
+############################################################################################################################
+#########Taux_de_pauvrete_historique##################################################
+###############################################################################################################################
+@api.get('/Taux_de_pauvrete_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Taux_de_pauvrete.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu de residence": 1,"Regions 12": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Taux_de_pauvrete.find({}, {"_id": 0, "Date": 1, "Milieu de residence": 1,"Regions 12": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Taux_de_pauvrete_relative_au_seuil_de_60pourcent_de_la_mediane_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Taux_de_pauvrete_relative_au_seuil_de_60pourcent_de_la_mediane/")
+async def hierarchy():
+    Taux_de_pauvrete_relative_au_seuil_de_60pourcent_de_la_mediane_hierarchy=[
+
+        {"name":"Taux_de_pauvrete_relative_au_seuil_de_60pourcent_de_la_mediane",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Taux_de_pauvrete_relative_au_seuil_de_60pourcent_de_la_medianeTaux_de_pauvrete_hierarchy
+############################################################################################################################
+#########Taux_de_pauvrete_historique##################################################
+###############################################################################################################################
+@api.get('/Taux_de_pauvrete_relative_au_seuil_de_60pourcent_de_la_mediane_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Taux_de_pauvrete_relative_au_seuil_de_60pourcent_de_la_mediane.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Taux_de_pauvrete_relative_au_seuil_de_60pourcent_de_la_mediane.find({}, {"_id": 0, "Date": 1, "Milieu": 1, "Valeur en pourcentage": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Taux_de_vulnerabilite_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Taux_de_vulnerabilite/")
+async def hierarchy():
+    Taux_de_vulnerabilite_hierarchy=[
+
+        {"name":"Taux_de_vulnerabilite",
+        "elements":[
+
+            ]
+            },
+
+    ]
+    return Taux_de_vulnerabilite_hierarchy
+############################################################################################################################
+#########Taux_de_vulnerabilite_historique##################################################
+###############################################################################################################################
+@api.get('/Taux_de_vulnerabilite_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Taux_de_vulnerabilite.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Milieu": 1, "Valeur en pourcentage": 1}));
+    else:
+        a = list(Taux_de_vulnerabilite.find({}, {"_id": 0, "Date": 1, "Milieu": 1, "Valeur en pourcentage": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 
