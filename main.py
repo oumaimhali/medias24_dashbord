@@ -207,6 +207,22 @@ Production_de_legumineuses = db2.Production_de_legumineuses
 Superficie_cultivee_des_cultures_fourrageres = db2.Superficie_cultivee_des_cultures_fourrageres
 Superficie_laissee_en_jachere = db2.Superficie_laissee_en_jachere
 superficie_cultivee_des_cereales = db2.superficie_cultivee_des_cereales
+Effectif_du_cheptel_par_type = db2.Effectif_du_cheptel_par_type
+Production_d_agrumes_par_type = db2.Production_d_agrumes_par_type
+Production_de_cultures_industrielles_betterave = db2.Production_de_cultures_industrielles_betterave
+Production_de_cultures_industrielles_total = db2.Production_de_cultures_industrielles_total
+Production_de_cultures_oleagineuses_par_type = db2.Production_de_cultures_oleagineuses_par_type
+Production_de_la_viande_blanche_par_secteur = db2.Production_de_la_viande_blanche_par_secteur
+Production_de_la_viande_rouge_par_type = db2.Production_de_la_viande_rouge_par_type
+Production_de_legumineuses_par_type = db2.Production_de_legumineuses_par_type
+Production_d_oeufs_par_secteur = db2.Production_d_oeufs_par_secteur
+Superficie_agricole_utile = db2.Superficie_agricole_utile
+Superficie_culivee_des_cultures_maraicheres = db2.Superficie_culivee_des_cultures_maraicheres
+Superficie_cultivee_des_cereales_par_type = db2.Superficie_cultivee_des_cereales_par_type
+Superficie_cultivee_des_cultures_en_sous_etages = db2.Superficie_cultivee_des_cultures_en_sous_etages
+Superficie_cultivee_des_cultures_industrielles_betterave = db2.Superficie_cultivee_des_cultures_industrielles_betterave
+Superficie_des_plantations_denses = db2.Superficie_des_plantations_denses
+#####
 
 NB_DE_CLASSES = db5.NB_DE_CLASSES
 ELEVES_DES_ECOLES_CORANIQUES = db5.ELEVES_DES_ECOLES_CORANIQUES
@@ -6035,6 +6051,472 @@ def getComptes(start: int = 0, end: int = 0):
                                      {"_id": 0, "Date": 1, "Valeur en Millers de HA": 1}));
     else:
         a = list(superficie_cultivee_des_cereales.find({}, {"_id": 0, "Date": 1, "Valeur en Millers de HA": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+########################################################################################################################################################################################################################################################################################
+##########################################################################################################################################################################
+######################################mise à jour agriculture###########################################################
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Effectif_du_cheptel_par_type_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Effectif_du_cheptel_par_type/")
+async def hierarchy():
+    Effectif_du_cheptel_par_type_hierarchy=[
+
+        {"name":"",
+        "elements":[
+            {"name": "Cheptel", "elements": []},
+            {"name": "Effectif_du_cheptel_par_type", "elements": []},
+
+            ]
+            },
+
+    ]
+    return Effectif_du_cheptel_par_type_hierarchy
+############################################################################################################################
+#########Effectif_du_cheptel_par_type_historique##################################################
+###############################################################################################################################
+@api.get('/Effectif_du_cheptel_par_type_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Effectif_du_cheptel_par_type.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Cheptel": 1, "Valeur": 1}));
+    else:
+        a = list(Effectif_du_cheptel_par_type.find({}, {"_id": 0, "Date": 1, "Cheptel": 1, "Valeur": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Production_d_agrumes_par_type_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Production_d_agrumes_par_type/")
+async def hierarchy():
+    Production_d_agrumes_par_type_hierarchy=[
+
+        {"name":"Production_d_agrumes_par_type",
+        "elements":[
+            {"name": "Type d agrume", "elements": []},
+            {"name": "Valeur en TONNE", "elements": []},
+
+
+
+            ]
+            },
+
+    ]
+    return Production_d_agrumes_par_type_hierarchy
+############################################################################################################################
+#########Production_d_agrumes_par_type_historique##################################################
+###############################################################################################################################
+@api.get('/Production_d_agrumes_par_type_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_d_agrumes_par_type.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Type d agrume": 1, "Valeur en TONNE": 1}));
+    else:
+        a = list(Production_d_agrumes_par_type.find({}, {"_id": 0, "Date": 1, "Type d agrume": 1, "Valeur en TONNE": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Production_de_cultures_industrielles_betterave_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Production_de_cultures_industrielles_betterave/")
+async def hierarchy():
+    Production_de_cultures_industrielles_betterave_hierarchy=[
+
+        {"name":"Production_de_cultures_industrielles_betterave",
+        "elements":[
+            {"name": "Type de culture industrielle", "elements": []},
+            {"name": "Valeur en MILLIERS DE QUINTAUX", "elements": []},
+
+
+
+            ]
+            },
+
+    ]
+    return Production_de_cultures_industrielles_betterave_hierarchy
+############################################################################################################################
+#########Production_de_cultures_industrielles_betterave_historique##################################################
+###############################################################################################################################
+@api.get('/Production_de_cultures_industrielles_betterave_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_de_cultures_industrielles_betterave.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Type de culture industrielle": 1, "Valeur en MILLIERS DE QUINTAUX": 1}));
+    else:
+        a = list(Production_de_cultures_industrielles_betterave.find({}, {"_id": 0, "Date": 1, "Type de culture industrielle": 1, "Valeur en MILLIERS DE QUINTAUX": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Production_de_cultures_industrielles_total_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Production_de_cultures_industrielles_total/")
+async def hierarchy():
+    Production_de_cultures_industrielles_total_hierarchy=[
+
+        {"name":"Production_de_cultures_industrielles_betterave",
+        "elements":[
+
+
+
+
+            ]
+            },
+
+    ]
+    return Production_de_cultures_industrielles_total_hierarchy
+############################################################################################################################
+########Production_de_cultures_industrielles_total_historique##################################################
+###############################################################################################################################
+@api.get('/Production_de_cultures_industrielles_total_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_de_cultures_industrielles_total.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE QUINTAUX": 1}));
+    else:
+        a = list(Production_de_cultures_industrielles_total.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE QUINTAUX": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Production_de_cultures_oleagineuses_par_type_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Production_de_cultures_oleagineuses_par_type/")
+async def hierarchy():
+    Production_de_cultures_oleagineuses_par_type_hierarchy=[
+
+        {"name":"Production_de_cultures_oleagineuses_par_type",
+        "elements":[
+            {"name": "Type de culture oleagineuse", "elements": []},
+            {"name": "Valeur en MILLIERS DE QUINTAUX", "elements": []},
+
+
+
+            ]
+            },
+
+    ]
+    return Production_de_cultures_oleagineuses_par_type_hierarchy
+############################################################################################################################
+#########Production_de_cultures_oleagineuses_par_type_historique##################################################
+###############################################################################################################################
+@api.get('/Production_de_cultures_oleagineuses_par_type_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_de_cultures_oleagineuses_par_type.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Type de culture oleagineuse": 1, "Valeur en MILLIERS DE QUINTAUX": 1}));
+    else:
+        a = list(Production_de_cultures_oleagineuses_par_type.find({}, {"_id": 0, "Date": 1, "Type de culture oleagineuse": 1, "Valeur en MILLIERS DE QUINTAUX": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Production_de_la_viande_blanche_par_secteur_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Production_de_la_viande_blanche_par_secteur/")
+async def hierarchy():
+    Production_de_la_viande_blanche_par_secteur_hierarchy=[
+
+        {"name":"Production_de_la_viande_blanche_par_secteur",
+        "elements":[
+            {"name": "Secteur de production elevage", "elements": []},
+            {"name": "Valeur en MILLIERS DE TONNES", "elements": []},
+
+
+
+            ]
+            },
+
+    ]
+    return Production_de_la_viande_blanche_par_secteur_hierarchy
+############################################################################################################################
+#########Production_de_la_viande_blanche_par_secteur_historique##################################################
+###############################################################################################################################
+@api.get('/Production_de_la_viande_blanche_par_secteur_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_de_la_viande_blanche_par_secteur.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Secteur de production elevage": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    else:
+        a = list(Production_de_la_viande_blanche_par_secteur.find({}, {"_id": 0, "Date": 1, "Secteur de production elevage": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Production_de_la_viande_rouge_par_type_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Production_de_la_viande_rouge_par_type/")
+async def hierarchy():
+    Production_de_la_viande_rouge_par_type_hierarchy=[
+
+        {"name":"Production_de_la_viande_rouge_par_type",
+        "elements":[
+            {"name": "Type de viande rouge", "elements": []},
+            {"name": "Valeur en MILLIERS DE TONNES", "elements": []},
+
+
+
+            ]
+            },
+
+    ]
+    return Production_de_la_viande_rouge_par_type_hierarchy
+############################################################################################################################
+#########Production_de_la_viande_rouge_par_type_historique##################################################
+###############################################################################################################################
+@api.get('/Production_de_la_viande_rouge_par_type_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_de_la_viande_rouge_par_type.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Type de viande rouge": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    else:
+        a = list(Production_de_la_viande_rouge_par_type.find({}, {"_id": 0, "Date": 1, "Type de viande rouge": 1, "Valeur en MILLIERS DE TONNES": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Production_de_legumineuses_par_type_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Production_de_legumineuses_par_type/")
+async def hierarchy():
+    Production_de_legumineuses_par_type_hierarchy=[
+
+        {"name":"Production_de_legumineuses_par_type",
+        "elements":[
+            {"name": "Type de legumineuse", "elements": []},
+            {"name": "Valeur en MILLIERS DE QUINTAUX", "elements": []},
+
+
+
+            ]
+            },
+
+    ]
+    return Production_de_legumineuses_par_type_hierarchy
+############################################################################################################################
+########Production_de_legumineuses_par_type_historique##################################################
+###############################################################################################################################
+@api.get('/Production_de_legumineuses_par_type_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_de_legumineuses_par_type.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Type de legumineuse": 1, "Valeur en MILLIERS DE QUINTAUX": 1}));
+    else:
+        a = list(Production_de_legumineuses_par_type.find({}, {"_id": 0, "Date": 1, "Type de legumineuse": 1, "Valeur en MILLIERS DE QUINTAUX": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Production_d_oeufs_par_secteur_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Production_d_oeufs_par_secteur/")
+async def hierarchy():
+    Production_d_oeufs_par_secteur_hierarchy=[
+
+        {"name":"Production_d_oeufs_par_secteur",
+        "elements":[
+            {"name": "Secteur de production elevage", "elements": []},
+            {"name": "Valeur en MILLIERS DE QUINTAUX", "elements": []},
+
+
+
+            ]
+            },
+
+    ]
+    return Production_d_oeufs_par_secteur_hierarchy
+############################################################################################################################
+########Production_d_oeufs_par_secteur_historique##################################################
+###############################################################################################################################
+@api.get('/Production_d_oeufs_par_secteur_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Production_d_oeufs_par_secteur.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1,"Secteur de production elevage": 1, "Valeur en MILLIONS UNITES": 1}));
+    else:
+        a = list(Production_d_oeufs_par_secteur.find({}, {"_id": 0, "Date": 1, "Secteur de production elevage": 1, "Valeur en MILLIONS UNITES": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Superficie_agricole_utile_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Superficie_agricole_utile/")
+async def hierarchy():
+    Superficie_agricole_utile_hierarchy=[
+
+        {"name":"Superficie_agricole_utile",
+        "elements":[
+
+
+
+
+            ]
+            },
+
+    ]
+    return Superficie_agricole_utile_hierarchy
+############################################################################################################################
+########Superficie_agricole_utile_historique##################################################
+###############################################################################################################################
+@api.get('/Superficie_agricole_utile_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Superficie_agricole_utile.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE HA": 1}));
+    else:
+        a = list(Superficie_agricole_utile.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE HA": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Superficie_culivee_des_cultures_maraicheres_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Superficie_culivee_des_cultures_maraicheres/")
+async def hierarchy():
+    Superficie_culivee_des_cultures_maraicheres_hierarchy=[
+
+        {"name":"Superficie_culivee_des_cultures_maraicheres",
+        "elements":[
+
+
+
+
+            ]
+            },
+
+    ]
+    return Superficie_culivee_des_cultures_maraicheres_hierarchy
+############################################################################################################################
+########Superficie_agricole_utile_historique##################################################
+###############################################################################################################################
+@api.get('/Superficie_culivee_des_cultures_maraicheres_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Superficie_culivee_des_cultures_maraicheres.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE HA": 1}));
+    else:
+        a = list(Superficie_culivee_des_cultures_maraicheres.find({}, {"_id": 0, "Date": 1, "Valeur en MILLIERS DE HA": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+####################Superficie_cultivee_des_cereales_par_type_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Superficie_cultivee_des_cereales_par_type/")
+async def hierarchy():
+    Superficie_cultivee_des_cereales_par_type_hierarchy=[
+
+        {"name":"Superficie_cultivee_des_cereales_par_type",
+        "elements":[
+            {"name": "Type de cereale", "elements": []},
+            {"name": "Valeur en MILLIERS DE HA", "elements": []},
+
+        ]
+            },
+
+    ]
+    return Superficie_cultivee_des_cereales_par_type_hierarchy
+############################################################################################################################
+########Superficie_cultivee_des_cereales_par_type_historique##################################################
+###############################################################################################################################
+@api.get('/Superficie_cultivee_des_cereales_par_type_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Superficie_cultivee_des_cereales_par_type.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Type de cereale": 1, "Valeur en MILLIERS DE HA": 1}));
+    else:
+        a = list(Superficie_cultivee_des_cereales_par_type.find({}, {"_id": 0, "Date": 1,  "Type de cereale": 1,"Valeur en MILLIERS DE HA": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+###################Superficie_cultivee_des_cultures_en_sous_etages_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Superficie_cultivee_des_cultures_en_sous_etages/")
+async def hierarchy():
+    Superficie_cultivee_des_cultures_en_sous_etages_hierarchy=[
+
+        {"name":"Superficie_cultivee_des_cultures_en_sous_etages",
+        "elements":[
+
+        ]
+            },
+
+    ]
+    return Superficie_cultivee_des_cultures_en_sous_etages_hierarchy
+############################################################################################################################
+########Superficie_cultivee_des_cultures_en_sous_etages_historique##################################################
+###############################################################################################################################
+@api.get('/Superficie_cultivee_des_cultures_en_sous_etages_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Superficie_cultivee_des_cultures_en_sous_etages.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE HA": 1}));
+    else:
+        a = list(Superficie_cultivee_des_cultures_en_sous_etages.find({}, {"_id": 0, "Date": 1,"Valeur en MILLIERS DE HA": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+###################Superficie_cultivee_des_cultures_industrielles_betterave_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Superficie_cultivee_des_cultures_industrielles_betterave/")
+async def hierarchy():
+    Superficie_cultivee_des_cultures_industrielles_betterave_hierarchy=[
+
+        {"name":"Superficie_cultivee_des_cultures_industrielles_betterave",
+        "elements":[
+
+        ]
+            },
+
+    ]
+    return Superficie_cultivee_des_cultures_industrielles_betterave_hierarchy
+############################################################################################################################
+########Superficie_cultivee_des_cultures_industrielles_betterave_historique##################################################
+###############################################################################################################################
+@api.get('/Superficie_cultivee_des_cultures_industrielles_betterave_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Superficie_cultivee_des_cultures_industrielles_betterave.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE HA": 1}));
+    else:
+        a = list(Superficie_cultivee_des_cultures_industrielles_betterave.find({}, {"_id": 0, "Date": 1,"Valeur en MILLIERS DE HA": 1}));
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
+###################################################################################################################################
+##########################################################################################################################################################################
+#####################################################################################################################################################
+###################Superficie_des_plantations_denses_hierarchy####################################################
+####################################################################################################################################################################################
+@api.get("/Superficie_des_plantations_denses/")
+async def hierarchy():
+    Superficie_des_plantations_denses_hierarchy=[
+
+        {"name":"Superficie_des_plantations_denses",
+        "elements":[
+
+        ]
+            },
+
+    ]
+    return Superficie_des_plantations_denses_hierarchy
+############################################################################################################################
+########Superficie_des_plantations_denses_historique##################################################
+###############################################################################################################################
+@api.get('/Superficie_des_plantations_denses_historique')
+def getComptes(start: int = 0, end: int = 0):
+    if (start and end):
+        a = list(Superficie_des_plantations_denses.find({"Date": {"$gte": start, "$lte": end}},
+                                     {"_id": 0, "Date": 1, "Valeur en MILLIERS DE HA": 1}));
+    else:
+        a = list(Superficie_des_plantations_denses.find({}, {"_id": 0, "Date": 1,"Valeur en MILLIERS DE HA": 1}));
     return JSONResponse(status_code=200, content=json.loads(json_util.dumps(a)))
 ###############################################################################################################################
 ################################################################################################################################
